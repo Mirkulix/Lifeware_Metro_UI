@@ -12,6 +12,21 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,8 +48,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,6 +70,12 @@
     <Reference Include="System.Xml" />
     <Reference Include="Zeroit.Framework.Button, Version=1.0.7032.31637, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
       <HintPath>..\packages\Zeroit.Framework.Button.1.0.0\lib\Zeroit.Framework.Button.dll</HintPath>
+    </Reference>
+    <Reference Include="Zeroit.Framework.ButtonThematic, Version=1.0.7032.33577, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeroit.Framework.ButtonThematic.1.0.0\lib\Zeroit.Framework.ButtonThematic.dll</HintPath>
+    </Reference>
+    <Reference Include="Zeroit.Framework.Form, Version=1.0.7033.12348, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeroit.Framework.Form.1.0.0\lib\Zeroit.Framework.Form.dll</HintPath>
     </Reference>
     <Reference Include="Zeroit.Framework.FormEditors, Version=1.0.7033.14697, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
       <HintPath>..\packages\Zeroit.Framework.FormEditors.1.0.0\lib\Zeroit.Framework.FormEditors.dll</HintPath>
@@ -70,14 +100,62 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Allergiens.cs">
+      <DependentUpon>LifewareDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Arzts.cs">
+      <DependentUpon>LifewareDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Dokumentes.cs">
+      <DependentUpon>LifewareDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Erkrankungens.cs">
+      <DependentUpon>LifewareDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LifewareDataModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LifewareDataModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LifewareDataModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LifewareDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LifewareDataModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LifewareDataModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Logins.cs">
+      <DependentUpon>LifewareDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Medikations.cs">
+      <DependentUpon>LifewareDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Notfallaktions.cs">
+      <DependentUpon>LifewareDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Notfallkontakte.cs">
+      <DependentUpon>LifewareDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Patients.cs">
+      <DependentUpon>LifewareDataModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Pat_Medi_Datas.cs">
+      <DependentUpon>LifewareDataModel.tt</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -86,7 +164,15 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EntityDeploy Include="LifewareDataModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>LifewareDataModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="LifewareDataModel.edmx.diagram">
+      <DependentUpon>LifewareDataModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -100,6 +186,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Ribbon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LifewareDataModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LifewareDataModel.edmx</DependentUpon>
+      <LastGenOutput>LifewareDataModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="LifewareDataModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>LifewareDataModel.edmx</DependentUpon>
+      <LastGenOutput>LifewareDataModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 und x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

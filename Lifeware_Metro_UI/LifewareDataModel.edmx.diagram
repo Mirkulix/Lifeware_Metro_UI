@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="670cfa5f8a574148b41a13451cba13cb" Name="Diagram1">
+        <EntityTypeShape EntityType="ePatientDBlocalModel.Allergiens" Width="1.5" PointX="7.5" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ePatientDBlocalModel.Arzts" Width="1.5" PointX="5.25" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="ePatientDBlocalModel.Dokumentes" Width="1.5" PointX="7.5" PointY="16.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ePatientDBlocalModel.Erkrankungens" Width="1.5" PointX="7.5" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ePatientDBlocalModel.Logins" Width="1.5" PointX="0.75" PointY="12.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ePatientDBlocalModel.Medikations" Width="1.5" PointX="7.5" PointY="22.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ePatientDBlocalModel.Notfallaktions" Width="1.5" PointX="5.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ePatientDBlocalModel.Notfallkontakte" Width="1.5" PointX="5.25" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="ePatientDBlocalModel.Pat_Medi_Datas" Width="1.5" PointX="5.25" PointY="17.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="ePatientDBlocalModel.Patients" Width="1.5" PointX="3" PointY="11" IsExpanded="true" />
+        <AssociationConnector Association="ePatientDBlocalModel.FK_Pat_Medi_DataAllergien" ManuallyRouted="false" />
+        <AssociationConnector Association="ePatientDBlocalModel.FK_PatientArzt" ManuallyRouted="false" />
+        <AssociationConnector Association="ePatientDBlocalModel.FK_Pat_Medi_DataDokumente" ManuallyRouted="false" />
+        <AssociationConnector Association="ePatientDBlocalModel.FK_Pat_Medi_DataErkrankungen" ManuallyRouted="false" />
+        <AssociationConnector Association="ePatientDBlocalModel.FK_LoginPatient" ManuallyRouted="false" />
+        <AssociationConnector Association="ePatientDBlocalModel.FK_Pat_Medi_DataMedikation" ManuallyRouted="false" />
+        <AssociationConnector Association="ePatientDBlocalModel.FK_PatientNotfallaktion" ManuallyRouted="false" />
+        <AssociationConnector Association="ePatientDBlocalModel.FK_PatientsNotfallkontakte" ManuallyRouted="false" />
+        <AssociationConnector Association="ePatientDBlocalModel.FK_PatientPat_Medi_Data" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
