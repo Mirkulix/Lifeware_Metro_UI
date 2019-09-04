@@ -15,11 +15,13 @@ namespace Lifeware_Metro_UI
 {
     public partial class Login : Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialForm
     {
+        int MaxVersuche = 0;
 
         DatabaseConnectingHandler db = new DatabaseConnectingHandler();
         Logins login = new Logins();
 
         public int userID;
+
 
 
         public Login()
@@ -32,7 +34,7 @@ namespace Lifeware_Metro_UI
         {
             string username = tbx_Login.Text;
             string password = HPass(tbx_Passwd.Text);
-
+            
 
             foreach (var user in db.Logins)
             {
@@ -44,10 +46,32 @@ namespace Lifeware_Metro_UI
 
                     userID = user.Id_Login;
 
-                    MessageBox.Show(userID.ToString());
+                    Form_Dashboard dboard = new Form_Dashboard(userID);
+                    dboard.Show();
 
+                    
+                    // Hier wird die Hauptform versteckt.
+                    Form_Verstecken();
+
+                    return;
                 }
+
+
+               
+               
             }
+
+            MaxVersuche++;
+
+            lbl_Login_false.Text = "Login/Password falsch";
+
+            // Hier werden die Versuche gezählt für die Falscheingabe der Daten.
+            if (MaxVersuche == 3)
+            {
+                MessageBox.Show("Sie habe 3 mal sich Falsch angemeldet, das System ist in 60. Sekunden wieder verfügbar");
+            }
+
+
         }
 
         private void AddUser(string username, string password, string confirmPass)
@@ -75,6 +99,18 @@ namespace Lifeware_Metro_UI
             {
                 string Epass = HPass(password);
                 login.Username = username;
+                login.Password = Epass;
+
+                tbx_reg_login.Text = String.Empty;
+                tbx_reg_passwd.Text = String.Empty;
+                tbx_reg_confirm_passwd.Text = String.Empty;
+
+                db.Logins.Add(login);
+                db.SaveChanges();
+
+
+                MessageBox.Show("Registrierung ist angeschlossen.");
+
 
             }
         }
@@ -91,6 +127,24 @@ namespace Lifeware_Metro_UI
             }
 
             return strBuilder.ToString();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            tbx_Passwd.UseSystemPasswordChar = true;
+            tbx_reg_passwd.UseSystemPasswordChar = true;
+            tbx_reg_confirm_passwd.UseSystemPasswordChar = true;
+        }
+
+        private void Form_Verstecken()
+        {
+            this.Visible = false;
+            this.ShowInTaskbar = false;
+        }
+
+        private void Btn_registrieren_Click(object sender, EventArgs e)
+        {
+            AddUser(tbx_reg_login.Text, tbx_reg_passwd.Text, tbx_reg_confirm_passwd.Text);
         }
     }
 }

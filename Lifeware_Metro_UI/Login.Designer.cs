@@ -40,6 +40,7 @@
             this.tbx_reg_confirm_passwd = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.btn_registrieren = new Zeroit.Framework.Button.ZeroitDummyControl();
             this.btn_anmelden = new Zeroit.Framework.Button.ZeroitDummyControl();
+            this.lbl_Login_false = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbl_Login
@@ -227,6 +228,7 @@
             this.btn_registrieren.TextAlign = System.Drawing.StringAlignment.Center;
             this.btn_registrieren.UpperLeftCurve = 10;
             this.btn_registrieren.UpperRightCurve = 10;
+            this.btn_registrieren.Click += new System.EventHandler(this.Btn_registrieren_Click);
             // 
             // btn_anmelden
             // 
@@ -265,12 +267,22 @@
             this.btn_anmelden.UpperRightCurve = 10;
             this.btn_anmelden.Click += new System.EventHandler(this.Btn_anmelden_Click);
             // 
+            // lbl_Login_false
+            // 
+            this.lbl_Login_false.AutoSize = true;
+            this.lbl_Login_false.ForeColor = System.Drawing.Color.Red;
+            this.lbl_Login_false.Location = new System.Drawing.Point(258, 177);
+            this.lbl_Login_false.Name = "lbl_Login_false";
+            this.lbl_Login_false.Size = new System.Drawing.Size(0, 13);
+            this.lbl_Login_false.TabIndex = 12;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(774, 513);
+            this.Controls.Add(this.lbl_Login_false);
             this.Controls.Add(this.btn_anmelden);
             this.Controls.Add(this.btn_registrieren);
             this.Controls.Add(this.tbx_reg_confirm_passwd);
@@ -287,7 +299,9 @@
             this.Name = "Login";
             this.Text = "Anmeldung";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -305,6 +319,7 @@
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField tbx_reg_confirm_passwd;
         private Zeroit.Framework.Button.ZeroitDummyControl btn_registrieren;
         private Zeroit.Framework.Button.ZeroitDummyControl btn_anmelden;
+        private System.Windows.Forms.Label lbl_Login_false;
     }
 }
 
