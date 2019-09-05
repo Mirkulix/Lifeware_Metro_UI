@@ -152,5 +152,10 @@ namespace Lifeware_Metro_UI
         {
             AddUser(tbx_reg_login.Text, tbx_reg_passwd.Text, tbx_reg_confirm_passwd.Text);
         }
+
+        private void Login_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Close();
+        }
     }
 }

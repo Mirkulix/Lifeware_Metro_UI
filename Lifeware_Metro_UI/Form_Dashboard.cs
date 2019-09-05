@@ -22,7 +22,7 @@ namespace Lifeware_Metro_UI
         public string FilePathUebergabe;
 
 
-        /// public byte[] imgData;
+
 
 
         public Form_Dashboard()
@@ -34,6 +34,42 @@ namespace Lifeware_Metro_UI
         {
             InitializeComponent();
             this.userID_H = userID;
+
+
+
+            using (DatabaseConnectingHandler db = new DatabaseConnectingHandler())
+            {
+                // hier wird das ByteArray auf Null gesetzt !
+                byte[] PictureLoad = null;
+
+
+                foreach (var pat in db.Patients)
+                {
+                    if (pat.LoginId_Login == userID_H)
+                    {
+                        tbx_pd_anrede.Text = pat.Anrede;
+                        tbx_pd_vorname.Text = pat.Vorname;
+                        tbx_pd_nachname.Text = pat.Nachname;
+                        tbx_pd_strasse.Text = pat.Straße;
+                        tbx_pd_nr.Text = pat.Nr.ToString();
+                        tbx_pd_plz.Text = pat.PLZ.ToString();
+                        tbx_pd_ort.Text = pat.Ort;
+                        tbx_pd_geburtstag.Text = pat.geb;
+                        tbx_pd_geburtsort.Text = pat.ort_geb;
+                        tbx_pd_telefonnummer.Text = pat.Telefon;
+                        tbx_pd_krankenkasse.Text = pat.Krankenkasse;
+                        tbx_pd_kk_nummer.Text = pat.KrankenkassenNR;
+                        tbx_pd_personalberater_nr.Text = pat.PersonalausweisNR;
+                        tbx_pd_fuehrerschein_nr.Text = pat.FührerscheinNR;
+
+                        // hier werden die Daten gespeichert 
+                        PictureLoad = (byte[])(pat.Image);
+                        MemoryStream ms = new MemoryStream(PictureLoad);
+                        picbox_pd_meinBild.SizeMode = PictureBoxSizeMode.StretchImage;
+                        picbox_pd_meinBild.Image = Image.FromStream(ms);
+                    }
+                }
+            }
 
         }
 
@@ -60,17 +96,17 @@ namespace Lifeware_Metro_UI
 
         private void Tbx_pd_telefonnummer_Format(object sender, EventArgs e)
         {
-                                                        //string format;
-                                                        //string ausgabe;
+            //string format;
+            //string ausgabe;
 
-                                                        //format = "{0:(###) ###-####}";
+            //format = "{0:(###) ###-####}";
 
-                                                        //ausgabe = String.Format(format, tbx_pd_telefonnummer.Text);
+            //ausgabe = String.Format(format, tbx_pd_telefonnummer.Text);
 
-                                                        //tbx_pd_ort.Text = ausgabe;
+            //tbx_pd_ort.Text = ausgabe;
 
-                                                        //TelefonnummerFormat telefonformat = new TelefonnummerFormat(tbx_pd_telefonnummer.Text, "+##########");
-                                                        //tbx_pd_telefonnummer.Text = telefonformat.ToString();
+            //TelefonnummerFormat telefonformat = new TelefonnummerFormat(tbx_pd_telefonnummer.Text, "+##########");
+            //tbx_pd_telefonnummer.Text = telefonformat.ToString();
 
             NummerFormat format = new NummerFormat(tbx_pd_telefonnummer.Text);
             tbx_pd_telefonnummer.Text = format.ToString();
@@ -94,29 +130,29 @@ namespace Lifeware_Metro_UI
                 picbox_pd_meinBild.SizeMode = PictureBoxSizeMode.StretchImage;
                 picbox_pd_meinBild.ImageLocation = DateiAuswahl.FileName;
 
-                
 
 
 
-                                                            //--------------------------------------------------------------------    
+
+                //--------------------------------------------------------------------    
 
 
-                                                            // FilePathUebergabe = DateiAuswahl.FileName;
+                // FilePathUebergabe = DateiAuswahl.FileName;
 
 
-                                                            //Image image = Image.FromFile(DateiAuswahl.FileName);
+                //Image image = Image.FromFile(DateiAuswahl.FileName);
 
 
-                                                            //picbox_pd_eigenesBild.
-                                                            //picbox_pd_eigenesBild.Image = image;
+                //picbox_pd_eigenesBild.
+                //picbox_pd_eigenesBild.Image = image;
 
-                                                            /// Hier wurde die PictureBox vom Zeroit verwendet.
+                /// Hier wurde die PictureBox vom Zeroit verwendet.
 
-                                                            //picbox_zeroit.BackgroundImageLayout = ImageLayout.Stretch;
-                                                            //picbox_zeroit.Image = image;
+                //picbox_zeroit.BackgroundImageLayout = ImageLayout.Stretch;
+                //picbox_zeroit.Image = image;
 
 
-                                                            //---------------------------------------------------------------------
+                //---------------------------------------------------------------------
 
 
             }
@@ -136,9 +172,17 @@ namespace Lifeware_Metro_UI
             /// Table Persönliche Daten
             Patients pat = new Patients();
 
-            byte[] imgData;
-            imgData = File.ReadAllBytes(picbox_pd_meinBild.ImageLocation);
-
+            if (picbox_pd_meinBild.ImageLocation != null)
+            {
+                byte[] imgData;
+                imgData = File.ReadAllBytes(picbox_pd_meinBild.ImageLocation);
+                pat.Image = imgData;
+            }
+            else
+            {
+                byte [] PictureLoad = (byte[])(pat.Image);
+                pat.Image = PictureLoad;
+            }
             {
                 pat.LoginId_Login = userID_H;
                 pat.Anrede = tbx_pd_anrede.Text;
@@ -155,12 +199,15 @@ namespace Lifeware_Metro_UI
                 pat.KrankenkassenNR = tbx_pd_kk_nummer.Text;
                 pat.PersonalausweisNR = tbx_pd_personalberater_nr.Text;
                 pat.FührerscheinNR = tbx_pd_fuehrerschein_nr.Text;
-                pat.Image = imgData;
+                //pat.Image = imgData;
             };
 
 
             db.Patients.Add(pat);
             db.SaveChanges();
+
+            lbl_Dashboard_Status.ForeColor = Color.Red;
+            lbl_Dashboard_Status.Text = "GESPEICHERT";
 
 
             /// Table Notfallkontakte
@@ -179,6 +226,16 @@ namespace Lifeware_Metro_UI
             //db.Notfallkontakte.Add(notk);
             //db.SaveChanges();
 
+        }
+
+        private void Form_Dashboard_Load(object sender, EventArgs e)
+        {
+            lbl_Dashboard_Status.Text = "OPEN";
+        }
+
+        private void Tbx_pd_anrede_TextChanged(object sender, EventArgs e)
+        {
+            lbl_Dashboard_Status.Text = "In Bearbeitung";
         }
     }
 }

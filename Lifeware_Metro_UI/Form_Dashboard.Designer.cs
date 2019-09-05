@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             this.btn_speichern = new XanderUI.XUIButton();
             this.zeroitMaterialLabel1 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
@@ -60,9 +59,8 @@
             this.tbx_pd_geburtsort = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.tbx_pd_geburtstag = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.btn_picbox_speichern = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRaisedButton();
-            this.zeroitEXPicBoxTextAngleAnimator1 = new Zeroit.Framework.PictureBox.ZeroitEXPicBoxTextAngleAnimator(this.components);
             this.picbox_pd_meinBild = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.zeroitEXPicBoxTextAngleAnimator1)).BeginInit();
+            this.lbl_Dashboard_Status = new Zeroit.Framework.Labels.ZeroitDottedMatrix();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).BeginInit();
             this.SuspendLayout();
             // 
@@ -195,6 +193,7 @@
             this.tbx_pd_anrede.TabIndex = 10;
             this.tbx_pd_anrede.TabStop = false;
             this.tbx_pd_anrede.UseSystemPasswordChar = false;
+            this.tbx_pd_anrede.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_vorname
             // 
@@ -212,6 +211,7 @@
             this.tbx_pd_vorname.TabIndex = 11;
             this.tbx_pd_vorname.TabStop = false;
             this.tbx_pd_vorname.UseSystemPasswordChar = false;
+            this.tbx_pd_vorname.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_nachname
             // 
@@ -229,6 +229,7 @@
             this.tbx_pd_nachname.TabIndex = 12;
             this.tbx_pd_nachname.TabStop = false;
             this.tbx_pd_nachname.UseSystemPasswordChar = false;
+            this.tbx_pd_nachname.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_strasse
             // 
@@ -246,6 +247,7 @@
             this.tbx_pd_strasse.TabIndex = 13;
             this.tbx_pd_strasse.TabStop = false;
             this.tbx_pd_strasse.UseSystemPasswordChar = false;
+            this.tbx_pd_strasse.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_nr
             // 
@@ -263,6 +265,7 @@
             this.tbx_pd_nr.TabIndex = 14;
             this.tbx_pd_nr.TabStop = false;
             this.tbx_pd_nr.UseSystemPasswordChar = false;
+            this.tbx_pd_nr.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_plz
             // 
@@ -280,6 +283,7 @@
             this.tbx_pd_plz.TabIndex = 15;
             this.tbx_pd_plz.TabStop = false;
             this.tbx_pd_plz.UseSystemPasswordChar = false;
+            this.tbx_pd_plz.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_ort
             // 
@@ -297,6 +301,7 @@
             this.tbx_pd_ort.TabIndex = 16;
             this.tbx_pd_ort.TabStop = false;
             this.tbx_pd_ort.UseSystemPasswordChar = false;
+            this.tbx_pd_ort.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // zeroitMaterialLabel8
             // 
@@ -405,6 +410,7 @@
             this.tbx_pd_personalberater_nr.TabIndex = 30;
             this.tbx_pd_personalberater_nr.TabStop = false;
             this.tbx_pd_personalberater_nr.UseSystemPasswordChar = false;
+            this.tbx_pd_personalberater_nr.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_fuehrerschein_nr
             // 
@@ -422,6 +428,7 @@
             this.tbx_pd_fuehrerschein_nr.TabIndex = 29;
             this.tbx_pd_fuehrerschein_nr.TabStop = false;
             this.tbx_pd_fuehrerschein_nr.UseSystemPasswordChar = false;
+            this.tbx_pd_fuehrerschein_nr.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_kk_nummer
             // 
@@ -439,6 +446,7 @@
             this.tbx_pd_kk_nummer.TabIndex = 28;
             this.tbx_pd_kk_nummer.TabStop = false;
             this.tbx_pd_kk_nummer.UseSystemPasswordChar = false;
+            this.tbx_pd_kk_nummer.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_krankenkasse
             // 
@@ -456,6 +464,7 @@
             this.tbx_pd_krankenkasse.TabIndex = 27;
             this.tbx_pd_krankenkasse.TabStop = false;
             this.tbx_pd_krankenkasse.UseSystemPasswordChar = false;
+            this.tbx_pd_krankenkasse.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_telefonnummer
             // 
@@ -473,6 +482,8 @@
             this.tbx_pd_telefonnummer.TabIndex = 26;
             this.tbx_pd_telefonnummer.TabStop = false;
             this.tbx_pd_telefonnummer.UseSystemPasswordChar = false;
+            this.tbx_pd_telefonnummer.Enter += new System.EventHandler(this.Tbx_pd_telefonnummer_Format);
+            this.tbx_pd_telefonnummer.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_geburtsort
             // 
@@ -490,12 +501,13 @@
             this.tbx_pd_geburtsort.TabIndex = 25;
             this.tbx_pd_geburtsort.TabStop = false;
             this.tbx_pd_geburtsort.UseSystemPasswordChar = false;
+            this.tbx_pd_geburtsort.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             // 
             // tbx_pd_geburtstag
             // 
             this.tbx_pd_geburtstag.Depth = 0;
             this.tbx_pd_geburtstag.Hint = "__.__.____";
-            this.tbx_pd_geburtstag.Location = new System.Drawing.Point(328, 461);
+            this.tbx_pd_geburtstag.Location = new System.Drawing.Point(315, 461);
             this.tbx_pd_geburtstag.MaxLength = 32767;
             this.tbx_pd_geburtstag.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.tbx_pd_geburtstag.Name = "tbx_pd_geburtstag";
@@ -503,10 +515,11 @@
             this.tbx_pd_geburtstag.SelectedText = "";
             this.tbx_pd_geburtstag.SelectionLength = 0;
             this.tbx_pd_geburtstag.SelectionStart = 0;
-            this.tbx_pd_geburtstag.Size = new System.Drawing.Size(66, 23);
+            this.tbx_pd_geburtstag.Size = new System.Drawing.Size(79, 23);
             this.tbx_pd_geburtstag.TabIndex = 24;
             this.tbx_pd_geburtstag.TabStop = false;
             this.tbx_pd_geburtstag.UseSystemPasswordChar = false;
+            this.tbx_pd_geburtstag.TextChanged += new System.EventHandler(this.Tbx_pd_anrede_TextChanged);
             this.tbx_pd_geburtstag.Validating += new System.ComponentModel.CancelEventHandler(this.Tbx_pd_geburtstag_Validating);
             // 
             // btn_picbox_speichern
@@ -533,11 +546,28 @@
             this.picbox_pd_meinBild.TabIndex = 32;
             this.picbox_pd_meinBild.TabStop = false;
             // 
+            // lbl_Dashboard_Status
+            // 
+            this.lbl_Dashboard_Status.AllowTransparency = true;
+            this.lbl_Dashboard_Status.DotHeight = 3.571429F;
+            this.lbl_Dashboard_Status.DotSpace = 0;
+            this.lbl_Dashboard_Status.DotWidth = 1.312773F;
+            this.lbl_Dashboard_Status.Location = new System.Drawing.Point(12, 85);
+            this.lbl_Dashboard_Status.Name = "lbl_Dashboard_Status";
+            this.lbl_Dashboard_Status.OffColor = System.Drawing.Color.Transparent;
+            this.lbl_Dashboard_Status.OffColorShadow = System.Drawing.Color.Transparent;
+            this.lbl_Dashboard_Status.OnColor = System.Drawing.Color.LightGreen;
+            this.lbl_Dashboard_Status.OnColorShadow = System.Drawing.Color.Green;
+            this.lbl_Dashboard_Status.Size = new System.Drawing.Size(144, 20);
+            this.lbl_Dashboard_Status.TabIndex = 33;
+            this.lbl_Dashboard_Status.Text = "Status";
+            // 
             // Form_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 674);
+            this.Controls.Add(this.lbl_Dashboard_Status);
             this.Controls.Add(this.picbox_pd_meinBild);
             this.Controls.Add(this.btn_picbox_speichern);
             this.Controls.Add(this.tbx_pd_personalberater_nr);
@@ -572,8 +602,8 @@
             this.Name = "Form_Dashboard";
             this.Text = "Dashboard";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Dashboard_FormClosing);
+            this.Load += new System.EventHandler(this.Form_Dashboard_Load);
             this.Enter += new System.EventHandler(this.Tbx_pd_telefonnummer_Format);
-            ((System.ComponentModel.ISupportInitialize)(this.zeroitEXPicBoxTextAngleAnimator1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -612,7 +642,7 @@
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField tbx_pd_geburtsort;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField tbx_pd_geburtstag;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRaisedButton btn_picbox_speichern;
-        private Zeroit.Framework.PictureBox.ZeroitEXPicBoxTextAngleAnimator zeroitEXPicBoxTextAngleAnimator1;
         private System.Windows.Forms.PictureBox picbox_pd_meinBild;
+        private Zeroit.Framework.Labels.ZeroitDottedMatrix lbl_Dashboard_Status;
     }
 }
