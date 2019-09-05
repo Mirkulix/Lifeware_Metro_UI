@@ -138,8 +138,14 @@ namespace Lifeware_Metro_UI
 
         private void Form_Verstecken()
         {
-            this.Visible = false;
-            this.ShowInTaskbar = false;
+            this.Hide();
+            //this.Visible = false;
+            //this.ShowInTaskbar = false;
+        }
+
+        public void Form_Show()
+        {
+            this.Show();
         }
 
         private void Btn_registrieren_Click(object sender, EventArgs e)

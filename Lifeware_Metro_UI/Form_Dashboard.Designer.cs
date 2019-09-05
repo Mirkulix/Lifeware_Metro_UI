@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
-            this.xuiButton1 = new XanderUI.XUIButton();
-            this.picbox_pd_eigenesBild = new XanderUI.XUICustomPictureBox();
+            this.btn_speichern = new XanderUI.XUIButton();
             this.zeroitMaterialLabel1 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel3 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
@@ -43,7 +43,7 @@
             this.tbx_pd_nachname = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.tbx_pd_strasse = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.tbx_pd_nr = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
-            this.tby_pd_plz = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
+            this.tbx_pd_plz = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.tbx_pd_ort = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.zeroitMaterialLabel8 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel9 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
@@ -60,42 +60,32 @@
             this.tbx_pd_geburtsort = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.tbx_pd_geburtstag = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.btn_picbox_speichern = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRaisedButton();
+            this.zeroitEXPicBoxTextAngleAnimator1 = new Zeroit.Framework.PictureBox.ZeroitEXPicBoxTextAngleAnimator(this.components);
+            this.picbox_pd_meinBild = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.zeroitEXPicBoxTextAngleAnimator1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).BeginInit();
             this.SuspendLayout();
             // 
-            // xuiButton1
+            // btn_speichern
             // 
-            this.xuiButton1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.xuiButton1.ButtonImage = ((System.Drawing.Image)(resources.GetObject("xuiButton1.ButtonImage")));
-            this.xuiButton1.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.xuiButton1.ButtonText = "Button";
-            this.xuiButton1.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.xuiButton1.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.xuiButton1.CornerRadius = 5;
-            this.xuiButton1.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.xuiButton1.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.xuiButton1.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.xuiButton1.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.xuiButton1.Location = new System.Drawing.Point(945, 612);
-            this.xuiButton1.Name = "xuiButton1";
-            this.xuiButton1.Size = new System.Drawing.Size(200, 50);
-            this.xuiButton1.TabIndex = 0;
-            this.xuiButton1.TextColor = System.Drawing.Color.DodgerBlue;
-            this.xuiButton1.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            // 
-            // picbox_pd_eigenesBild
-            // 
-            this.picbox_pd_eigenesBild.Color1 = System.Drawing.Color.DodgerBlue;
-            this.picbox_pd_eigenesBild.Color2 = System.Drawing.Color.DodgerBlue;
-            this.picbox_pd_eigenesBild.FilterAlpha = 200;
-            this.picbox_pd_eigenesBild.FilterEnabled = true;
-            this.picbox_pd_eigenesBild.Image = null;
-            this.picbox_pd_eigenesBild.IsElipse = false;
-            this.picbox_pd_eigenesBild.IsParallax = false;
-            this.picbox_pd_eigenesBild.Location = new System.Drawing.Point(180, 82);
-            this.picbox_pd_eigenesBild.Name = "picbox_pd_eigenesBild";
-            this.picbox_pd_eigenesBild.Size = new System.Drawing.Size(214, 149);
-            this.picbox_pd_eigenesBild.TabIndex = 2;
-            this.picbox_pd_eigenesBild.Text = "xuiCustomPictureBox2";
+            this.btn_speichern.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_speichern.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btn_speichern.ButtonImage")));
+            this.btn_speichern.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btn_speichern.ButtonText = "Speichern";
+            this.btn_speichern.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btn_speichern.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_speichern.CornerRadius = 5;
+            this.btn_speichern.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_speichern.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btn_speichern.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_speichern.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btn_speichern.Location = new System.Drawing.Point(945, 612);
+            this.btn_speichern.Name = "btn_speichern";
+            this.btn_speichern.Size = new System.Drawing.Size(200, 50);
+            this.btn_speichern.TabIndex = 0;
+            this.btn_speichern.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_speichern.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_speichern.Click += new System.EventHandler(this.Btn_speichern_Click);
             // 
             // zeroitMaterialLabel1
             // 
@@ -274,22 +264,22 @@
             this.tbx_pd_nr.TabStop = false;
             this.tbx_pd_nr.UseSystemPasswordChar = false;
             // 
-            // tby_pd_plz
+            // tbx_pd_plz
             // 
-            this.tby_pd_plz.Depth = 0;
-            this.tby_pd_plz.Hint = "";
-            this.tby_pd_plz.Location = new System.Drawing.Point(180, 407);
-            this.tby_pd_plz.MaxLength = 32767;
-            this.tby_pd_plz.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.tby_pd_plz.Name = "tby_pd_plz";
-            this.tby_pd_plz.PasswordChar = '\0';
-            this.tby_pd_plz.SelectedText = "";
-            this.tby_pd_plz.SelectionLength = 0;
-            this.tby_pd_plz.SelectionStart = 0;
-            this.tby_pd_plz.Size = new System.Drawing.Size(214, 23);
-            this.tby_pd_plz.TabIndex = 15;
-            this.tby_pd_plz.TabStop = false;
-            this.tby_pd_plz.UseSystemPasswordChar = false;
+            this.tbx_pd_plz.Depth = 0;
+            this.tbx_pd_plz.Hint = "";
+            this.tbx_pd_plz.Location = new System.Drawing.Point(180, 407);
+            this.tbx_pd_plz.MaxLength = 32767;
+            this.tbx_pd_plz.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.tbx_pd_plz.Name = "tbx_pd_plz";
+            this.tbx_pd_plz.PasswordChar = '\0';
+            this.tbx_pd_plz.SelectedText = "";
+            this.tbx_pd_plz.SelectionLength = 0;
+            this.tbx_pd_plz.SelectionStart = 0;
+            this.tbx_pd_plz.Size = new System.Drawing.Size(214, 23);
+            this.tbx_pd_plz.TabIndex = 15;
+            this.tbx_pd_plz.TabStop = false;
+            this.tbx_pd_plz.UseSystemPasswordChar = false;
             // 
             // tbx_pd_ort
             // 
@@ -522,21 +512,33 @@
             // btn_picbox_speichern
             // 
             this.btn_picbox_speichern.AllowTransparency = true;
+            this.btn_picbox_speichern.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.btn_picbox_speichern.Depth = 0;
+            this.btn_picbox_speichern.ForeColor = System.Drawing.SystemColors.Control;
             this.btn_picbox_speichern.Icon = null;
-            this.btn_picbox_speichern.Location = new System.Drawing.Point(267, 237);
+            this.btn_picbox_speichern.Location = new System.Drawing.Point(260, 237);
             this.btn_picbox_speichern.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.btn_picbox_speichern.Name = "btn_picbox_speichern";
             this.btn_picbox_speichern.Primary = true;
-            this.btn_picbox_speichern.Size = new System.Drawing.Size(127, 36);
+            this.btn_picbox_speichern.Size = new System.Drawing.Size(134, 36);
             this.btn_picbox_speichern.TabIndex = 31;
-            this.btn_picbox_speichern.Text = "Bild speichern";
+            this.btn_picbox_speichern.Text = "Bild hochladen";
+            this.btn_picbox_speichern.Click += new System.EventHandler(this.Btn_picbox_speichern_Click);
+            // 
+            // picbox_pd_meinBild
+            // 
+            this.picbox_pd_meinBild.Location = new System.Drawing.Point(260, 85);
+            this.picbox_pd_meinBild.Name = "picbox_pd_meinBild";
+            this.picbox_pd_meinBild.Size = new System.Drawing.Size(134, 146);
+            this.picbox_pd_meinBild.TabIndex = 32;
+            this.picbox_pd_meinBild.TabStop = false;
             // 
             // Form_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 674);
+            this.Controls.Add(this.picbox_pd_meinBild);
             this.Controls.Add(this.btn_picbox_speichern);
             this.Controls.Add(this.tbx_pd_personalberater_nr);
             this.Controls.Add(this.tbx_pd_fuehrerschein_nr);
@@ -553,7 +555,7 @@
             this.Controls.Add(this.zeroitMaterialLabel9);
             this.Controls.Add(this.zeroitMaterialLabel8);
             this.Controls.Add(this.tbx_pd_ort);
-            this.Controls.Add(this.tby_pd_plz);
+            this.Controls.Add(this.tbx_pd_plz);
             this.Controls.Add(this.tbx_pd_nr);
             this.Controls.Add(this.tbx_pd_strasse);
             this.Controls.Add(this.tbx_pd_nachname);
@@ -566,11 +568,13 @@
             this.Controls.Add(this.zeroitMaterialLabel3);
             this.Controls.Add(this.zeroitMaterialLabel2);
             this.Controls.Add(this.zeroitMaterialLabel1);
-            this.Controls.Add(this.picbox_pd_eigenesBild);
-            this.Controls.Add(this.xuiButton1);
+            this.Controls.Add(this.btn_speichern);
             this.Name = "Form_Dashboard";
             this.Text = "Dashboard";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Dashboard_FormClosing);
             this.Enter += new System.EventHandler(this.Tbx_pd_telefonnummer_Format);
+            ((System.ComponentModel.ISupportInitialize)(this.zeroitEXPicBoxTextAngleAnimator1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -578,8 +582,7 @@
 
         #endregion
 
-        private XanderUI.XUIButton xuiButton1;
-        private XanderUI.XUICustomPictureBox picbox_pd_eigenesBild;
+        private XanderUI.XUIButton btn_speichern;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel1;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel2;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel3;
@@ -592,7 +595,7 @@
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField tbx_pd_nachname;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField tbx_pd_strasse;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField tbx_pd_nr;
-        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField tby_pd_plz;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField tbx_pd_plz;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField tbx_pd_ort;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel8;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel9;
@@ -609,5 +612,7 @@
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField tbx_pd_geburtsort;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField tbx_pd_geburtstag;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRaisedButton btn_picbox_speichern;
+        private Zeroit.Framework.PictureBox.ZeroitEXPicBoxTextAngleAnimator zeroitEXPicBoxTextAngleAnimator1;
+        private System.Windows.Forms.PictureBox picbox_pd_meinBild;
     }
 }
