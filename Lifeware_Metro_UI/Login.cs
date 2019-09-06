@@ -47,6 +47,7 @@ namespace Lifeware_Metro_UI
                     userID = user.Id_Login;
 
                     Form_Dashboard dboard = new Form_Dashboard(userID);
+                    dboard.Dispose();
                     dboard.Show();
 
                     

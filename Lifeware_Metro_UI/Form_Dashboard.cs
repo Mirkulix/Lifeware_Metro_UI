@@ -96,17 +96,13 @@ namespace Lifeware_Metro_UI
 
         private void Tbx_pd_telefonnummer_Format(object sender, EventArgs e)
         {
-            //string format;
-            //string ausgabe;
-
-            //format = "{0:(###) ###-####}";
-
-            //ausgabe = String.Format(format, tbx_pd_telefonnummer.Text);
-
-            //tbx_pd_ort.Text = ausgabe;
-
-            //TelefonnummerFormat telefonformat = new TelefonnummerFormat(tbx_pd_telefonnummer.Text, "+##########");
-            //tbx_pd_telefonnummer.Text = telefonformat.ToString();
+                                                                                            //string format;
+                                                                                            //string ausgabe;
+                                                                                            //format = "{0:(###) ###-####}";
+                                                                                            //ausgabe = String.Format(format, tbx_pd_telefonnummer.Text);
+                                                                                            //tbx_pd_ort.Text = ausgabe;
+                                                                                            //TelefonnummerFormat telefonformat = new TelefonnummerFormat(tbx_pd_telefonnummer.Text, "+##########");
+                                                                                            //tbx_pd_telefonnummer.Text = telefonformat.ToString();
 
             NummerFormat format = new NummerFormat(tbx_pd_telefonnummer.Text);
             tbx_pd_telefonnummer.Text = format.ToString();
@@ -130,29 +126,15 @@ namespace Lifeware_Metro_UI
                 picbox_pd_meinBild.SizeMode = PictureBoxSizeMode.StretchImage;
                 picbox_pd_meinBild.ImageLocation = DateiAuswahl.FileName;
 
-
-
-
-
-                //--------------------------------------------------------------------    
-
-
-                // FilePathUebergabe = DateiAuswahl.FileName;
-
-
-                //Image image = Image.FromFile(DateiAuswahl.FileName);
-
-
-                //picbox_pd_eigenesBild.
-                //picbox_pd_eigenesBild.Image = image;
-
-                /// Hier wurde die PictureBox vom Zeroit verwendet.
-
-                //picbox_zeroit.BackgroundImageLayout = ImageLayout.Stretch;
-                //picbox_zeroit.Image = image;
-
-
-                //---------------------------------------------------------------------
+                                                                                            //--------------------------------------------------------------------    
+                                                                                            // FilePathUebergabe = DateiAuswahl.FileName;
+                                                                                            //Image image = Image.FromFile(DateiAuswahl.FileName);
+                                                                                            //picbox_pd_eigenesBild.
+                                                                                            //picbox_pd_eigenesBild.Image = image;
+                                                                                            /// Hier wurde die PictureBox vom Zeroit verwendet.
+                                                                                            //picbox_zeroit.BackgroundImageLayout = ImageLayout.Stretch;
+                                                                                            //picbox_zeroit.Image = image;
+                                                                                            //---------------------------------------------------------------------
 
 
             }
@@ -161,7 +143,6 @@ namespace Lifeware_Metro_UI
         private void Form_Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
             Login gb = new Login();
-
             gb.Form_Show();
         }
 
