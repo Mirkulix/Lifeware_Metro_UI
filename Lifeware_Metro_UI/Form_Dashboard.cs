@@ -93,7 +93,8 @@ namespace Lifeware_Metro_UI
             else e.Cancel = true;
             if (e.Cancel)
             {
-                if (MessageBox.Show("Das Datenformat ist leider Flasch.Das Korrekteformat dd/mm/yyyy\n+ dd Biite geben Sie Zahlen zwischen 1 and 31.\n" +
+                if (MessageBox.Show("Das Datenformat ist leider Flasch.Das Korrekteformat " +
+                    "dd/mm/yyyy\n+ dd Biite geben Sie Zahlen zwischen 1 and 31.\n" +
                     "+ mm und den 1 and 12.\n+ yyyy vor dem Jahr 2019 ein.",
                     "Invalid date", MessageBoxButtons.OKCancel, MessageBoxIcon.Error) == DialogResult.Cancel)
                     e.Cancel = false;
@@ -156,7 +157,7 @@ namespace Lifeware_Metro_UI
         {
             DatabaseConnectingHandler db = new DatabaseConnectingHandler();
 
-            /// Table Persönliche Daten
+            /// Table Persönliche Daten /// Die Abhängkeiten klar rausarbeiten... 
             Patients pat = new Patients();
 
             if (picbox_pd_meinBild.ImageLocation != null)
@@ -165,11 +166,19 @@ namespace Lifeware_Metro_UI
                 imgData = File.ReadAllBytes(picbox_pd_meinBild.ImageLocation);
                 pat.Image = imgData;
             }
-            else
+            else if (picbox_pd_meinBild.Image != null || picbox_pd_meinBild.Image == null)
             {
                 byte [] PictureLoad = (byte[])(pat.Image);
                 pat.Image = PictureLoad;
             }
+
+            foreach (var control in this.Controls)
+            {
+                if (control is TextBox)
+                    if (((TextBox)control).Text == "") 
+                        ((TextBox)control).Text = " ";
+            }
+
             {
                 pat.LoginId_Login = userID_H;
                 pat.Anrede = AesOperation.EncryptString(key_User_Cryt, tbx_pd_anrede.Text); 
