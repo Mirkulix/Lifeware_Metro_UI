@@ -4,296 +4,296 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="ePatientDBlocalModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
-        <EntityType Name="Allergiens">
-          <Key>
-            <PropertyRef Name="Id_Allergien" />
-          </Key>
-          <Property Name="Id_Allergien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Allergie" Type="nvarchar(max)" />
-          <Property Name="Wann" Type="datetime" />
-          <Property Name="Reaktion" Type="nvarchar(max)" />
-          <Property Name="Besonderheit" Type="nvarchar(max)" />
-          <Property Name="Pat_Medi_DataId_Pat_Medi_Data" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Arzts">
-          <Key>
-            <PropertyRef Name="Id_Artz" />
-          </Key>
-          <Property Name="Id_Artz" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Anrede" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Vorname" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Nachname" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Straße" Type="nvarchar(max)" />
-          <Property Name="Nr" Type="smallint" />
-          <Property Name="PLZ" Type="smallint" />
-          <Property Name="Ort" Type="nvarchar(max)" />
-          <Property Name="Telefon" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="PatientId_Patient" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Dokumentes">
-          <Key>
-            <PropertyRef Name="Id_Dokumente" />
-          </Key>
-          <Property Name="Id_Dokumente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Was" Type="nvarchar(max)" />
-          <Property Name="Date" Type="datetime" />
-          <Property Name="Wo" Type="nvarchar(max)" />
-          <Property Name="Datei" Type="varbinary(max)" />
-          <Property Name="Pat_Medi_DataId_Pat_Medi_Data" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Erkrankungens">
-          <Key>
-            <PropertyRef Name="Id_Erkrankung" />
-          </Key>
-          <Property Name="Id_Erkrankung" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Erkrankung" Type="nvarchar(max)" />
-          <Property Name="Wann" Type="datetime" />
-          <Property Name="Chronisch" Type="nvarchar(max)" />
-          <Property Name="Pat_Medi_DataId_Pat_Medi_Data" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Logins">
-          <Key>
-            <PropertyRef Name="Id_Login" />
-          </Key>
-          <Property Name="Id_Login" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="EMail" Type="nvarchar(max)" />
-        </EntityType>
-        <EntityType Name="Medikations">
-          <Key>
-            <PropertyRef Name="Id_Medikation" />
-          </Key>
-          <Property Name="Id_Medikation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Medikament" Type="nvarchar(max)" />
-          <Property Name="Art" Type="nvarchar(max)" />
-          <Property Name="Dosis" Type="nvarchar(max)" />
-          <Property Name="Einnahmeregel" Type="nvarchar(max)" />
-          <Property Name="Besonderheit" Type="nvarchar(max)" />
-          <Property Name="Wann" Type="datetime" />
-          <Property Name="Pat_Medi_DataId_Pat_Medi_Data" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Notfallaktions">
-          <Key>
-            <PropertyRef Name="Id_Nottaktion" />
-          </Key>
-          <Property Name="Id_Nottaktion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Aktion" Type="nvarchar(max)" />
-          <Property Name="Vorname" Type="nvarchar(max)" />
-          <Property Name="Nachname" Type="nvarchar(max)" />
-          <Property Name="Straße" Type="nvarchar(max)" />
-          <Property Name="Nr" Type="smallint" />
-          <Property Name="PLZ" Type="smallint" />
-          <Property Name="Ort" Type="nvarchar(max)" />
-          <Property Name="Telefon" Type="nvarchar(max)" />
-          <Property Name="Besonderheit" Type="nvarchar(max)" />
-          <Property Name="PatientId_Patient" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Notfallkontakte">
-          <Key>
-            <PropertyRef Name="Id_Notfallkontakte" />
-          </Key>
-          <Property Name="Id_Notfallkontakte" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Vorname" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Telefonnummer" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Strasse" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="PLZ" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Ort" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="PatientsId_Patient" Type="int" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Pat_Medi_Datas">
-          <Key>
-            <PropertyRef Name="Id_Pat_Medi_Data" />
-          </Key>
-          <Property Name="Id_Pat_Medi_Data" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Organspende" Type="bit" />
-          <Property Name="Patfafü" Type="bit" />
-          <Property Name="Betreuungsverfügung" Type="bit" />
-          <Property Name="PatientId_Patient" Type="int" Nullable="false" />
-          <Property Name="Sorgerechtsverfügung" Type="bit" Nullable="false" />
-        </EntityType>
-        <EntityType Name="Patients">
-          <Key>
-            <PropertyRef Name="Id_Patient" />
-          </Key>
-          <Property Name="Id_Patient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Anrede" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Vorname" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Nachname" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Straße" Type="nvarchar(max)" />
-          <Property Name="Nr" Type="smallint" />
-          <Property Name="PLZ" Type="smallint" />
-          <Property Name="Ort" Type="nvarchar(max)" />
-          <Property Name="geb" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="ort_geb" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Telefon" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Krankenkasse" Type="nvarchar(max)" />
-          <Property Name="KrankenkassenNR" Type="nvarchar(max)" />
-          <Property Name="PersonalausweisNR" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="FührerscheinNR" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Image" Type="varbinary(max)" />
-          <Property Name="LoginId_Login" Type="int" Nullable="false" />
-        </EntityType>
-        <Association Name="FK_LoginPatient">
-          <End Role="Logins" Type="Self.Logins" Multiplicity="1" />
-          <End Role="Patients" Type="Self.Patients" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Logins">
-              <PropertyRef Name="Id_Login" />
-            </Principal>
-            <Dependent Role="Patients">
-              <PropertyRef Name="LoginId_Login" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Pat_Medi_DataAllergien">
-          <End Role="Pat_Medi_Datas" Type="Self.Pat_Medi_Datas" Multiplicity="1" />
-          <End Role="Allergiens" Type="Self.Allergiens" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pat_Medi_Datas">
-              <PropertyRef Name="Id_Pat_Medi_Data" />
-            </Principal>
-            <Dependent Role="Allergiens">
-              <PropertyRef Name="Pat_Medi_DataId_Pat_Medi_Data" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Pat_Medi_DataDokumente">
-          <End Role="Pat_Medi_Datas" Type="Self.Pat_Medi_Datas" Multiplicity="1" />
-          <End Role="Dokumentes" Type="Self.Dokumentes" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pat_Medi_Datas">
-              <PropertyRef Name="Id_Pat_Medi_Data" />
-            </Principal>
-            <Dependent Role="Dokumentes">
-              <PropertyRef Name="Pat_Medi_DataId_Pat_Medi_Data" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Pat_Medi_DataErkrankungen">
-          <End Role="Pat_Medi_Datas" Type="Self.Pat_Medi_Datas" Multiplicity="1" />
-          <End Role="Erkrankungens" Type="Self.Erkrankungens" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pat_Medi_Datas">
-              <PropertyRef Name="Id_Pat_Medi_Data" />
-            </Principal>
-            <Dependent Role="Erkrankungens">
-              <PropertyRef Name="Pat_Medi_DataId_Pat_Medi_Data" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Pat_Medi_DataMedikation">
-          <End Role="Pat_Medi_Datas" Type="Self.Pat_Medi_Datas" Multiplicity="1" />
-          <End Role="Medikations" Type="Self.Medikations" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Pat_Medi_Datas">
-              <PropertyRef Name="Id_Pat_Medi_Data" />
-            </Principal>
-            <Dependent Role="Medikations">
-              <PropertyRef Name="Pat_Medi_DataId_Pat_Medi_Data" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PatientArzt">
-          <End Role="Patients" Type="Self.Patients" Multiplicity="1" />
-          <End Role="Arzts" Type="Self.Arzts" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Patients">
-              <PropertyRef Name="Id_Patient" />
-            </Principal>
-            <Dependent Role="Arzts">
-              <PropertyRef Name="PatientId_Patient" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PatientNotfallaktion">
-          <End Role="Patients" Type="Self.Patients" Multiplicity="1" />
-          <End Role="Notfallaktions" Type="Self.Notfallaktions" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Patients">
-              <PropertyRef Name="Id_Patient" />
-            </Principal>
-            <Dependent Role="Notfallaktions">
-              <PropertyRef Name="PatientId_Patient" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PatientPat_Medi_Data">
-          <End Role="Patients" Type="Self.Patients" Multiplicity="1" />
-          <End Role="Pat_Medi_Datas" Type="Self.Pat_Medi_Datas" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Patients">
-              <PropertyRef Name="Id_Patient" />
-            </Principal>
-            <Dependent Role="Pat_Medi_Datas">
-              <PropertyRef Name="PatientId_Patient" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_PatientsNotfallkontakte">
-          <End Role="Patients" Type="Self.Patients" Multiplicity="1" />
-          <End Role="Notfallkontakte" Type="Self.Notfallkontakte" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Patients">
-              <PropertyRef Name="Id_Patient" />
-            </Principal>
-            <Dependent Role="Notfallkontakte">
-              <PropertyRef Name="PatientsId_Patient" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <EntityContainer Name="ePatientDBlocalModelStoreContainer">
-          <EntitySet Name="Allergiens" EntityType="Self.Allergiens" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Arzts" EntityType="Self.Arzts" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Dokumentes" EntityType="Self.Dokumentes" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Erkrankungens" EntityType="Self.Erkrankungens" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Logins" EntityType="Self.Logins" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Medikations" EntityType="Self.Medikations" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Notfallaktions" EntityType="Self.Notfallaktions" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Notfallkontakte" EntityType="Self.Notfallkontakte" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Pat_Medi_Datas" EntityType="Self.Pat_Medi_Datas" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Patients" EntityType="Self.Patients" Schema="dbo" store:Type="Tables" />
-          <AssociationSet Name="FK_LoginPatient" Association="Self.FK_LoginPatient">
-            <End Role="Logins" EntitySet="Logins" />
-            <End Role="Patients" EntitySet="Patients" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pat_Medi_DataAllergien" Association="Self.FK_Pat_Medi_DataAllergien">
-            <End Role="Pat_Medi_Datas" EntitySet="Pat_Medi_Datas" />
-            <End Role="Allergiens" EntitySet="Allergiens" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pat_Medi_DataDokumente" Association="Self.FK_Pat_Medi_DataDokumente">
-            <End Role="Pat_Medi_Datas" EntitySet="Pat_Medi_Datas" />
-            <End Role="Dokumentes" EntitySet="Dokumentes" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pat_Medi_DataErkrankungen" Association="Self.FK_Pat_Medi_DataErkrankungen">
-            <End Role="Pat_Medi_Datas" EntitySet="Pat_Medi_Datas" />
-            <End Role="Erkrankungens" EntitySet="Erkrankungens" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Pat_Medi_DataMedikation" Association="Self.FK_Pat_Medi_DataMedikation">
-            <End Role="Pat_Medi_Datas" EntitySet="Pat_Medi_Datas" />
-            <End Role="Medikations" EntitySet="Medikations" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PatientArzt" Association="Self.FK_PatientArzt">
-            <End Role="Patients" EntitySet="Patients" />
-            <End Role="Arzts" EntitySet="Arzts" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PatientNotfallaktion" Association="Self.FK_PatientNotfallaktion">
-            <End Role="Patients" EntitySet="Patients" />
-            <End Role="Notfallaktions" EntitySet="Notfallaktions" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PatientPat_Medi_Data" Association="Self.FK_PatientPat_Medi_Data">
-            <End Role="Patients" EntitySet="Patients" />
-            <End Role="Pat_Medi_Datas" EntitySet="Pat_Medi_Datas" />
-          </AssociationSet>
-          <AssociationSet Name="FK_PatientsNotfallkontakte" Association="Self.FK_PatientsNotfallkontakte">
-            <End Role="Patients" EntitySet="Patients" />
-            <End Role="Notfallkontakte" EntitySet="Notfallkontakte" />
-          </AssociationSet>
-        </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+    <Schema Namespace="ePatientDBlocalModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="ePatientDBlocalModelStoreContainer">
+    <EntitySet Name="Allergiens" EntityType="ePatientDBlocalModel.Store.Allergiens" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Arzts" EntityType="ePatientDBlocalModel.Store.Arzts" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Dokumentes" EntityType="ePatientDBlocalModel.Store.Dokumentes" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Erkrankungens" EntityType="ePatientDBlocalModel.Store.Erkrankungens" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Logins" EntityType="ePatientDBlocalModel.Store.Logins" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Medikations" EntityType="ePatientDBlocalModel.Store.Medikations" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Notfallaktions" EntityType="ePatientDBlocalModel.Store.Notfallaktions" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Notfallkontakte" EntityType="ePatientDBlocalModel.Store.Notfallkontakte" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Pat_Medi_Datas" EntityType="ePatientDBlocalModel.Store.Pat_Medi_Datas" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Patients" EntityType="ePatientDBlocalModel.Store.Patients" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Pat_Medi_DataAllergien" Association="ePatientDBlocalModel.Store.FK_Pat_Medi_DataAllergien">
+      <End Role="Pat_Medi_Datas" EntitySet="Pat_Medi_Datas" />
+      <End Role="Allergiens" EntitySet="Allergiens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PatientArzt" Association="ePatientDBlocalModel.Store.FK_PatientArzt">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Arzts" EntitySet="Arzts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pat_Medi_DataDokumente" Association="ePatientDBlocalModel.Store.FK_Pat_Medi_DataDokumente">
+      <End Role="Pat_Medi_Datas" EntitySet="Pat_Medi_Datas" />
+      <End Role="Dokumentes" EntitySet="Dokumentes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pat_Medi_DataErkrankungen" Association="ePatientDBlocalModel.Store.FK_Pat_Medi_DataErkrankungen">
+      <End Role="Pat_Medi_Datas" EntitySet="Pat_Medi_Datas" />
+      <End Role="Erkrankungens" EntitySet="Erkrankungens" />
+    </AssociationSet>
+    <AssociationSet Name="FK_LoginPatient" Association="ePatientDBlocalModel.Store.FK_LoginPatient">
+      <End Role="Logins" EntitySet="Logins" />
+      <End Role="Patients" EntitySet="Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Pat_Medi_DataMedikation" Association="ePatientDBlocalModel.Store.FK_Pat_Medi_DataMedikation">
+      <End Role="Pat_Medi_Datas" EntitySet="Pat_Medi_Datas" />
+      <End Role="Medikations" EntitySet="Medikations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PatientNotfallaktion" Association="ePatientDBlocalModel.Store.FK_PatientNotfallaktion">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Notfallaktions" EntitySet="Notfallaktions" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PatientsNotfallkontakte" Association="ePatientDBlocalModel.Store.FK_PatientsNotfallkontakte">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Notfallkontakte" EntitySet="Notfallkontakte" />
+    </AssociationSet>
+    <AssociationSet Name="FK_PatientPat_Medi_Data" Association="ePatientDBlocalModel.Store.FK_PatientPat_Medi_Data">
+      <End Role="Patients" EntitySet="Patients" />
+      <End Role="Pat_Medi_Datas" EntitySet="Pat_Medi_Datas" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Allergiens">
+    <Key>
+      <PropertyRef Name="Id_Allergien" />
+    </Key>
+    <Property Name="Id_Allergien" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Allergie" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Wann" Type="datetime" Nullable="true" />
+    <Property Name="Reaktion" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Besonderheit" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Pat_Medi_DataId_Pat_Medi_Data" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Arzts">
+    <Key>
+      <PropertyRef Name="Id_Artz" />
+    </Key>
+    <Property Name="Id_Artz" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Anrede" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Vorname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nachname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Straße" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Nr" Type="smallint" Nullable="true" />
+    <Property Name="PLZ" Type="smallint" Nullable="true" />
+    <Property Name="Ort" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Telefon" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PatientId_Patient" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Dokumentes">
+    <Key>
+      <PropertyRef Name="Id_Dokumente" />
+    </Key>
+    <Property Name="Id_Dokumente" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Was" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Date" Type="datetime" Nullable="true" />
+    <Property Name="Wo" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Datei" Type="varbinary(max)" Nullable="true" />
+    <Property Name="Pat_Medi_DataId_Pat_Medi_Data" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Erkrankungens">
+    <Key>
+      <PropertyRef Name="Id_Erkrankung" />
+    </Key>
+    <Property Name="Id_Erkrankung" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Erkrankung" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Wann" Type="datetime" Nullable="true" />
+    <Property Name="Chronisch" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Pat_Medi_DataId_Pat_Medi_Data" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Logins">
+    <Key>
+      <PropertyRef Name="Id_Login" />
+    </Key>
+    <Property Name="Id_Login" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Username" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Password" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EMail" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="AES_ID" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Medikations">
+    <Key>
+      <PropertyRef Name="Id_Medikation" />
+    </Key>
+    <Property Name="Id_Medikation" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Medikament" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Art" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Dosis" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Einnahmeregel" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Besonderheit" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Wann" Type="datetime" Nullable="true" />
+    <Property Name="Pat_Medi_DataId_Pat_Medi_Data" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notfallaktions">
+    <Key>
+      <PropertyRef Name="Id_Nottaktion" />
+    </Key>
+    <Property Name="Id_Nottaktion" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Aktion" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Vorname" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Nachname" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Straße" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Nr" Type="smallint" Nullable="true" />
+    <Property Name="PLZ" Type="smallint" Nullable="true" />
+    <Property Name="Ort" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Telefon" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Besonderheit" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PatientId_Patient" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Notfallkontakte">
+    <Key>
+      <PropertyRef Name="Id_Notfallkontakte" />
+    </Key>
+    <Property Name="Id_Notfallkontakte" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Vorname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefonnummer" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Strasse" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PLZ" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Ort" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PatientsId_Patient" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Pat_Medi_Datas">
+    <Key>
+      <PropertyRef Name="Id_Pat_Medi_Data" />
+    </Key>
+    <Property Name="Id_Pat_Medi_Data" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Organspende" Type="bit" Nullable="true" />
+    <Property Name="Patfafü" Type="bit" Nullable="true" />
+    <Property Name="Betreuungsverfügung" Type="bit" Nullable="true" />
+    <Property Name="PatientId_Patient" Type="int" Nullable="false" />
+    <Property Name="Sorgerechtsverfügung" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Patients">
+    <Key>
+      <PropertyRef Name="Id_Patient" />
+    </Key>
+    <Property Name="Id_Patient" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Anrede" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Vorname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Nachname" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Straße" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Nr" Type="smallint" Nullable="true" />
+    <Property Name="PLZ" Type="smallint" Nullable="true" />
+    <Property Name="Ort" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="geb" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ort_geb" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Telefon" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Krankenkasse" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="KrankenkassenNR" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PersonalausweisNR" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="FührerscheinNR" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Image" Type="varbinary(max)" Nullable="true" />
+    <Property Name="LoginId_Login" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_Pat_Medi_DataAllergien">
+    <End Role="Pat_Medi_Datas" Type="ePatientDBlocalModel.Store.Pat_Medi_Datas" Multiplicity="1" />
+    <End Role="Allergiens" Type="ePatientDBlocalModel.Store.Allergiens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pat_Medi_Datas">
+        <PropertyRef Name="Id_Pat_Medi_Data" />
+      </Principal>
+      <Dependent Role="Allergiens">
+        <PropertyRef Name="Pat_Medi_DataId_Pat_Medi_Data" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PatientArzt">
+    <End Role="Patients" Type="ePatientDBlocalModel.Store.Patients" Multiplicity="1" />
+    <End Role="Arzts" Type="ePatientDBlocalModel.Store.Arzts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="Id_Patient" />
+      </Principal>
+      <Dependent Role="Arzts">
+        <PropertyRef Name="PatientId_Patient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pat_Medi_DataDokumente">
+    <End Role="Pat_Medi_Datas" Type="ePatientDBlocalModel.Store.Pat_Medi_Datas" Multiplicity="1" />
+    <End Role="Dokumentes" Type="ePatientDBlocalModel.Store.Dokumentes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pat_Medi_Datas">
+        <PropertyRef Name="Id_Pat_Medi_Data" />
+      </Principal>
+      <Dependent Role="Dokumentes">
+        <PropertyRef Name="Pat_Medi_DataId_Pat_Medi_Data" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pat_Medi_DataErkrankungen">
+    <End Role="Pat_Medi_Datas" Type="ePatientDBlocalModel.Store.Pat_Medi_Datas" Multiplicity="1" />
+    <End Role="Erkrankungens" Type="ePatientDBlocalModel.Store.Erkrankungens" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pat_Medi_Datas">
+        <PropertyRef Name="Id_Pat_Medi_Data" />
+      </Principal>
+      <Dependent Role="Erkrankungens">
+        <PropertyRef Name="Pat_Medi_DataId_Pat_Medi_Data" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_LoginPatient">
+    <End Role="Logins" Type="ePatientDBlocalModel.Store.Logins" Multiplicity="1" />
+    <End Role="Patients" Type="ePatientDBlocalModel.Store.Patients" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Logins">
+        <PropertyRef Name="Id_Login" />
+      </Principal>
+      <Dependent Role="Patients">
+        <PropertyRef Name="LoginId_Login" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Pat_Medi_DataMedikation">
+    <End Role="Pat_Medi_Datas" Type="ePatientDBlocalModel.Store.Pat_Medi_Datas" Multiplicity="1" />
+    <End Role="Medikations" Type="ePatientDBlocalModel.Store.Medikations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Pat_Medi_Datas">
+        <PropertyRef Name="Id_Pat_Medi_Data" />
+      </Principal>
+      <Dependent Role="Medikations">
+        <PropertyRef Name="Pat_Medi_DataId_Pat_Medi_Data" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PatientNotfallaktion">
+    <End Role="Patients" Type="ePatientDBlocalModel.Store.Patients" Multiplicity="1" />
+    <End Role="Notfallaktions" Type="ePatientDBlocalModel.Store.Notfallaktions" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="Id_Patient" />
+      </Principal>
+      <Dependent Role="Notfallaktions">
+        <PropertyRef Name="PatientId_Patient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PatientsNotfallkontakte">
+    <End Role="Patients" Type="ePatientDBlocalModel.Store.Patients" Multiplicity="1" />
+    <End Role="Notfallkontakte" Type="ePatientDBlocalModel.Store.Notfallkontakte" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="Id_Patient" />
+      </Principal>
+      <Dependent Role="Notfallkontakte">
+        <PropertyRef Name="PatientsId_Patient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_PatientPat_Medi_Data">
+    <End Role="Patients" Type="ePatientDBlocalModel.Store.Patients" Multiplicity="1" />
+    <End Role="Pat_Medi_Datas" Type="ePatientDBlocalModel.Store.Pat_Medi_Datas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Patients">
+        <PropertyRef Name="Id_Patient" />
+      </Principal>
+      <Dependent Role="Pat_Medi_Datas">
+        <PropertyRef Name="PatientId_Patient" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="ePatientDBlocalModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -357,6 +357,7 @@
           <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="EMail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Patients" Relationship="Self.FK_LoginPatient" FromRole="Logins" ToRole="Patients" />
+          <Property Name="AES_ID" Type="String" Nullable="false" />
         </EntityType>
         <EntityType Name="Medikations">
           <Key>
@@ -606,152 +607,152 @@
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
-      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="ePatientDBlocalModelStoreContainer" CdmEntityContainer="DatabaseConnectingHandler">
-          <EntitySetMapping Name="Allergiens">
-            <EntityTypeMapping TypeName="ePatientDBlocalModel.Allergiens">
-              <MappingFragment StoreEntitySet="Allergiens">
-                <ScalarProperty Name="Id_Allergien" ColumnName="Id_Allergien" />
-                <ScalarProperty Name="Allergie" ColumnName="Allergie" />
-                <ScalarProperty Name="Wann" ColumnName="Wann" />
-                <ScalarProperty Name="Reaktion" ColumnName="Reaktion" />
-                <ScalarProperty Name="Besonderheit" ColumnName="Besonderheit" />
-                <ScalarProperty Name="Pat_Medi_DataId_Pat_Medi_Data" ColumnName="Pat_Medi_DataId_Pat_Medi_Data" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Arzts">
-            <EntityTypeMapping TypeName="ePatientDBlocalModel.Arzts">
-              <MappingFragment StoreEntitySet="Arzts">
-                <ScalarProperty Name="Id_Artz" ColumnName="Id_Artz" />
-                <ScalarProperty Name="Anrede" ColumnName="Anrede" />
-                <ScalarProperty Name="Vorname" ColumnName="Vorname" />
-                <ScalarProperty Name="Nachname" ColumnName="Nachname" />
-                <ScalarProperty Name="Straße" ColumnName="Straße" />
-                <ScalarProperty Name="Nr" ColumnName="Nr" />
-                <ScalarProperty Name="PLZ" ColumnName="PLZ" />
-                <ScalarProperty Name="Ort" ColumnName="Ort" />
-                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
-                <ScalarProperty Name="PatientId_Patient" ColumnName="PatientId_Patient" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Dokumentes">
-            <EntityTypeMapping TypeName="ePatientDBlocalModel.Dokumentes">
-              <MappingFragment StoreEntitySet="Dokumentes">
-                <ScalarProperty Name="Id_Dokumente" ColumnName="Id_Dokumente" />
-                <ScalarProperty Name="Was" ColumnName="Was" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
-                <ScalarProperty Name="Wo" ColumnName="Wo" />
-                <ScalarProperty Name="Datei" ColumnName="Datei" />
-                <ScalarProperty Name="Pat_Medi_DataId_Pat_Medi_Data" ColumnName="Pat_Medi_DataId_Pat_Medi_Data" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Erkrankungens">
-            <EntityTypeMapping TypeName="ePatientDBlocalModel.Erkrankungens">
-              <MappingFragment StoreEntitySet="Erkrankungens">
-                <ScalarProperty Name="Id_Erkrankung" ColumnName="Id_Erkrankung" />
-                <ScalarProperty Name="Erkrankung" ColumnName="Erkrankung" />
-                <ScalarProperty Name="Wann" ColumnName="Wann" />
-                <ScalarProperty Name="Chronisch" ColumnName="Chronisch" />
-                <ScalarProperty Name="Pat_Medi_DataId_Pat_Medi_Data" ColumnName="Pat_Medi_DataId_Pat_Medi_Data" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Logins">
-            <EntityTypeMapping TypeName="ePatientDBlocalModel.Logins">
-              <MappingFragment StoreEntitySet="Logins">
-                <ScalarProperty Name="Id_Login" ColumnName="Id_Login" />
-                <ScalarProperty Name="Username" ColumnName="Username" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="EMail" ColumnName="EMail" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Medikations">
-            <EntityTypeMapping TypeName="ePatientDBlocalModel.Medikations">
-              <MappingFragment StoreEntitySet="Medikations">
-                <ScalarProperty Name="Id_Medikation" ColumnName="Id_Medikation" />
-                <ScalarProperty Name="Medikament" ColumnName="Medikament" />
-                <ScalarProperty Name="Art" ColumnName="Art" />
-                <ScalarProperty Name="Dosis" ColumnName="Dosis" />
-                <ScalarProperty Name="Einnahmeregel" ColumnName="Einnahmeregel" />
-                <ScalarProperty Name="Besonderheit" ColumnName="Besonderheit" />
-                <ScalarProperty Name="Wann" ColumnName="Wann" />
-                <ScalarProperty Name="Pat_Medi_DataId_Pat_Medi_Data" ColumnName="Pat_Medi_DataId_Pat_Medi_Data" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Notfallaktions">
-            <EntityTypeMapping TypeName="ePatientDBlocalModel.Notfallaktions">
-              <MappingFragment StoreEntitySet="Notfallaktions">
-                <ScalarProperty Name="Id_Nottaktion" ColumnName="Id_Nottaktion" />
-                <ScalarProperty Name="Aktion" ColumnName="Aktion" />
-                <ScalarProperty Name="Vorname" ColumnName="Vorname" />
-                <ScalarProperty Name="Nachname" ColumnName="Nachname" />
-                <ScalarProperty Name="Straße" ColumnName="Straße" />
-                <ScalarProperty Name="Nr" ColumnName="Nr" />
-                <ScalarProperty Name="PLZ" ColumnName="PLZ" />
-                <ScalarProperty Name="Ort" ColumnName="Ort" />
-                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
-                <ScalarProperty Name="Besonderheit" ColumnName="Besonderheit" />
-                <ScalarProperty Name="PatientId_Patient" ColumnName="PatientId_Patient" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Notfallkontakte">
-            <EntityTypeMapping TypeName="ePatientDBlocalModel.Notfallkontakte">
-              <MappingFragment StoreEntitySet="Notfallkontakte">
-                <ScalarProperty Name="Id_Notfallkontakte" ColumnName="Id_Notfallkontakte" />
-                <ScalarProperty Name="Vorname" ColumnName="Vorname" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Telefonnummer" ColumnName="Telefonnummer" />
-                <ScalarProperty Name="Strasse" ColumnName="Strasse" />
-                <ScalarProperty Name="PLZ" ColumnName="PLZ" />
-                <ScalarProperty Name="Ort" ColumnName="Ort" />
-                <ScalarProperty Name="PatientsId_Patient" ColumnName="PatientsId_Patient" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Pat_Medi_Datas">
-            <EntityTypeMapping TypeName="ePatientDBlocalModel.Pat_Medi_Datas">
-              <MappingFragment StoreEntitySet="Pat_Medi_Datas">
-                <ScalarProperty Name="Id_Pat_Medi_Data" ColumnName="Id_Pat_Medi_Data" />
-                <ScalarProperty Name="Organspende" ColumnName="Organspende" />
-                <ScalarProperty Name="Patfafü" ColumnName="Patfafü" />
-                <ScalarProperty Name="Betreuungsverfügung" ColumnName="Betreuungsverfügung" />
-                <ScalarProperty Name="PatientId_Patient" ColumnName="PatientId_Patient" />
-                <ScalarProperty Name="Sorgerechtsverfügung" ColumnName="Sorgerechtsverfügung" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Patients">
-            <EntityTypeMapping TypeName="ePatientDBlocalModel.Patients">
-              <MappingFragment StoreEntitySet="Patients">
-                <ScalarProperty Name="Id_Patient" ColumnName="Id_Patient" />
-                <ScalarProperty Name="Anrede" ColumnName="Anrede" />
-                <ScalarProperty Name="Vorname" ColumnName="Vorname" />
-                <ScalarProperty Name="Nachname" ColumnName="Nachname" />
-                <ScalarProperty Name="Straße" ColumnName="Straße" />
-                <ScalarProperty Name="Nr" ColumnName="Nr" />
-                <ScalarProperty Name="PLZ" ColumnName="PLZ" />
-                <ScalarProperty Name="Ort" ColumnName="Ort" />
-                <ScalarProperty Name="geb" ColumnName="geb" />
-                <ScalarProperty Name="ort_geb" ColumnName="ort_geb" />
-                <ScalarProperty Name="Telefon" ColumnName="Telefon" />
-                <ScalarProperty Name="Krankenkasse" ColumnName="Krankenkasse" />
-                <ScalarProperty Name="KrankenkassenNR" ColumnName="KrankenkassenNR" />
-                <ScalarProperty Name="PersonalausweisNR" ColumnName="PersonalausweisNR" />
-                <ScalarProperty Name="FührerscheinNR" ColumnName="FührerscheinNR" />
-                <ScalarProperty Name="Image" ColumnName="Image" />
-                <ScalarProperty Name="LoginId_Login" ColumnName="LoginId_Login" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-        </EntityContainerMapping>
-      </Mapping>
-    </edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ePatientDBlocalModelStoreContainer" CdmEntityContainer="DatabaseConnectingHandler">
+    <EntitySetMapping Name="Allergiens">
+      <EntityTypeMapping TypeName="IsTypeOf(ePatientDBlocalModel.Allergiens)">
+        <MappingFragment StoreEntitySet="Allergiens">
+          <ScalarProperty Name="Id_Allergien" ColumnName="Id_Allergien" />
+          <ScalarProperty Name="Allergie" ColumnName="Allergie" />
+          <ScalarProperty Name="Wann" ColumnName="Wann" />
+          <ScalarProperty Name="Reaktion" ColumnName="Reaktion" />
+          <ScalarProperty Name="Besonderheit" ColumnName="Besonderheit" />
+          <ScalarProperty Name="Pat_Medi_DataId_Pat_Medi_Data" ColumnName="Pat_Medi_DataId_Pat_Medi_Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Arzts">
+      <EntityTypeMapping TypeName="IsTypeOf(ePatientDBlocalModel.Arzts)">
+        <MappingFragment StoreEntitySet="Arzts">
+          <ScalarProperty Name="Id_Artz" ColumnName="Id_Artz" />
+          <ScalarProperty Name="Anrede" ColumnName="Anrede" />
+          <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+          <ScalarProperty Name="Nachname" ColumnName="Nachname" />
+          <ScalarProperty Name="Straße" ColumnName="Straße" />
+          <ScalarProperty Name="Nr" ColumnName="Nr" />
+          <ScalarProperty Name="PLZ" ColumnName="PLZ" />
+          <ScalarProperty Name="Ort" ColumnName="Ort" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="PatientId_Patient" ColumnName="PatientId_Patient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dokumentes">
+      <EntityTypeMapping TypeName="IsTypeOf(ePatientDBlocalModel.Dokumentes)">
+        <MappingFragment StoreEntitySet="Dokumentes">
+          <ScalarProperty Name="Id_Dokumente" ColumnName="Id_Dokumente" />
+          <ScalarProperty Name="Was" ColumnName="Was" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Wo" ColumnName="Wo" />
+          <ScalarProperty Name="Datei" ColumnName="Datei" />
+          <ScalarProperty Name="Pat_Medi_DataId_Pat_Medi_Data" ColumnName="Pat_Medi_DataId_Pat_Medi_Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Erkrankungens">
+      <EntityTypeMapping TypeName="IsTypeOf(ePatientDBlocalModel.Erkrankungens)">
+        <MappingFragment StoreEntitySet="Erkrankungens">
+          <ScalarProperty Name="Id_Erkrankung" ColumnName="Id_Erkrankung" />
+          <ScalarProperty Name="Erkrankung" ColumnName="Erkrankung" />
+          <ScalarProperty Name="Wann" ColumnName="Wann" />
+          <ScalarProperty Name="Chronisch" ColumnName="Chronisch" />
+          <ScalarProperty Name="Pat_Medi_DataId_Pat_Medi_Data" ColumnName="Pat_Medi_DataId_Pat_Medi_Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="IsTypeOf(ePatientDBlocalModel.Logins)">
+        <MappingFragment StoreEntitySet="Logins">
+          <ScalarProperty Name="Id_Login" ColumnName="Id_Login" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="EMail" ColumnName="EMail" />
+          <ScalarProperty Name="AES_ID" ColumnName="AES_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medikations">
+      <EntityTypeMapping TypeName="IsTypeOf(ePatientDBlocalModel.Medikations)">
+        <MappingFragment StoreEntitySet="Medikations">
+          <ScalarProperty Name="Id_Medikation" ColumnName="Id_Medikation" />
+          <ScalarProperty Name="Medikament" ColumnName="Medikament" />
+          <ScalarProperty Name="Art" ColumnName="Art" />
+          <ScalarProperty Name="Dosis" ColumnName="Dosis" />
+          <ScalarProperty Name="Einnahmeregel" ColumnName="Einnahmeregel" />
+          <ScalarProperty Name="Besonderheit" ColumnName="Besonderheit" />
+          <ScalarProperty Name="Wann" ColumnName="Wann" />
+          <ScalarProperty Name="Pat_Medi_DataId_Pat_Medi_Data" ColumnName="Pat_Medi_DataId_Pat_Medi_Data" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notfallaktions">
+      <EntityTypeMapping TypeName="IsTypeOf(ePatientDBlocalModel.Notfallaktions)">
+        <MappingFragment StoreEntitySet="Notfallaktions">
+          <ScalarProperty Name="Id_Nottaktion" ColumnName="Id_Nottaktion" />
+          <ScalarProperty Name="Aktion" ColumnName="Aktion" />
+          <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+          <ScalarProperty Name="Nachname" ColumnName="Nachname" />
+          <ScalarProperty Name="Straße" ColumnName="Straße" />
+          <ScalarProperty Name="Nr" ColumnName="Nr" />
+          <ScalarProperty Name="PLZ" ColumnName="PLZ" />
+          <ScalarProperty Name="Ort" ColumnName="Ort" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Besonderheit" ColumnName="Besonderheit" />
+          <ScalarProperty Name="PatientId_Patient" ColumnName="PatientId_Patient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notfallkontakte">
+      <EntityTypeMapping TypeName="IsTypeOf(ePatientDBlocalModel.Notfallkontakte)">
+        <MappingFragment StoreEntitySet="Notfallkontakte">
+          <ScalarProperty Name="Id_Notfallkontakte" ColumnName="Id_Notfallkontakte" />
+          <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Telefonnummer" ColumnName="Telefonnummer" />
+          <ScalarProperty Name="Strasse" ColumnName="Strasse" />
+          <ScalarProperty Name="PLZ" ColumnName="PLZ" />
+          <ScalarProperty Name="Ort" ColumnName="Ort" />
+          <ScalarProperty Name="PatientsId_Patient" ColumnName="PatientsId_Patient" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Pat_Medi_Datas">
+      <EntityTypeMapping TypeName="IsTypeOf(ePatientDBlocalModel.Pat_Medi_Datas)">
+        <MappingFragment StoreEntitySet="Pat_Medi_Datas">
+          <ScalarProperty Name="Id_Pat_Medi_Data" ColumnName="Id_Pat_Medi_Data" />
+          <ScalarProperty Name="Organspende" ColumnName="Organspende" />
+          <ScalarProperty Name="Patfafü" ColumnName="Patfafü" />
+          <ScalarProperty Name="Betreuungsverfügung" ColumnName="Betreuungsverfügung" />
+          <ScalarProperty Name="PatientId_Patient" ColumnName="PatientId_Patient" />
+          <ScalarProperty Name="Sorgerechtsverfügung" ColumnName="Sorgerechtsverfügung" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="IsTypeOf(ePatientDBlocalModel.Patients)">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="Id_Patient" ColumnName="Id_Patient" />
+          <ScalarProperty Name="Anrede" ColumnName="Anrede" />
+          <ScalarProperty Name="Vorname" ColumnName="Vorname" />
+          <ScalarProperty Name="Nachname" ColumnName="Nachname" />
+          <ScalarProperty Name="Straße" ColumnName="Straße" />
+          <ScalarProperty Name="Nr" ColumnName="Nr" />
+          <ScalarProperty Name="PLZ" ColumnName="PLZ" />
+          <ScalarProperty Name="Ort" ColumnName="Ort" />
+          <ScalarProperty Name="geb" ColumnName="geb" />
+          <ScalarProperty Name="ort_geb" ColumnName="ort_geb" />
+          <ScalarProperty Name="Telefon" ColumnName="Telefon" />
+          <ScalarProperty Name="Krankenkasse" ColumnName="Krankenkasse" />
+          <ScalarProperty Name="KrankenkassenNR" ColumnName="KrankenkassenNR" />
+          <ScalarProperty Name="PersonalausweisNR" ColumnName="PersonalausweisNR" />
+          <ScalarProperty Name="FührerscheinNR" ColumnName="FührerscheinNR" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="LoginId_Login" ColumnName="LoginId_Login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
   </edmx:Runtime>
   <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
   <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
@@ -765,7 +766,7 @@
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
         <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
-        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="Kein" />
       </DesignerInfoPropertySet>
     </Options>

@@ -21,6 +21,7 @@ namespace Lifeware_Metro_UI
         Logins login = new Logins();
 
         public int userID;
+        public string key;
 
 
 
@@ -45,9 +46,10 @@ namespace Lifeware_Metro_UI
                     tbx_Passwd.Text = string.Empty;
 
                     userID = user.Id_Login;
+                    key = user.AES_ID;
 
-                    Form_Dashboard dboard = new Form_Dashboard(userID);
-                    dboard.Dispose();
+                    Form_Dashboard dboard = new Form_Dashboard(userID,key);
+                    // dboard.Dispose();
                     dboard.Show();
 
                     
@@ -101,6 +103,8 @@ namespace Lifeware_Metro_UI
                 string Epass = HPass(password);
                 login.Username = username;
                 login.Password = Epass;
+                // Hier wird Verschlüsselungs_Key_generiert
+                login.AES_ID = AesOperation.GenerateCoupon(32);
 
                 tbx_reg_login.Text = String.Empty;
                 tbx_reg_passwd.Text = String.Empty;
@@ -156,7 +160,7 @@ namespace Lifeware_Metro_UI
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Close();
+            this.Close();
         }
     }
 }

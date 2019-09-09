@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="670cfa5f8a574148b41a13451cba13cb" Name="Diagram1" ZoomLevel="55">
+      <Diagram DiagramId="670cfa5f8a574148b41a13451cba13cb" Name="Diagram1" ZoomLevel="94">
         <EntityTypeShape EntityType="ePatientDBlocalModel.Allergiens" Width="1.5" PointX="9.75" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="ePatientDBlocalModel.Arzts" Width="1.5" PointX="1.25" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="ePatientDBlocalModel.Dokumentes" Width="1.5" PointX="7.5" PointY="13.875" IsExpanded="true" />

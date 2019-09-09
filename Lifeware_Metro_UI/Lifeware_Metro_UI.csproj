@@ -77,11 +77,17 @@
     <Reference Include="Zeroit.Framework.ButtonThematic, Version=1.0.7032.33577, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
       <HintPath>..\packages\Zeroit.Framework.ButtonThematic.1.0.0\lib\Zeroit.Framework.ButtonThematic.dll</HintPath>
     </Reference>
+    <Reference Include="Zeroit.Framework.Component, Version=1.0.7033.9537, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeroit.Framework.Component.1.0.0\lib\Zeroit.Framework.Component.dll</HintPath>
+    </Reference>
     <Reference Include="Zeroit.Framework.Form, Version=1.0.7033.12348, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
       <HintPath>..\packages\Zeroit.Framework.Form.1.0.0\lib\Zeroit.Framework.Form.dll</HintPath>
     </Reference>
     <Reference Include="Zeroit.Framework.FormEditors, Version=1.0.7033.14697, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
       <HintPath>..\packages\Zeroit.Framework.FormEditors.1.0.0\lib\Zeroit.Framework.FormEditors.dll</HintPath>
+    </Reference>
+    <Reference Include="Zeroit.Framework.FormThemes.UIThemes, Version=1.0.7033.15273, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeroit.Framework.FormThemes.UIThemes.1.0.0\lib\Zeroit.Framework.FormThemes.UIThemes.dll</HintPath>
     </Reference>
     <Reference Include="Zeroit.Framework.Labels, Version=1.0.7036.34859, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
       <HintPath>..\packages\Zeroit.Framework.Labels.1.0.0\lib\Zeroit.Framework.Labels.dll</HintPath>
@@ -101,8 +107,12 @@
     <Reference Include="Zeroit.Framework.Tooltip, Version=1.0.0.0, Culture=neutral, PublicKeyToken=a0cee1bfa120b953, processorArchitecture=MSIL">
       <HintPath>..\packages\Zeroit.Framework.Tooltip.1.0.0\lib\Zeroit.Framework.Tooltip.dll</HintPath>
     </Reference>
+    <Reference Include="Zeroit.Framework.UIThemes, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Zeroit.Framework.UIThemes.1.0.0\lib\Zeroit.Framework.UIThemes.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AesOperation.cs" />
     <Compile Include="Allergiens.cs">
       <DependentUpon>LifewareDataModel.tt</DependentUpon>
     </Compile>
@@ -210,6 +220,7 @@
       <DependentUpon>LifewareDataModel.edmx</DependentUpon>
       <LastGenOutput>LifewareDataModel.Context.cs</LastGenOutput>
     </Content>
+    <Content Include="LifewareDataModel.edmx.sql" />
     <Content Include="LifewareDataModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>LifewareDataModel.edmx</DependentUpon>

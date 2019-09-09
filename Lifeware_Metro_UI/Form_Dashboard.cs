@@ -13,6 +13,7 @@ using XanderUI;
 using System.Text.RegularExpressions;
 using System.IO;
 
+
 namespace Lifeware_Metro_UI
 {
     public partial class Form_Dashboard : ZeroitMaterialForm
@@ -20,7 +21,8 @@ namespace Lifeware_Metro_UI
 
         public int userID_H;
         public string FilePathUebergabe;
-
+        // Hier wird der Schlüsselübergeben
+        public string key_User_Cryt;
 
 
 
@@ -30,11 +32,11 @@ namespace Lifeware_Metro_UI
             InitializeComponent();
         }
 
-        public Form_Dashboard(int userID)
+        public Form_Dashboard(int userID,string key)
         {
             InitializeComponent();
             this.userID_H = userID;
-
+            this.key_User_Cryt = key;
 
 
             using (DatabaseConnectingHandler db = new DatabaseConnectingHandler())
@@ -43,27 +45,31 @@ namespace Lifeware_Metro_UI
                 byte[] PictureLoad = null;
 
 
+
                 foreach (var pat in db.Patients)
                 {
                     if (pat.LoginId_Login == userID_H)
                     {
-                        tbx_pd_anrede.Text = pat.Anrede;
-                        tbx_pd_vorname.Text = pat.Vorname;
-                        tbx_pd_nachname.Text = pat.Nachname;
-                        tbx_pd_strasse.Text = pat.Straße;
-                        tbx_pd_nr.Text = pat.Nr.ToString();
-                        tbx_pd_plz.Text = pat.PLZ.ToString();
-                        tbx_pd_ort.Text = pat.Ort;
-                        tbx_pd_geburtstag.Text = pat.geb;
-                        tbx_pd_geburtsort.Text = pat.ort_geb;
-                        tbx_pd_telefonnummer.Text = pat.Telefon;
-                        tbx_pd_krankenkasse.Text = pat.Krankenkasse;
-                        tbx_pd_kk_nummer.Text = pat.KrankenkassenNR;
-                        tbx_pd_personalberater_nr.Text = pat.PersonalausweisNR;
-                        tbx_pd_fuehrerschein_nr.Text = pat.FührerscheinNR;
+                        tbx_pd_anrede.Text = AesOperation.DecryptString(key_User_Cryt, pat.Anrede); 
+                        tbx_pd_vorname.Text = AesOperation.DecryptString(key_User_Cryt, pat.Vorname); 
+                        tbx_pd_nachname.Text = AesOperation.DecryptString(key_User_Cryt, pat.Nachname);
+                        tbx_pd_strasse.Text = AesOperation.DecryptString(key_User_Cryt, pat.Straße); 
+                        tbx_pd_nr.Text = pat.Nr.ToString(); 
+                        tbx_pd_plz.Text = pat.PLZ.ToString(); 
+                        tbx_pd_ort.Text = AesOperation.DecryptString(key_User_Cryt, pat.Ort);
+                        tbx_pd_geburtstag.Text = AesOperation.DecryptString(key_User_Cryt, pat.geb); 
+                        tbx_pd_geburtsort.Text = AesOperation.DecryptString(key_User_Cryt, pat.ort_geb); 
+                        tbx_pd_telefonnummer.Text = AesOperation.DecryptString(key_User_Cryt, pat.ort_geb);
+                        tbx_pd_krankenkasse.Text = AesOperation.DecryptString(key_User_Cryt, pat.Krankenkasse);
+                        tbx_pd_kk_nummer.Text = AesOperation.DecryptString(key_User_Cryt, pat.KrankenkassenNR); 
+                        tbx_pd_personalberater_nr.Text = AesOperation.DecryptString(key_User_Cryt, pat.PersonalausweisNR); 
+                        tbx_pd_fuehrerschein_nr.Text = AesOperation.DecryptString(key_User_Cryt, pat.FührerscheinNR); 
+                        
+                        
 
                         // hier werden die Daten gespeichert 
                         PictureLoad = (byte[])(pat.Image);
+                        
                         MemoryStream ms = new MemoryStream(PictureLoad);
                         picbox_pd_meinBild.SizeMode = PictureBoxSizeMode.StretchImage;
                         picbox_pd_meinBild.Image = Image.FromStream(ms);
@@ -166,20 +172,20 @@ namespace Lifeware_Metro_UI
             }
             {
                 pat.LoginId_Login = userID_H;
-                pat.Anrede = tbx_pd_anrede.Text;
-                pat.Vorname = tbx_pd_vorname.Text;
-                pat.Nachname = tbx_pd_nachname.Text;
-                pat.Straße = tbx_pd_strasse.Text;
+                pat.Anrede = AesOperation.EncryptString(key_User_Cryt, tbx_pd_anrede.Text); 
+                pat.Vorname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_vorname.Text);
+                pat.Nachname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_nachname.Text);
+                pat.Straße = AesOperation.EncryptString(key_User_Cryt, tbx_pd_strasse.Text);
                 pat.Nr = Int16.Parse(tbx_pd_nr.Text);
                 pat.PLZ = Int16.Parse(tbx_pd_plz.Text);
-                pat.Ort = tbx_pd_ort.Text;
-                pat.geb = tbx_pd_geburtstag.Text;
-                pat.ort_geb = tbx_pd_geburtsort.Text;
-                pat.Telefon = tbx_pd_telefonnummer.Text;
-                pat.Krankenkasse = tbx_pd_krankenkasse.Text;
-                pat.KrankenkassenNR = tbx_pd_kk_nummer.Text;
-                pat.PersonalausweisNR = tbx_pd_personalberater_nr.Text;
-                pat.FührerscheinNR = tbx_pd_fuehrerschein_nr.Text;
+                pat.Ort = AesOperation.EncryptString(key_User_Cryt, tbx_pd_ort.Text);
+                pat.geb = AesOperation.EncryptString(key_User_Cryt, tbx_pd_geburtstag.Text);
+                pat.ort_geb = AesOperation.EncryptString(key_User_Cryt, tbx_pd_geburtsort.Text);
+                pat.Telefon = AesOperation.EncryptString(key_User_Cryt, tbx_pd_telefonnummer.Text);
+                pat.Krankenkasse = AesOperation.EncryptString(key_User_Cryt, tbx_pd_krankenkasse.Text);
+                pat.KrankenkassenNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_kk_nummer.Text);
+                pat.PersonalausweisNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_personalberater_nr.Text);
+                pat.FührerscheinNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_fuehrerschein_nr.Text);
                 //pat.Image = imgData;
             };
 

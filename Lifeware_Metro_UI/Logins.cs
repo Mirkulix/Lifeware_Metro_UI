@@ -24,6 +24,8 @@ namespace Lifeware_Metro_UI
         public string Username { get; set; }
         public string Password { get; set; }
         public string EMail { get; set; }
+
+        public string AES_ID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Patients> Patients { get; set; }
