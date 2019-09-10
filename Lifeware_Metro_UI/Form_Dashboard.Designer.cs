@@ -61,19 +61,11 @@
             this.btn_picbox_speichern = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRaisedButton();
             this.picbox_pd_meinBild = new System.Windows.Forms.PictureBox();
             this.lbl_Dashboard_Status = new Zeroit.Framework.Labels.ZeroitDottedMatrix();
-            this.zeroitMaterialTabControl1 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialTabControl();
-            this.tbaNotfall = new System.Windows.Forms.TabPage();
-            this.zeroitMaterialLabel21 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.zeroitMaterialLabel20 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.zeroitMaterialLabel19 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.zeroitMaterialLabel18 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.zeroitMaterialLabel17 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.zeroitMaterialLabel16 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.zeroitMaterialLabel15 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.tabMedizinscheDaten = new System.Windows.Forms.TabPage();
+            this.xuiFlatTabControl = new XanderUI.XUIFlatTab();
+            this.tbaNotfalldaten = new System.Windows.Forms.TabPage();
+            this.tabMDDaten = new System.Windows.Forms.TabPage();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).BeginInit();
-            this.zeroitMaterialTabControl1.SuspendLayout();
-            this.tbaNotfall.SuspendLayout();
+            this.xuiFlatTabControl.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_speichern
@@ -574,142 +566,51 @@
             this.lbl_Dashboard_Status.TabIndex = 33;
             this.lbl_Dashboard_Status.Text = "Status";
             // 
-            // zeroitMaterialTabControl1
+            // xuiFlatTabControl
             // 
-            this.zeroitMaterialTabControl1.Controls.Add(this.tbaNotfall);
-            this.zeroitMaterialTabControl1.Controls.Add(this.tabMedizinscheDaten);
-            this.zeroitMaterialTabControl1.Depth = 0;
-            this.zeroitMaterialTabControl1.Location = new System.Drawing.Point(418, 85);
-            this.zeroitMaterialTabControl1.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialTabControl1.Name = "zeroitMaterialTabControl1";
-            this.zeroitMaterialTabControl1.SelectedIndex = 0;
-            this.zeroitMaterialTabControl1.Size = new System.Drawing.Size(716, 502);
-            this.zeroitMaterialTabControl1.TabIndex = 34;
+            this.xuiFlatTabControl.ActiveHeaderColor = System.Drawing.Color.DodgerBlue;
+            this.xuiFlatTabControl.ActiveTextColor = System.Drawing.Color.White;
+            this.xuiFlatTabControl.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.xuiFlatTabControl.Controls.Add(this.tbaNotfalldaten);
+            this.xuiFlatTabControl.Controls.Add(this.tabMDDaten);
+            this.xuiFlatTabControl.HeaderBackgroundColor = System.Drawing.Color.White;
+            this.xuiFlatTabControl.InActiveHeaderColor = System.Drawing.Color.RoyalBlue;
+            this.xuiFlatTabControl.InActiveTextColor = System.Drawing.Color.White;
+            this.xuiFlatTabControl.ItemSize = new System.Drawing.Size(240, 16);
+            this.xuiFlatTabControl.Location = new System.Drawing.Point(462, 85);
+            this.xuiFlatTabControl.Name = "xuiFlatTabControl";
+            this.xuiFlatTabControl.OnlyTopLine = true;
+            this.xuiFlatTabControl.PageColor = System.Drawing.Color.White;
+            this.xuiFlatTabControl.SelectedIndex = 0;
+            this.xuiFlatTabControl.Size = new System.Drawing.Size(672, 521);
+            this.xuiFlatTabControl.TabIndex = 34;
             // 
-            // tbaNotfall
+            // tbaNotfalldaten
             // 
-            this.tbaNotfall.Controls.Add(this.zeroitMaterialLabel21);
-            this.tbaNotfall.Controls.Add(this.zeroitMaterialLabel20);
-            this.tbaNotfall.Controls.Add(this.zeroitMaterialLabel19);
-            this.tbaNotfall.Controls.Add(this.zeroitMaterialLabel18);
-            this.tbaNotfall.Controls.Add(this.zeroitMaterialLabel17);
-            this.tbaNotfall.Controls.Add(this.zeroitMaterialLabel16);
-            this.tbaNotfall.Controls.Add(this.zeroitMaterialLabel15);
-            this.tbaNotfall.Location = new System.Drawing.Point(4, 22);
-            this.tbaNotfall.Name = "tbaNotfall";
-            this.tbaNotfall.Padding = new System.Windows.Forms.Padding(3);
-            this.tbaNotfall.Size = new System.Drawing.Size(708, 476);
-            this.tbaNotfall.TabIndex = 0;
-            this.tbaNotfall.Text = "Notfallkontakte";
-            this.tbaNotfall.UseVisualStyleBackColor = true;
+            this.tbaNotfalldaten.BackColor = System.Drawing.Color.White;
+            this.tbaNotfalldaten.Location = new System.Drawing.Point(4, 20);
+            this.tbaNotfalldaten.Name = "tbaNotfalldaten";
+            this.tbaNotfalldaten.Padding = new System.Windows.Forms.Padding(3);
+            this.tbaNotfalldaten.Size = new System.Drawing.Size(664, 497);
+            this.tbaNotfalldaten.TabIndex = 0;
+            this.tbaNotfalldaten.Text = "Notfalldaten";
             // 
-            // zeroitMaterialLabel21
+            // tabMDDaten
             // 
-            this.zeroitMaterialLabel21.AllowTransparency = true;
-            this.zeroitMaterialLabel21.Depth = 0;
-            this.zeroitMaterialLabel21.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel21.Location = new System.Drawing.Point(27, 185);
-            this.zeroitMaterialLabel21.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel21.Name = "zeroitMaterialLabel21";
-            this.zeroitMaterialLabel21.Size = new System.Drawing.Size(112, 19);
-            this.zeroitMaterialLabel21.TabIndex = 27;
-            this.zeroitMaterialLabel21.Text = "Telefonnummer";
-            // 
-            // zeroitMaterialLabel20
-            // 
-            this.zeroitMaterialLabel20.AllowTransparency = true;
-            this.zeroitMaterialLabel20.Depth = 0;
-            this.zeroitMaterialLabel20.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel20.Location = new System.Drawing.Point(27, 160);
-            this.zeroitMaterialLabel20.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel20.Name = "zeroitMaterialLabel20";
-            this.zeroitMaterialLabel20.Size = new System.Drawing.Size(31, 19);
-            this.zeroitMaterialLabel20.TabIndex = 26;
-            this.zeroitMaterialLabel20.Text = "PLZ";
-            // 
-            // zeroitMaterialLabel19
-            // 
-            this.zeroitMaterialLabel19.AllowTransparency = true;
-            this.zeroitMaterialLabel19.Depth = 0;
-            this.zeroitMaterialLabel19.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel19.Location = new System.Drawing.Point(27, 135);
-            this.zeroitMaterialLabel19.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel19.Name = "zeroitMaterialLabel19";
-            this.zeroitMaterialLabel19.Size = new System.Drawing.Size(25, 19);
-            this.zeroitMaterialLabel19.TabIndex = 25;
-            this.zeroitMaterialLabel19.Text = "Nr.";
-            // 
-            // zeroitMaterialLabel18
-            // 
-            this.zeroitMaterialLabel18.AllowTransparency = true;
-            this.zeroitMaterialLabel18.Depth = 0;
-            this.zeroitMaterialLabel18.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel18.Location = new System.Drawing.Point(27, 110);
-            this.zeroitMaterialLabel18.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel18.Name = "zeroitMaterialLabel18";
-            this.zeroitMaterialLabel18.Size = new System.Drawing.Size(49, 19);
-            this.zeroitMaterialLabel18.TabIndex = 24;
-            this.zeroitMaterialLabel18.Text = "Straße";
-            // 
-            // zeroitMaterialLabel17
-            // 
-            this.zeroitMaterialLabel17.AllowTransparency = true;
-            this.zeroitMaterialLabel17.Depth = 0;
-            this.zeroitMaterialLabel17.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel17.Location = new System.Drawing.Point(27, 85);
-            this.zeroitMaterialLabel17.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel17.Name = "zeroitMaterialLabel17";
-            this.zeroitMaterialLabel17.Size = new System.Drawing.Size(77, 19);
-            this.zeroitMaterialLabel17.TabIndex = 23;
-            this.zeroitMaterialLabel17.Text = "Nachname";
-            // 
-            // zeroitMaterialLabel16
-            // 
-            this.zeroitMaterialLabel16.AllowTransparency = true;
-            this.zeroitMaterialLabel16.Depth = 0;
-            this.zeroitMaterialLabel16.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel16.Location = new System.Drawing.Point(27, 60);
-            this.zeroitMaterialLabel16.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel16.Name = "zeroitMaterialLabel16";
-            this.zeroitMaterialLabel16.Size = new System.Drawing.Size(66, 19);
-            this.zeroitMaterialLabel16.TabIndex = 22;
-            this.zeroitMaterialLabel16.Text = "Vorname";
-            // 
-            // zeroitMaterialLabel15
-            // 
-            this.zeroitMaterialLabel15.AllowTransparency = true;
-            this.zeroitMaterialLabel15.Depth = 0;
-            this.zeroitMaterialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel15.Location = new System.Drawing.Point(27, 35);
-            this.zeroitMaterialLabel15.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel15.Name = "zeroitMaterialLabel15";
-            this.zeroitMaterialLabel15.Size = new System.Drawing.Size(53, 19);
-            this.zeroitMaterialLabel15.TabIndex = 21;
-            this.zeroitMaterialLabel15.Text = "Anrede";
-            // 
-            // tabMedizinscheDaten
-            // 
-            this.tabMedizinscheDaten.Location = new System.Drawing.Point(4, 22);
-            this.tabMedizinscheDaten.Name = "tabMedizinscheDaten";
-            this.tabMedizinscheDaten.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMedizinscheDaten.Size = new System.Drawing.Size(708, 476);
-            this.tabMedizinscheDaten.TabIndex = 1;
-            this.tabMedizinscheDaten.Text = "Medizinische Daten";
-            this.tabMedizinscheDaten.UseVisualStyleBackColor = true;
+            this.tabMDDaten.BackColor = System.Drawing.Color.White;
+            this.tabMDDaten.Location = new System.Drawing.Point(4, 20);
+            this.tabMDDaten.Name = "tabMDDaten";
+            this.tabMDDaten.Padding = new System.Windows.Forms.Padding(3);
+            this.tabMDDaten.Size = new System.Drawing.Size(664, 497);
+            this.tabMDDaten.TabIndex = 1;
+            this.tabMDDaten.Text = "MED Daten";
             // 
             // Form_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1157, 674);
-            this.Controls.Add(this.zeroitMaterialTabControl1);
+            this.Controls.Add(this.xuiFlatTabControl);
             this.Controls.Add(this.lbl_Dashboard_Status);
             this.Controls.Add(this.picbox_pd_meinBild);
             this.Controls.Add(this.btn_picbox_speichern);
@@ -748,8 +649,7 @@
             this.Load += new System.EventHandler(this.Form_Dashboard_Load);
             this.Enter += new System.EventHandler(this.Tbx_pd_telefonnummer_Format);
             ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).EndInit();
-            this.zeroitMaterialTabControl1.ResumeLayout(false);
-            this.tbaNotfall.ResumeLayout(false);
+            this.xuiFlatTabControl.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -789,15 +689,8 @@
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRaisedButton btn_picbox_speichern;
         private System.Windows.Forms.PictureBox picbox_pd_meinBild;
         private Zeroit.Framework.Labels.ZeroitDottedMatrix lbl_Dashboard_Status;
-        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialTabControl zeroitMaterialTabControl1;
-        private System.Windows.Forms.TabPage tabMedizinscheDaten;
-        private System.Windows.Forms.TabPage tbaNotfall;
-        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel21;
-        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel20;
-        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel19;
-        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel18;
-        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel17;
-        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel16;
-        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel15;
+        private XanderUI.XUIFlatTab xuiFlatTabControl;
+        private System.Windows.Forms.TabPage tbaNotfalldaten;
+        private System.Windows.Forms.TabPage tabMDDaten;
     }
 }

@@ -149,6 +149,7 @@ namespace Lifeware_Metro_UI
 
         private void Form_Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
+            
             Login gb = new Login();
             gb.Form_Show();
         }
