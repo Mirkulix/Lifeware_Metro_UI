@@ -64,8 +64,25 @@
             this.xuiFlatTabControl = new XanderUI.XUIFlatTab();
             this.tbaNotfalldaten = new System.Windows.Forms.TabPage();
             this.tabMDDaten = new System.Windows.Forms.TabPage();
+            this.zeroitMaterialLabel15 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel16 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel17 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel18 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel19 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel20 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel21 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLineTextField1 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
+            this.zeroitMaterialLineTextField2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
+            this.zeroitMaterialLineTextField3 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
+            this.zeroitMaterialLineTextField4 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
+            this.zeroitMaterialLineTextField5 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
+            this.zeroitMaterialLineTextField6 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
+            this.zeroitMaterialLineTextField7 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
+            this.zeroitMaterialLineTextField8 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
+            this.zeroitMaterialLabel22 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).BeginInit();
             this.xuiFlatTabControl.SuspendLayout();
+            this.tbaNotfalldaten.SuspendLayout();
             this.SuspendLayout();
             // 
             // btn_speichern
@@ -588,6 +605,22 @@
             // tbaNotfalldaten
             // 
             this.tbaNotfalldaten.BackColor = System.Drawing.Color.White;
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLabel22);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLineTextField1);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLineTextField2);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLineTextField3);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLineTextField4);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLineTextField5);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLineTextField6);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLineTextField7);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLineTextField8);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLabel21);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLabel20);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLabel19);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLabel18);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLabel17);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLabel16);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLabel15);
             this.tbaNotfalldaten.Location = new System.Drawing.Point(4, 20);
             this.tbaNotfalldaten.Name = "tbaNotfalldaten";
             this.tbaNotfalldaten.Padding = new System.Windows.Forms.Padding(3);
@@ -604,6 +637,247 @@
             this.tabMDDaten.Size = new System.Drawing.Size(664, 497);
             this.tabMDDaten.TabIndex = 1;
             this.tabMDDaten.Text = "MED Daten";
+            // 
+            // zeroitMaterialLabel15
+            // 
+            this.zeroitMaterialLabel15.AllowTransparency = true;
+            this.zeroitMaterialLabel15.Depth = 0;
+            this.zeroitMaterialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel15.Location = new System.Drawing.Point(31, 34);
+            this.zeroitMaterialLabel15.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel15.Name = "zeroitMaterialLabel15";
+            this.zeroitMaterialLabel15.Size = new System.Drawing.Size(53, 19);
+            this.zeroitMaterialLabel15.TabIndex = 4;
+            this.zeroitMaterialLabel15.Text = "Anrede";
+            // 
+            // zeroitMaterialLabel16
+            // 
+            this.zeroitMaterialLabel16.AllowTransparency = true;
+            this.zeroitMaterialLabel16.Depth = 0;
+            this.zeroitMaterialLabel16.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel16.Location = new System.Drawing.Point(31, 59);
+            this.zeroitMaterialLabel16.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel16.Name = "zeroitMaterialLabel16";
+            this.zeroitMaterialLabel16.Size = new System.Drawing.Size(66, 19);
+            this.zeroitMaterialLabel16.TabIndex = 5;
+            this.zeroitMaterialLabel16.Text = "Vorname";
+            // 
+            // zeroitMaterialLabel17
+            // 
+            this.zeroitMaterialLabel17.AllowTransparency = true;
+            this.zeroitMaterialLabel17.Depth = 0;
+            this.zeroitMaterialLabel17.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel17.Location = new System.Drawing.Point(31, 111);
+            this.zeroitMaterialLabel17.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel17.Name = "zeroitMaterialLabel17";
+            this.zeroitMaterialLabel17.Size = new System.Drawing.Size(49, 19);
+            this.zeroitMaterialLabel17.TabIndex = 7;
+            this.zeroitMaterialLabel17.Text = "Straße";
+            // 
+            // zeroitMaterialLabel18
+            // 
+            this.zeroitMaterialLabel18.AllowTransparency = true;
+            this.zeroitMaterialLabel18.Depth = 0;
+            this.zeroitMaterialLabel18.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel18.Location = new System.Drawing.Point(31, 136);
+            this.zeroitMaterialLabel18.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel18.Name = "zeroitMaterialLabel18";
+            this.zeroitMaterialLabel18.Size = new System.Drawing.Size(25, 19);
+            this.zeroitMaterialLabel18.TabIndex = 8;
+            this.zeroitMaterialLabel18.Text = "Nr.";
+            // 
+            // zeroitMaterialLabel19
+            // 
+            this.zeroitMaterialLabel19.AllowTransparency = true;
+            this.zeroitMaterialLabel19.Depth = 0;
+            this.zeroitMaterialLabel19.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel19.Location = new System.Drawing.Point(31, 162);
+            this.zeroitMaterialLabel19.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel19.Name = "zeroitMaterialLabel19";
+            this.zeroitMaterialLabel19.Size = new System.Drawing.Size(31, 19);
+            this.zeroitMaterialLabel19.TabIndex = 9;
+            this.zeroitMaterialLabel19.Text = "PLZ";
+            // 
+            // zeroitMaterialLabel20
+            // 
+            this.zeroitMaterialLabel20.AllowTransparency = true;
+            this.zeroitMaterialLabel20.Depth = 0;
+            this.zeroitMaterialLabel20.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel20.Location = new System.Drawing.Point(31, 188);
+            this.zeroitMaterialLabel20.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel20.Name = "zeroitMaterialLabel20";
+            this.zeroitMaterialLabel20.Size = new System.Drawing.Size(25, 19);
+            this.zeroitMaterialLabel20.TabIndex = 10;
+            this.zeroitMaterialLabel20.Text = "Ort";
+            // 
+            // zeroitMaterialLabel21
+            // 
+            this.zeroitMaterialLabel21.AllowTransparency = true;
+            this.zeroitMaterialLabel21.Depth = 0;
+            this.zeroitMaterialLabel21.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel21.Location = new System.Drawing.Point(31, 267);
+            this.zeroitMaterialLabel21.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel21.Name = "zeroitMaterialLabel21";
+            this.zeroitMaterialLabel21.Size = new System.Drawing.Size(112, 19);
+            this.zeroitMaterialLabel21.TabIndex = 20;
+            this.zeroitMaterialLabel21.Text = "Telefonnummer";
+            // 
+            // zeroitMaterialLineTextField1
+            // 
+            this.zeroitMaterialLineTextField1.Depth = 0;
+            this.zeroitMaterialLineTextField1.Hint = "";
+            this.zeroitMaterialLineTextField1.Location = new System.Drawing.Point(173, 263);
+            this.zeroitMaterialLineTextField1.MaxLength = 32767;
+            this.zeroitMaterialLineTextField1.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLineTextField1.Name = "zeroitMaterialLineTextField1";
+            this.zeroitMaterialLineTextField1.PasswordChar = '\0';
+            this.zeroitMaterialLineTextField1.SelectedText = "";
+            this.zeroitMaterialLineTextField1.SelectionLength = 0;
+            this.zeroitMaterialLineTextField1.SelectionStart = 0;
+            this.zeroitMaterialLineTextField1.Size = new System.Drawing.Size(214, 23);
+            this.zeroitMaterialLineTextField1.TabIndex = 34;
+            this.zeroitMaterialLineTextField1.TabStop = false;
+            this.zeroitMaterialLineTextField1.UseSystemPasswordChar = false;
+            // 
+            // zeroitMaterialLineTextField2
+            // 
+            this.zeroitMaterialLineTextField2.Depth = 0;
+            this.zeroitMaterialLineTextField2.Hint = "";
+            this.zeroitMaterialLineTextField2.Location = new System.Drawing.Point(173, 184);
+            this.zeroitMaterialLineTextField2.MaxLength = 32767;
+            this.zeroitMaterialLineTextField2.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLineTextField2.Name = "zeroitMaterialLineTextField2";
+            this.zeroitMaterialLineTextField2.PasswordChar = '\0';
+            this.zeroitMaterialLineTextField2.SelectedText = "";
+            this.zeroitMaterialLineTextField2.SelectionLength = 0;
+            this.zeroitMaterialLineTextField2.SelectionStart = 0;
+            this.zeroitMaterialLineTextField2.Size = new System.Drawing.Size(214, 23);
+            this.zeroitMaterialLineTextField2.TabIndex = 33;
+            this.zeroitMaterialLineTextField2.TabStop = false;
+            this.zeroitMaterialLineTextField2.UseSystemPasswordChar = false;
+            // 
+            // zeroitMaterialLineTextField3
+            // 
+            this.zeroitMaterialLineTextField3.Depth = 0;
+            this.zeroitMaterialLineTextField3.Hint = "";
+            this.zeroitMaterialLineTextField3.Location = new System.Drawing.Point(173, 158);
+            this.zeroitMaterialLineTextField3.MaxLength = 32767;
+            this.zeroitMaterialLineTextField3.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLineTextField3.Name = "zeroitMaterialLineTextField3";
+            this.zeroitMaterialLineTextField3.PasswordChar = '\0';
+            this.zeroitMaterialLineTextField3.SelectedText = "";
+            this.zeroitMaterialLineTextField3.SelectionLength = 0;
+            this.zeroitMaterialLineTextField3.SelectionStart = 0;
+            this.zeroitMaterialLineTextField3.Size = new System.Drawing.Size(214, 23);
+            this.zeroitMaterialLineTextField3.TabIndex = 32;
+            this.zeroitMaterialLineTextField3.TabStop = false;
+            this.zeroitMaterialLineTextField3.UseSystemPasswordChar = false;
+            // 
+            // zeroitMaterialLineTextField4
+            // 
+            this.zeroitMaterialLineTextField4.Depth = 0;
+            this.zeroitMaterialLineTextField4.Hint = "";
+            this.zeroitMaterialLineTextField4.Location = new System.Drawing.Point(173, 132);
+            this.zeroitMaterialLineTextField4.MaxLength = 32767;
+            this.zeroitMaterialLineTextField4.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLineTextField4.Name = "zeroitMaterialLineTextField4";
+            this.zeroitMaterialLineTextField4.PasswordChar = '\0';
+            this.zeroitMaterialLineTextField4.SelectedText = "";
+            this.zeroitMaterialLineTextField4.SelectionLength = 0;
+            this.zeroitMaterialLineTextField4.SelectionStart = 0;
+            this.zeroitMaterialLineTextField4.Size = new System.Drawing.Size(214, 23);
+            this.zeroitMaterialLineTextField4.TabIndex = 31;
+            this.zeroitMaterialLineTextField4.TabStop = false;
+            this.zeroitMaterialLineTextField4.UseSystemPasswordChar = false;
+            // 
+            // zeroitMaterialLineTextField5
+            // 
+            this.zeroitMaterialLineTextField5.Depth = 0;
+            this.zeroitMaterialLineTextField5.Hint = "";
+            this.zeroitMaterialLineTextField5.Location = new System.Drawing.Point(173, 107);
+            this.zeroitMaterialLineTextField5.MaxLength = 32767;
+            this.zeroitMaterialLineTextField5.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLineTextField5.Name = "zeroitMaterialLineTextField5";
+            this.zeroitMaterialLineTextField5.PasswordChar = '\0';
+            this.zeroitMaterialLineTextField5.SelectedText = "";
+            this.zeroitMaterialLineTextField5.SelectionLength = 0;
+            this.zeroitMaterialLineTextField5.SelectionStart = 0;
+            this.zeroitMaterialLineTextField5.Size = new System.Drawing.Size(214, 23);
+            this.zeroitMaterialLineTextField5.TabIndex = 30;
+            this.zeroitMaterialLineTextField5.TabStop = false;
+            this.zeroitMaterialLineTextField5.UseSystemPasswordChar = false;
+            // 
+            // zeroitMaterialLineTextField6
+            // 
+            this.zeroitMaterialLineTextField6.Depth = 0;
+            this.zeroitMaterialLineTextField6.Hint = "";
+            this.zeroitMaterialLineTextField6.Location = new System.Drawing.Point(173, 80);
+            this.zeroitMaterialLineTextField6.MaxLength = 32767;
+            this.zeroitMaterialLineTextField6.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLineTextField6.Name = "zeroitMaterialLineTextField6";
+            this.zeroitMaterialLineTextField6.PasswordChar = '\0';
+            this.zeroitMaterialLineTextField6.SelectedText = "";
+            this.zeroitMaterialLineTextField6.SelectionLength = 0;
+            this.zeroitMaterialLineTextField6.SelectionStart = 0;
+            this.zeroitMaterialLineTextField6.Size = new System.Drawing.Size(214, 23);
+            this.zeroitMaterialLineTextField6.TabIndex = 29;
+            this.zeroitMaterialLineTextField6.TabStop = false;
+            this.zeroitMaterialLineTextField6.UseSystemPasswordChar = false;
+            // 
+            // zeroitMaterialLineTextField7
+            // 
+            this.zeroitMaterialLineTextField7.Depth = 0;
+            this.zeroitMaterialLineTextField7.Hint = "";
+            this.zeroitMaterialLineTextField7.Location = new System.Drawing.Point(173, 55);
+            this.zeroitMaterialLineTextField7.MaxLength = 32767;
+            this.zeroitMaterialLineTextField7.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLineTextField7.Name = "zeroitMaterialLineTextField7";
+            this.zeroitMaterialLineTextField7.PasswordChar = '\0';
+            this.zeroitMaterialLineTextField7.SelectedText = "";
+            this.zeroitMaterialLineTextField7.SelectionLength = 0;
+            this.zeroitMaterialLineTextField7.SelectionStart = 0;
+            this.zeroitMaterialLineTextField7.Size = new System.Drawing.Size(214, 23);
+            this.zeroitMaterialLineTextField7.TabIndex = 28;
+            this.zeroitMaterialLineTextField7.TabStop = false;
+            this.zeroitMaterialLineTextField7.UseSystemPasswordChar = false;
+            // 
+            // zeroitMaterialLineTextField8
+            // 
+            this.zeroitMaterialLineTextField8.Depth = 0;
+            this.zeroitMaterialLineTextField8.Hint = "";
+            this.zeroitMaterialLineTextField8.Location = new System.Drawing.Point(173, 30);
+            this.zeroitMaterialLineTextField8.MaxLength = 32767;
+            this.zeroitMaterialLineTextField8.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLineTextField8.Name = "zeroitMaterialLineTextField8";
+            this.zeroitMaterialLineTextField8.PasswordChar = '\0';
+            this.zeroitMaterialLineTextField8.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.zeroitMaterialLineTextField8.SelectedText = "";
+            this.zeroitMaterialLineTextField8.SelectionLength = 0;
+            this.zeroitMaterialLineTextField8.SelectionStart = 0;
+            this.zeroitMaterialLineTextField8.Size = new System.Drawing.Size(214, 23);
+            this.zeroitMaterialLineTextField8.TabIndex = 27;
+            this.zeroitMaterialLineTextField8.TabStop = false;
+            this.zeroitMaterialLineTextField8.UseSystemPasswordChar = false;
+            // 
+            // zeroitMaterialLabel22
+            // 
+            this.zeroitMaterialLabel22.AllowTransparency = true;
+            this.zeroitMaterialLabel22.Depth = 0;
+            this.zeroitMaterialLabel22.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel22.Location = new System.Drawing.Point(31, 84);
+            this.zeroitMaterialLabel22.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel22.Name = "zeroitMaterialLabel22";
+            this.zeroitMaterialLabel22.Size = new System.Drawing.Size(77, 19);
+            this.zeroitMaterialLabel22.TabIndex = 35;
+            this.zeroitMaterialLabel22.Text = "Nachname";
             // 
             // Form_Dashboard
             // 
@@ -650,6 +924,7 @@
             this.Enter += new System.EventHandler(this.Tbx_pd_telefonnummer_Format);
             ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).EndInit();
             this.xuiFlatTabControl.ResumeLayout(false);
+            this.tbaNotfalldaten.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -692,5 +967,21 @@
         private XanderUI.XUIFlatTab xuiFlatTabControl;
         private System.Windows.Forms.TabPage tbaNotfalldaten;
         private System.Windows.Forms.TabPage tabMDDaten;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField zeroitMaterialLineTextField1;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField zeroitMaterialLineTextField2;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField zeroitMaterialLineTextField3;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField zeroitMaterialLineTextField4;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField zeroitMaterialLineTextField5;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField zeroitMaterialLineTextField6;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField zeroitMaterialLineTextField7;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField zeroitMaterialLineTextField8;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel21;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel20;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel19;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel18;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel17;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel16;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel15;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel22;
     }
 }

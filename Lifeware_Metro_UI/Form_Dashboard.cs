@@ -152,6 +152,8 @@ namespace Lifeware_Metro_UI
             
             Login gb = new Login();
             gb.Form_Show();
+
+            this.Hide();
         }
 
         private void Btn_speichern_Click(object sender, EventArgs e)

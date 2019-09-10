@@ -160,15 +160,7 @@ namespace Lifeware_Metro_UI
 
         private void Login_FormClosing(object sender, FormClosingEventArgs e)
         {
-            try
-            {
-                this.Close();
-            }
-            catch
-            {
 
-            }
-            
         }
     }
 }
