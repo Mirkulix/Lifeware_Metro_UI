@@ -12,6 +12,7 @@ using Zeroit.Framework.MaterialDesign.Controls;
 using XanderUI;
 using System.Text.RegularExpressions;
 using System.IO;
+using System.Data.Entity;
 
 
 namespace Lifeware_Metro_UI
@@ -72,8 +73,10 @@ namespace Lifeware_Metro_UI
                         if (pat.Image == null)
                         {
 
+                            FileStream fs = new FileStream(@"c:\tmp\Aleksandar_Barisic.PNG", FileMode.Open, FileAccess.Read);
+
                             picbox_pd_meinBild.SizeMode = PictureBoxSizeMode.StretchImage;
-                            picbox_pd_meinBild.Image = Image.FromFile("Aleksandar_Barisic.PNG");
+                            picbox_pd_meinBild.Image = Image.FromStream(fs);
 
                             //byte[] imgData;
                             //imgData = File.ReadAllBytes("Aleksandar_Barisic.PNG");
@@ -195,113 +198,106 @@ namespace Lifeware_Metro_UI
                     if (((TextBox)control).Text == "")
                         ((TextBox)control).Text = " ";
             }
+           // pat.LoginId_Login = userID_H;
 
             if (pat.LoginId_Login == 0)
+
             {
+                MessageBox.Show("Bin im Null Block");
+
+
+                pat.LoginId_Login = userID_H;
+                pat.Anrede = AesOperation.EncryptString(key_User_Cryt, tbx_pd_anrede.Text);
+                pat.Vorname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_vorname.Text);
+                pat.Nachname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_nachname.Text);
+                pat.Straße = AesOperation.EncryptString(key_User_Cryt, tbx_pd_strasse.Text);
+
+                if (tbx_pd_nr.Text == "")
                 {
-                    pat.LoginId_Login = userID_H;
-                    pat.Anrede = AesOperation.EncryptString(key_User_Cryt, tbx_pd_anrede.Text);
-                    pat.Vorname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_vorname.Text);
-                    pat.Nachname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_nachname.Text);
-                    pat.Straße = AesOperation.EncryptString(key_User_Cryt, tbx_pd_strasse.Text);
-                    
-                    if (tbx_pd_nr.Text == "")
-                    {
-                        pat.Nr = 0;
-                    }
-                    else if (tbx_pd_plz.Text == "")
-                    {
-                        pat.PLZ = 0;
-                    }
-                    else
-                    {
-                        pat.Nr = Int16.Parse(tbx_pd_nr.Text);
-                        pat.PLZ = Int16.Parse(tbx_pd_plz.Text);
-                    }
+                    pat.Nr = 0;
+                }
+                else if (tbx_pd_plz.Text == "")
+                {
+                    pat.PLZ = 0;
+                }
+                else
+                {
+                    pat.Nr = Int16.Parse(tbx_pd_nr.Text);
+                    pat.PLZ = Int16.Parse(tbx_pd_plz.Text);
+                }
 
-                    pat.Ort = AesOperation.EncryptString(key_User_Cryt, tbx_pd_ort.Text);
-                    pat.geb = AesOperation.EncryptString(key_User_Cryt, tbx_pd_geburtstag.Text);
-                    pat.ort_geb = AesOperation.EncryptString(key_User_Cryt, tbx_pd_geburtsort.Text);
-                    pat.Telefon = AesOperation.EncryptString(key_User_Cryt, tbx_pd_telefonnummer.Text);
-                    pat.Krankenkasse = AesOperation.EncryptString(key_User_Cryt, tbx_pd_krankenkasse.Text);
-                    pat.KrankenkassenNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_kk_nummer.Text);
-                    pat.PersonalausweisNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_personalberater_nr.Text);
-                    pat.FührerscheinNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_fuehrerschein_nr.Text);
-                    //pat.Image = imgData;
-                };
-
+                pat.Ort = AesOperation.EncryptString(key_User_Cryt, tbx_pd_ort.Text);
+                pat.geb = AesOperation.EncryptString(key_User_Cryt, tbx_pd_geburtstag.Text);
+                pat.ort_geb = AesOperation.EncryptString(key_User_Cryt, tbx_pd_geburtsort.Text);
+                pat.Telefon = AesOperation.EncryptString(key_User_Cryt, tbx_pd_telefonnummer.Text);
+                pat.Krankenkasse = AesOperation.EncryptString(key_User_Cryt, tbx_pd_krankenkasse.Text);
+                pat.KrankenkassenNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_kk_nummer.Text);
+                pat.PersonalausweisNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_personalberater_nr.Text);
+                pat.FührerscheinNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_fuehrerschein_nr.Text);
 
                 db.Patients.Add(pat);
                 db.SaveChanges();
 
+                lbl_Dashboard_Status.ForeColor = Color.Red;
+                lbl_Dashboard_Status.Text = "GESPEICHERT";
             }
-            else
 
-
-            if (pat.LoginId_Login == userID_H)
+            else if (pat.LoginId_Login == userID_H)
             {
+
+                MessageBox.Show("Ich bin UserID");
+
+
+                pat.LoginId_Login = userID_H;
+                pat.Anrede = AesOperation.EncryptString(key_User_Cryt, tbx_pd_anrede.Text);
+                pat.Vorname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_vorname.Text);
+                pat.Nachname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_nachname.Text);
+                pat.Straße = AesOperation.EncryptString(key_User_Cryt, tbx_pd_strasse.Text);
+                if (tbx_pd_nr.Text == "")
                 {
-                    pat.LoginId_Login = userID_H;
-                    pat.Anrede = AesOperation.EncryptString(key_User_Cryt, tbx_pd_anrede.Text);
-                    pat.Vorname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_vorname.Text);
-                    pat.Nachname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_nachname.Text);
-                    pat.Straße = AesOperation.EncryptString(key_User_Cryt, tbx_pd_strasse.Text);
-                    if (tbx_pd_nr.Text == "")
-                    {
-                        pat.Nr = 0;
-                    }
-                    else if (tbx_pd_plz.Text == "")
-                    {
-                        pat.PLZ = 0;
-                    }
-                    else
-                    {
-                        pat.Nr = Int16.Parse(tbx_pd_nr.Text);
-                        pat.PLZ = Int16.Parse(tbx_pd_plz.Text);
-                    }
-                    pat.Ort = AesOperation.EncryptString(key_User_Cryt, tbx_pd_ort.Text);
-                    pat.geb = AesOperation.EncryptString(key_User_Cryt, tbx_pd_geburtstag.Text);
-                    pat.ort_geb = AesOperation.EncryptString(key_User_Cryt, tbx_pd_geburtsort.Text);
-                    pat.Telefon = AesOperation.EncryptString(key_User_Cryt, tbx_pd_telefonnummer.Text);
-                    pat.Krankenkasse = AesOperation.EncryptString(key_User_Cryt, tbx_pd_krankenkasse.Text);
-                    pat.KrankenkassenNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_kk_nummer.Text);
-                    pat.PersonalausweisNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_personalberater_nr.Text);
-                    pat.FührerscheinNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_fuehrerschein_nr.Text);
-                    //pat.Image = imgData;
+                    pat.Nr = 0;
+                }
+                else if (tbx_pd_plz.Text == "")
+                {
+                    pat.PLZ = 0;
+                }
+                else
+                {
+                    pat.Nr = Int16.Parse(tbx_pd_nr.Text);
+                    pat.PLZ = Int16.Parse(tbx_pd_plz.Text);
+                }
 
-                };
+                pat.Ort = AesOperation.EncryptString(key_User_Cryt, tbx_pd_ort.Text);
+                pat.geb = AesOperation.EncryptString(key_User_Cryt, tbx_pd_geburtstag.Text);
+                pat.ort_geb = AesOperation.EncryptString(key_User_Cryt, tbx_pd_geburtsort.Text);
+                pat.Telefon = AesOperation.EncryptString(key_User_Cryt, tbx_pd_telefonnummer.Text);
+                pat.Krankenkasse = AesOperation.EncryptString(key_User_Cryt, tbx_pd_krankenkasse.Text);
+                pat.KrankenkassenNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_kk_nummer.Text);
+                pat.PersonalausweisNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_personalberater_nr.Text);
+                pat.FührerscheinNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_fuehrerschein_nr.Text);
 
 
-                db.Patients.Attach(pat);
+                // Heir das Bild Laden ! Eine Klasse einbauen!
+
+                byte[] PictureLoad = (byte[])(pat.Image);
+                pat.Image = PictureLoad;
 
 
 
-                //db.Patients.Add(pat);
-                db.U
+
+
+
+                /// Hier wird die Datenbank upgedatet!
+                /// 
+                db.Entry(pat).State = EntityState.Modified;
                 db.SaveChanges();
+                lbl_Dashboard_Status.ForeColor = Color.Red;
+                lbl_Dashboard_Status.Text = "GESPEICHERT";
+
+
             }
-            lbl_Dashboard_Status.ForeColor = Color.Red;
-            lbl_Dashboard_Status.Text = "GESPEICHERT";
-
-
-            /// Table Notfallkontakte
-            Notfallkontakte notk = new Notfallkontakte();
-
-            /// Notfallkontakte
-            // {
-            //notk.PatientsId_Patient = userID_H;
-            //notk.Vorname = tbx.Text;
-            //notk.Name = NotfallName.Text;
-            //notk.Strasse = NotfallStraße.Text;
-            //notk.PLZ = NotfallPLZ.Text;
-            //notk.Ort = NotfallOrt.Text;
-            // };
-
-            //db.Notfallkontakte.Add(notk);
-            //db.SaveChanges();
 
         }
-
         private void Form_Dashboard_Load(object sender, EventArgs e)
         {
             lbl_Dashboard_Status.Text = "OPEN";
@@ -311,5 +307,10 @@ namespace Lifeware_Metro_UI
         {
             lbl_Dashboard_Status.Text = "In Bearbeitung";
         }
+
     }
 }
+
+
+
+
