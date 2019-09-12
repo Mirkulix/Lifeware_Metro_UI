@@ -12,6 +12,15 @@ namespace Lifeware_Metro_UI
 {
     public class AesOperation
     {
+
+
+        /// <summary>
+        /// Mit der Methode GenerateCoupon wird ein Key (X-Länge) erzeugt jeh nach Anforderung des Schlüssel.
+        /// Es wird ein Random über die DateTime-Methode unter Verwendung vom Tick generiert damit dann in der Schleife über den Thread.Sleep(1) 
+        /// zufäälig ein Random Char erzeugt wird. => (result += characters[random.Next(0, characters.Count)]
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
         public static string GenerateCoupon(int length)
         {
             string result = string.Empty;
@@ -38,7 +47,13 @@ namespace Lifeware_Metro_UI
         }
 
 
-
+        /// <summary>
+        /// Mit den der System Kalsse System.Security.Cryptography wird auf die AES und den CryptoStream zugegriffen um die Verschlüsselung durch zu führen.
+        /// Dies erfolgt unter Verwendung des Master-Key und der Eingabe aus dem Feldern.
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="plainText"></param>
+        /// <returns></returns>
         public static string EncryptString(string key, string plainText)
         {
             byte[] iv = new byte[16];
@@ -67,6 +82,15 @@ namespace Lifeware_Metro_UI
 
             return Convert.ToBase64String(array);
         }
+
+        /// <summary>
+        /// Hier wird unter Verwendung des Master-Key und den Daten aus der Datenbank eine Entschlüsselung eingeleitet, diese wird dann in dem Dashbaord
+        /// angezeigt.
+        /// </summary>
+        /// <param name="key"></param>
+        /// <param name="cipherText"></param>
+        /// <returns></returns>
+
 
         public static string DecryptString(string key, string cipherText)
         {

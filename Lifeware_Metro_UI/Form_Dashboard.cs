@@ -219,6 +219,8 @@ namespace Lifeware_Metro_UI
             if (pat.LoginId_Login == 0)
 
             {
+                // AesOperation.EncrytString der direkte Aufruf der Verschlüsselungsklasse mit der Methode EncryptString. Equl zu Decrypt...
+
                 pat.LoginId_Login = userID_H;
                 pat.Anrede = AesOperation.EncryptString(key_User_Cryt, tbx_pd_anrede.Text);
                 pat.Vorname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_vorname.Text);

@@ -7,6 +7,11 @@ using System.Threading.Tasks;
 
 namespace Lifeware_Metro_UI
 {
+
+
+    /// <summary>
+    /// Diese Klasse koregiert die Eingabe von Telefonnumern, durch Verwendung von Regex.
+    /// </summary>
     public class NummerFormat
     {
 

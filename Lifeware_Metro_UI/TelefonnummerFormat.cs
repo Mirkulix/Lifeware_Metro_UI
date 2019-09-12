@@ -12,7 +12,9 @@ namespace Lifeware_Metro_UI
 
     public class TelefonnummerFormat
     {
-
+        /// <summary>
+        /// Diese Klasse erzeugt eine Telefonnumer in dem Format "(###) ###-####".
+        /// </summary>
         public string nummer;
         public string format;
 
