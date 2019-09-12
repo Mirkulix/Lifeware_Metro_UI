@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
-            this.btn_speichern = new XanderUI.XUIButton();
             this.zeroitMaterialLabel1 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel3 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
@@ -59,7 +58,6 @@
             this.tbx_pd_geburtsort = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.tbx_pd_geburtstag = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.btn_picbox_speichern = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRaisedButton();
-            this.picbox_pd_meinBild = new System.Windows.Forms.PictureBox();
             this.lbl_Dashboard_Status = new Zeroit.Framework.Labels.ZeroitDottedMatrix();
             this.xuiFlatTabControl = new XanderUI.XUIFlatTab();
             this.tbaNotfalldaten = new System.Windows.Forms.TabPage();
@@ -80,37 +78,18 @@
             this.zeroitMaterialLabel16 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel15 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.tabMDDaten = new System.Windows.Forms.TabPage();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).BeginInit();
+            this.picbox_pd_meinBild = new System.Windows.Forms.PictureBox();
+            this.btn_speichern = new XanderUI.XUIButton();
             this.xuiFlatTabControl.SuspendLayout();
             this.tbaNotfalldaten.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_speichern
-            // 
-            this.btn_speichern.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_speichern.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btn_speichern.ButtonImage")));
-            this.btn_speichern.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btn_speichern.ButtonText = "Speichern";
-            this.btn_speichern.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btn_speichern.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_speichern.CornerRadius = 5;
-            this.btn_speichern.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btn_speichern.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btn_speichern.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_speichern.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btn_speichern.Location = new System.Drawing.Point(934, 616);
-            this.btn_speichern.Name = "btn_speichern";
-            this.btn_speichern.Size = new System.Drawing.Size(200, 50);
-            this.btn_speichern.TabIndex = 0;
-            this.btn_speichern.TextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_speichern.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btn_speichern.Click += new System.EventHandler(this.Btn_speichern_Click);
             // 
             // zeroitMaterialLabel1
             // 
             this.zeroitMaterialLabel1.AllowTransparency = true;
             this.zeroitMaterialLabel1.Depth = 0;
-            this.zeroitMaterialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel1.Location = new System.Drawing.Point(12, 283);
             this.zeroitMaterialLabel1.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -123,7 +102,7 @@
             // 
             this.zeroitMaterialLabel2.AllowTransparency = true;
             this.zeroitMaterialLabel2.Depth = 0;
-            this.zeroitMaterialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel2.Location = new System.Drawing.Point(12, 308);
             this.zeroitMaterialLabel2.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -136,7 +115,7 @@
             // 
             this.zeroitMaterialLabel3.AllowTransparency = true;
             this.zeroitMaterialLabel3.Depth = 0;
-            this.zeroitMaterialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel3.Location = new System.Drawing.Point(12, 333);
             this.zeroitMaterialLabel3.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -149,7 +128,7 @@
             // 
             this.zeroitMaterialLabel4.AllowTransparency = true;
             this.zeroitMaterialLabel4.Depth = 0;
-            this.zeroitMaterialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel4.Location = new System.Drawing.Point(12, 360);
             this.zeroitMaterialLabel4.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -162,7 +141,7 @@
             // 
             this.zeroitMaterialLabel5.AllowTransparency = true;
             this.zeroitMaterialLabel5.Depth = 0;
-            this.zeroitMaterialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel5.Location = new System.Drawing.Point(12, 385);
             this.zeroitMaterialLabel5.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -175,7 +154,7 @@
             // 
             this.zeroitMaterialLabel6.AllowTransparency = true;
             this.zeroitMaterialLabel6.Depth = 0;
-            this.zeroitMaterialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel6.Location = new System.Drawing.Point(13, 411);
             this.zeroitMaterialLabel6.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -188,7 +167,7 @@
             // 
             this.zeroitMaterialLabel7.AllowTransparency = true;
             this.zeroitMaterialLabel7.Depth = 0;
-            this.zeroitMaterialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel7.Location = new System.Drawing.Point(13, 437);
             this.zeroitMaterialLabel7.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -328,7 +307,7 @@
             // 
             this.zeroitMaterialLabel8.AllowTransparency = true;
             this.zeroitMaterialLabel8.Depth = 0;
-            this.zeroitMaterialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel8.Location = new System.Drawing.Point(12, 462);
             this.zeroitMaterialLabel8.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -341,7 +320,7 @@
             // 
             this.zeroitMaterialLabel9.AllowTransparency = true;
             this.zeroitMaterialLabel9.Depth = 0;
-            this.zeroitMaterialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel9.Location = new System.Drawing.Point(13, 487);
             this.zeroitMaterialLabel9.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -354,7 +333,7 @@
             // 
             this.zeroitMaterialLabel10.AllowTransparency = true;
             this.zeroitMaterialLabel10.Depth = 0;
-            this.zeroitMaterialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel10.Location = new System.Drawing.Point(12, 512);
             this.zeroitMaterialLabel10.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -367,7 +346,7 @@
             // 
             this.zeroitMaterialLabel11.AllowTransparency = true;
             this.zeroitMaterialLabel11.Depth = 0;
-            this.zeroitMaterialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel11.Location = new System.Drawing.Point(12, 537);
             this.zeroitMaterialLabel11.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -380,7 +359,7 @@
             // 
             this.zeroitMaterialLabel12.AllowTransparency = true;
             this.zeroitMaterialLabel12.Depth = 0;
-            this.zeroitMaterialLabel12.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel12.Location = new System.Drawing.Point(12, 562);
             this.zeroitMaterialLabel12.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -393,7 +372,7 @@
             // 
             this.zeroitMaterialLabel13.AllowTransparency = true;
             this.zeroitMaterialLabel13.Depth = 0;
-            this.zeroitMaterialLabel13.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel13.Location = new System.Drawing.Point(12, 587);
             this.zeroitMaterialLabel13.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -406,7 +385,7 @@
             // 
             this.zeroitMaterialLabel14.AllowTransparency = true;
             this.zeroitMaterialLabel14.Depth = 0;
-            this.zeroitMaterialLabel14.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel14.Location = new System.Drawing.Point(12, 612);
             this.zeroitMaterialLabel14.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -559,14 +538,6 @@
             this.btn_picbox_speichern.Text = "Bild hochladen";
             this.btn_picbox_speichern.Click += new System.EventHandler(this.Btn_picbox_speichern_Click);
             // 
-            // picbox_pd_meinBild
-            // 
-            this.picbox_pd_meinBild.Location = new System.Drawing.Point(260, 85);
-            this.picbox_pd_meinBild.Name = "picbox_pd_meinBild";
-            this.picbox_pd_meinBild.Size = new System.Drawing.Size(134, 146);
-            this.picbox_pd_meinBild.TabIndex = 32;
-            this.picbox_pd_meinBild.TabStop = false;
-            // 
             // lbl_Dashboard_Status
             // 
             this.lbl_Dashboard_Status.AllowTransparency = true;
@@ -632,7 +603,7 @@
             // 
             this.zeroitMaterialLabel22.AllowTransparency = true;
             this.zeroitMaterialLabel22.Depth = 0;
-            this.zeroitMaterialLabel22.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel22.Location = new System.Drawing.Point(31, 84);
             this.zeroitMaterialLabel22.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -782,7 +753,7 @@
             // 
             this.zeroitMaterialLabel21.AllowTransparency = true;
             this.zeroitMaterialLabel21.Depth = 0;
-            this.zeroitMaterialLabel21.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel21.Location = new System.Drawing.Point(31, 267);
             this.zeroitMaterialLabel21.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -795,7 +766,7 @@
             // 
             this.zeroitMaterialLabel20.AllowTransparency = true;
             this.zeroitMaterialLabel20.Depth = 0;
-            this.zeroitMaterialLabel20.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel20.Location = new System.Drawing.Point(31, 188);
             this.zeroitMaterialLabel20.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -808,7 +779,7 @@
             // 
             this.zeroitMaterialLabel19.AllowTransparency = true;
             this.zeroitMaterialLabel19.Depth = 0;
-            this.zeroitMaterialLabel19.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel19.Location = new System.Drawing.Point(31, 162);
             this.zeroitMaterialLabel19.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -821,7 +792,7 @@
             // 
             this.zeroitMaterialLabel18.AllowTransparency = true;
             this.zeroitMaterialLabel18.Depth = 0;
-            this.zeroitMaterialLabel18.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel18.Location = new System.Drawing.Point(31, 136);
             this.zeroitMaterialLabel18.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -834,7 +805,7 @@
             // 
             this.zeroitMaterialLabel17.AllowTransparency = true;
             this.zeroitMaterialLabel17.Depth = 0;
-            this.zeroitMaterialLabel17.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel17.Location = new System.Drawing.Point(31, 111);
             this.zeroitMaterialLabel17.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -847,7 +818,7 @@
             // 
             this.zeroitMaterialLabel16.AllowTransparency = true;
             this.zeroitMaterialLabel16.Depth = 0;
-            this.zeroitMaterialLabel16.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel16.Location = new System.Drawing.Point(31, 59);
             this.zeroitMaterialLabel16.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -860,7 +831,7 @@
             // 
             this.zeroitMaterialLabel15.AllowTransparency = true;
             this.zeroitMaterialLabel15.Depth = 0;
-            this.zeroitMaterialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.zeroitMaterialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel15.Location = new System.Drawing.Point(31, 34);
             this.zeroitMaterialLabel15.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -878,6 +849,35 @@
             this.tabMDDaten.Size = new System.Drawing.Size(664, 497);
             this.tabMDDaten.TabIndex = 1;
             this.tabMDDaten.Text = "MED Daten";
+            // 
+            // picbox_pd_meinBild
+            // 
+            this.picbox_pd_meinBild.Location = new System.Drawing.Point(260, 85);
+            this.picbox_pd_meinBild.Name = "picbox_pd_meinBild";
+            this.picbox_pd_meinBild.Size = new System.Drawing.Size(134, 146);
+            this.picbox_pd_meinBild.TabIndex = 32;
+            this.picbox_pd_meinBild.TabStop = false;
+            // 
+            // btn_speichern
+            // 
+            this.btn_speichern.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_speichern.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btn_speichern.ButtonImage")));
+            this.btn_speichern.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btn_speichern.ButtonText = "Speichern";
+            this.btn_speichern.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btn_speichern.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_speichern.CornerRadius = 5;
+            this.btn_speichern.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_speichern.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btn_speichern.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_speichern.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btn_speichern.Location = new System.Drawing.Point(934, 616);
+            this.btn_speichern.Name = "btn_speichern";
+            this.btn_speichern.Size = new System.Drawing.Size(200, 50);
+            this.btn_speichern.TabIndex = 0;
+            this.btn_speichern.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_speichern.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_speichern.Click += new System.EventHandler(this.Btn_speichern_Click);
             // 
             // Form_Dashboard
             // 
@@ -922,9 +922,9 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form_Dashboard_FormClosing);
             this.Load += new System.EventHandler(this.Form_Dashboard_Load);
             this.Enter += new System.EventHandler(this.Tbx_pd_telefonnummer_Format);
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).EndInit();
             this.xuiFlatTabControl.ResumeLayout(false);
             this.tbaNotfalldaten.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
