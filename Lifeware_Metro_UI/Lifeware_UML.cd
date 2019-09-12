@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Lifeware_Metro_UI.AesOperation" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAIAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>AesOperation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Form_Dashboard" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAICBSAQABFgCIigYAACAQgAYhAA4X4giIlIAQQ=</HashCode>
+      <FileName>Form_Dashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.DatabaseConnectingHandler" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAEAAAAAAAAAADAAExAAAAAABAAQAAAAIAA=</HashCode>
+      <FileName>LifewareDataModel.Context.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Allergiens" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAABAAAACAAAAAAAAMAAAAwAAAAAAA=</HashCode>
+      <FileName>Allergiens.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Arzts" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACQAAAAAAABAAAAAAAAAAAAAQAAABgBAAQAgABAAA=</HashCode>
+      <FileName>Arzts.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Dokumentes" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAACAAAAAQAAABAAAQCAAAAAQ=</HashCode>
+      <FileName>Dokumentes.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Erkrankungens" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAAABCAAAAQAAAEAAAAQAAAAAAA=</HashCode>
+      <FileName>Erkrankungens.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Logins" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAACAAAAACBAAAAAADAAA=</HashCode>
+      <FileName>Logins.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Medikations" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAACAIAAAAAIMAAAAQCAAAAAA=</HashCode>
+      <FileName>Medikations.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Notfallaktions" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACQABAAAAAAAAAAAAAAAAAAAQAAAJgBAQAAgABAAA=</HashCode>
+      <FileName>Notfallaktions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Notfallkontakte" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACUAIAAAAAAAAAAAAAACQAAAAAAABgBAAAAAAAAAA=</HashCode>
+      <FileName>Notfallkontakte.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Pat_Medi_Datas" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAGAABAAEAAQAAAAAAAAAAAwQAAAACBAAAAAAAAAA=</HashCode>
+      <FileName>Pat_Medi_Datas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Patients" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAADSAgAAAAAAAAAAAAAQDAAAhDAABBgAAAQAgABIAA=</HashCode>
+      <FileName>Patients.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Login" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACQQBQkACACMgCAigIgAQCExAAAAAAAAEYA=</HashCode>
+      <FileName>Login.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.NummerFormat" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NummerFormat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Program">
+    <Position X="3" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Registrierung">
+    <Position X="4.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAACAAAAEAAACAgAACAAAAQAEAAAAAAAAAAQA=</HashCode>
+      <FileName>Registrierung.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.TelefonnummerFormat">
+    <Position X="10" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIEAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TelefonnummerFormat.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Properties.Resources">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lifeware_Metro_UI.Properties.Settings">
+    <Position X="8.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

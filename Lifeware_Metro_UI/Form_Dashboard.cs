@@ -14,7 +14,17 @@ using System.Text.RegularExpressions;
 using System.IO;
 using System.Data.Entity;
 
-
+/// <summary>
+///  Diese Applikation ist eine Digitale Notfallakte. Sie diehnt der Idee im Notfall alle medizinischen relevanten Daten zu haben.
+///  Die Applikation verwendet eine SQL Datenbank mit dem Entity Framework in Kombiation von ADO Entity Model. Das Konzept hierhinter ist der Ansatz 
+///  Design First. Die Applikation verschlüsselt und Endschlüsselt die Eingaben nach AES über die Klasse Aesoperations. In der Klasse Aesoperations wird auch 
+///  der Master-Key für die Verschlüsselung und Endschlüsselung erzeugt, dieser wird dann in die Datenbank geschrieben und hängt an Account des Users.
+///  
+///  In der Projekt Mappe befidnen sich ein Klassendiagramm in dem gezeigt wird wie die Struktuern im dem Projekt aufgebaut sind.
+///  Es befindet sich auch die SQL Sruktur der Datenbank als LifewareDataModel.edmx.sql in der Proejkt Mappe.
+///  
+/// 
+/// </summary>
 namespace Lifeware_Metro_UI
 {
     public partial class Form_Dashboard : ZeroitMaterialForm
@@ -22,7 +32,9 @@ namespace Lifeware_Metro_UI
 
         public int userID_H;
         public string FilePathUebergabe;
-        // Hier wird der Schlüsselübergeben
+
+
+        // Hier wird der Schlüssel übergeben Master-Key.
         public string key_User_Cryt;
 
 
@@ -39,14 +51,14 @@ namespace Lifeware_Metro_UI
             this.userID_H = userID;
             this.key_User_Cryt = key;
 
-
+            // Datenbankverbindungsaufbau
             using (DatabaseConnectingHandler db = new DatabaseConnectingHandler())
             {
                 // hier wird das ByteArray auf Null gesetzt !
                 byte[] PictureLoad = null;
 
 
-
+                //Abruf der Daten aus den Datenbank des Users.
                 foreach (var pat in db.Patients)
                 {
                     if (pat.LoginId_Login == userID_H)
@@ -68,7 +80,8 @@ namespace Lifeware_Metro_UI
 
 
 
-                        // hier werden die Daten gespeichert 
+                        // Falls Bilddaten nicht in der Datenbankvorhanden sind wir ein Dummy-Bild geladen. 
+                        // Dieses Dummybild liegt in einem Verzeichnis. 
 
                         if (pat.Image == null)
                         {
@@ -78,10 +91,6 @@ namespace Lifeware_Metro_UI
                             picbox_pd_meinBild.SizeMode = PictureBoxSizeMode.StretchImage;
                             picbox_pd_meinBild.Image = Image.FromStream(fs);
 
-                            //byte[] imgData;
-                            //imgData = File.ReadAllBytes("Aleksandar_Barisic.PNG");
-                            //pat.Image = imgData;
-                            //PictureLoad = (byte[])(pat.Image);
                         }
                         else if (pat.Image != null)
                         {
@@ -95,6 +104,9 @@ namespace Lifeware_Metro_UI
             }
 
         }
+
+
+        // Diese Methode dient zur Prüfungs des Geburtsdatums und wird mit einem Regex umgesetzt.
 
         private void Tbx_pd_geburtstag_Validating(object sender, CancelEventArgs e)
         {
@@ -118,6 +130,12 @@ namespace Lifeware_Metro_UI
             }
         }
 
+
+        // Diese Methode überprüft die Telefonnumer und besteht aus zwei Möglichkeiten
+        // a) die Methode -- hier auskommentiert 
+        // b) die Verwendung einer Klasse "NummerFormat
+
+
         private void Tbx_pd_telefonnummer_Format(object sender, EventArgs e)
         {
             //string format;
@@ -135,6 +153,10 @@ namespace Lifeware_Metro_UI
 
         }
 
+        // Hier wird die Methode Bild-Hochladen beschrieben. Mit der Methode wird ein Bild mit dem 
+        // OpenFileDialog auswählbar gemacht.
+
+
         private void Btn_picbox_speichern_Click(object sender, EventArgs e)
         {
             OpenFileDialog DateiAuswahl = new OpenFileDialog();
@@ -150,19 +172,11 @@ namespace Lifeware_Metro_UI
                 picbox_pd_meinBild.SizeMode = PictureBoxSizeMode.StretchImage;
                 picbox_pd_meinBild.ImageLocation = DateiAuswahl.FileName;
 
-                //--------------------------------------------------------------------    
-                // FilePathUebergabe = DateiAuswahl.FileName;
-                //Image image = Image.FromFile(DateiAuswahl.FileName);
-                //picbox_pd_eigenesBild.
-                //picbox_pd_eigenesBild.Image = image;
-                /// Hier wurde die PictureBox vom Zeroit verwendet.
-                //picbox_zeroit.BackgroundImageLayout = ImageLayout.Stretch;
-                //picbox_zeroit.Image = image;
-                //---------------------------------------------------------------------
-
-
             }
         }
+
+
+        // Mit dieser Methode wird die Form-Dashboard geschlossen und ein neue Instanz vom Login erzeugt.
 
         private void Form_Dashboard_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -172,6 +186,8 @@ namespace Lifeware_Metro_UI
 
             this.Hide();
         }
+
+        // Hier werden die Daten in die Datenbank gespeichert und gleich Zeitig über die Klasse "AesOperation" verschlüsselt und EndSchlüsselt 
 
         private void Btn_speichern_Click(object sender, EventArgs e)
         {
@@ -198,14 +214,11 @@ namespace Lifeware_Metro_UI
                     if (((TextBox)control).Text == "")
                         ((TextBox)control).Text = " ";
             }
-           // pat.LoginId_Login = userID_H;
+            //  pat.LoginId_Login = userID_H;
 
             if (pat.LoginId_Login == 0)
 
             {
-                MessageBox.Show("Bin im Null Block");
-
-
                 pat.LoginId_Login = userID_H;
                 pat.Anrede = AesOperation.EncryptString(key_User_Cryt, tbx_pd_anrede.Text);
                 pat.Vorname = AesOperation.EncryptString(key_User_Cryt, tbx_pd_vorname.Text);
@@ -281,9 +294,6 @@ namespace Lifeware_Metro_UI
 
                 byte[] PictureLoad = (byte[])(pat.Image);
                 pat.Image = PictureLoad;
-
-
-
 
 
 

@@ -13,6 +13,11 @@ using System.Security.Cryptography;
 
 namespace Lifeware_Metro_UI
 {
+
+    /// <summary>
+    /// Mit dieser Form wird das Login und die Registrierung bereit gestellt.
+    /// 
+    /// </summary>
     public partial class Login : Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialForm
     {
         int MaxVersuche = 0;
@@ -103,8 +108,15 @@ namespace Lifeware_Metro_UI
                 string Epass = HPass(password);
                 login.Username = username;
                 login.Password = Epass;
-                // Hier wird Verschlüsselungs_Key_generiert
+                /////// Wichtiger Block /////// 
+                // Hier wird Verschlüsselungs_Key_generiert 
+                // Der Schlüssel wird nur ein einziges mal erzeugt. Wenn dieser Schlüsselverloren geht 
+                // könnne die Daten nicht wieder hergestellt werden.
                 login.AES_ID = AesOperation.GenerateCoupon(32);
+
+
+                // Ausgabe des Schlüssels in eine MessageBox
+                MessageBox.Show("Der Security-Key Lautet:", login.AES_ID);
 
                 tbx_reg_login.Text = String.Empty;
                 tbx_reg_passwd.Text = String.Empty;
@@ -113,12 +125,15 @@ namespace Lifeware_Metro_UI
                 db.Logins.Add(login);
                 db.SaveChanges();
 
-
+                //Hier wird gezeigt das die Registrierung abgeschlossen ist.
                 MessageBox.Show("Registrierung ist angeschlossen.");
 
 
             }
         }
+
+
+        // Hier wird das Password verschlüsselt über ein SHA512 
 
         public string HPass(string password)
         {
@@ -134,12 +149,20 @@ namespace Lifeware_Metro_UI
             return strBuilder.ToString();
         }
 
+        // Hier wird die Form geladen und weiter Attribute aktiviert.
+        // Dazu gehört die das Einbilden des Logos und die Aktivierung der PasswordChar.
+
         private void Login_Load(object sender, EventArgs e)
         {
+            PicLogo.SizeMode = PictureBoxSizeMode.StretchImage;
+            PicLogo.Image = Lifeware_Metro_UI.Properties.Resources.Xsaver;
+
             tbx_Passwd.UseSystemPasswordChar = true;
             tbx_reg_passwd.UseSystemPasswordChar = true;
             tbx_reg_confirm_passwd.UseSystemPasswordChar = true;
         }
+
+        //Hier wird die Login Form ausgeblendet.
 
         private void Form_Verstecken()
         {
@@ -148,10 +171,14 @@ namespace Lifeware_Metro_UI
             //this.ShowInTaskbar = false;
         }
 
+        // Hier wird Sie wieder Aktiviert
+
         public void Form_Show()
         {
             this.Show();
         }
+
+        // Mit der Methode wird ein User angelegt.
 
         private void Btn_registrieren_Click(object sender, EventArgs e)
         {

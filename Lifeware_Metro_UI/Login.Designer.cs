@@ -41,15 +41,17 @@
             this.btn_registrieren = new Zeroit.Framework.Button.ZeroitDummyControl();
             this.btn_anmelden = new Zeroit.Framework.Button.ZeroitDummyControl();
             this.lbl_Login_false = new System.Windows.Forms.Label();
+            this.PicLogo = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_Login
             // 
             this.lbl_Login.AllowTransparency = true;
             this.lbl_Login.Depth = 0;
-            this.lbl_Login.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbl_Login.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbl_Login.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_Login.Location = new System.Drawing.Point(82, 117);
+            this.lbl_Login.Location = new System.Drawing.Point(264, 117);
             this.lbl_Login.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.lbl_Login.Name = "lbl_Login";
             this.lbl_Login.Size = new System.Drawing.Size(122, 19);
@@ -60,9 +62,9 @@
             // 
             this.lbl_Password.AllowTransparency = true;
             this.lbl_Password.Depth = 0;
-            this.lbl_Password.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbl_Password.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbl_Password.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_Password.Location = new System.Drawing.Point(82, 157);
+            this.lbl_Password.Location = new System.Drawing.Point(264, 157);
             this.lbl_Password.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(71, 19);
@@ -73,9 +75,9 @@
             // 
             this.lbl_regUsername.AllowTransparency = true;
             this.lbl_regUsername.Depth = 0;
-            this.lbl_regUsername.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbl_regUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbl_regUsername.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_regUsername.Location = new System.Drawing.Point(82, 324);
+            this.lbl_regUsername.Location = new System.Drawing.Point(264, 324);
             this.lbl_regUsername.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.lbl_regUsername.Name = "lbl_regUsername";
             this.lbl_regUsername.Size = new System.Drawing.Size(122, 19);
@@ -86,9 +88,9 @@
             // 
             this.lbl_regPassword.AllowTransparency = true;
             this.lbl_regPassword.Depth = 0;
-            this.lbl_regPassword.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbl_regPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbl_regPassword.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_regPassword.Location = new System.Drawing.Point(82, 365);
+            this.lbl_regPassword.Location = new System.Drawing.Point(264, 365);
             this.lbl_regPassword.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.lbl_regPassword.Name = "lbl_regPassword";
             this.lbl_regPassword.Size = new System.Drawing.Size(71, 19);
@@ -99,9 +101,9 @@
             // 
             this.lbl_regConfirm.AllowTransparency = true;
             this.lbl_regConfirm.Depth = 0;
-            this.lbl_regConfirm.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lbl_regConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbl_regConfirm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lbl_regConfirm.Location = new System.Drawing.Point(82, 402);
+            this.lbl_regConfirm.Location = new System.Drawing.Point(264, 402);
             this.lbl_regConfirm.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.lbl_regConfirm.Name = "lbl_regConfirm";
             this.lbl_regConfirm.Size = new System.Drawing.Size(59, 19);
@@ -112,7 +114,7 @@
             // 
             this.tbx_Login.Depth = 0;
             this.tbx_Login.Hint = "";
-            this.tbx_Login.Location = new System.Drawing.Point(258, 112);
+            this.tbx_Login.Location = new System.Drawing.Point(440, 112);
             this.tbx_Login.MaxLength = 32767;
             this.tbx_Login.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.tbx_Login.Name = "tbx_Login";
@@ -129,7 +131,7 @@
             // 
             this.tbx_Passwd.Depth = 0;
             this.tbx_Passwd.Hint = "";
-            this.tbx_Passwd.Location = new System.Drawing.Point(258, 153);
+            this.tbx_Passwd.Location = new System.Drawing.Point(440, 153);
             this.tbx_Passwd.MaxLength = 32767;
             this.tbx_Passwd.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.tbx_Passwd.Name = "tbx_Passwd";
@@ -146,7 +148,7 @@
             // 
             this.tbx_reg_login.Depth = 0;
             this.tbx_reg_login.Hint = "";
-            this.tbx_reg_login.Location = new System.Drawing.Point(258, 320);
+            this.tbx_reg_login.Location = new System.Drawing.Point(440, 320);
             this.tbx_reg_login.MaxLength = 32767;
             this.tbx_reg_login.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.tbx_reg_login.Name = "tbx_reg_login";
@@ -163,7 +165,7 @@
             // 
             this.tbx_reg_passwd.Depth = 0;
             this.tbx_reg_passwd.Hint = "";
-            this.tbx_reg_passwd.Location = new System.Drawing.Point(258, 361);
+            this.tbx_reg_passwd.Location = new System.Drawing.Point(440, 361);
             this.tbx_reg_passwd.MaxLength = 32767;
             this.tbx_reg_passwd.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.tbx_reg_passwd.Name = "tbx_reg_passwd";
@@ -180,7 +182,7 @@
             // 
             this.tbx_reg_confirm_passwd.Depth = 0;
             this.tbx_reg_confirm_passwd.Hint = "";
-            this.tbx_reg_confirm_passwd.Location = new System.Drawing.Point(258, 398);
+            this.tbx_reg_confirm_passwd.Location = new System.Drawing.Point(440, 398);
             this.tbx_reg_confirm_passwd.MaxLength = 32767;
             this.tbx_reg_confirm_passwd.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.tbx_reg_confirm_passwd.Name = "tbx_reg_confirm_passwd";
@@ -211,7 +213,7 @@
             this.btn_registrieren.Image = null;
             this.btn_registrieren.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_registrieren.ImageSize = new System.Drawing.Size(0, 0);
-            this.btn_registrieren.Location = new System.Drawing.Point(258, 443);
+            this.btn_registrieren.Location = new System.Drawing.Point(440, 443);
             this.btn_registrieren.Name = "btn_registrieren";
             this.btn_registrieren.PolygonRadius = 10;
             this.btn_registrieren.PolygonSides = 3;
@@ -248,7 +250,7 @@
             this.btn_anmelden.Image = null;
             this.btn_anmelden.ImageAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_anmelden.ImageSize = new System.Drawing.Size(0, 0);
-            this.btn_anmelden.Location = new System.Drawing.Point(258, 196);
+            this.btn_anmelden.Location = new System.Drawing.Point(440, 196);
             this.btn_anmelden.Name = "btn_anmelden";
             this.btn_anmelden.PolygonRadius = 10;
             this.btn_anmelden.PolygonSides = 3;
@@ -271,10 +273,19 @@
             // 
             this.lbl_Login_false.AutoSize = true;
             this.lbl_Login_false.ForeColor = System.Drawing.Color.Red;
-            this.lbl_Login_false.Location = new System.Drawing.Point(258, 177);
+            this.lbl_Login_false.Location = new System.Drawing.Point(440, 177);
             this.lbl_Login_false.Name = "lbl_Login_false";
             this.lbl_Login_false.Size = new System.Drawing.Size(0, 13);
             this.lbl_Login_false.TabIndex = 12;
+            // 
+            // PicLogo
+            // 
+            this.PicLogo.BackColor = System.Drawing.Color.Transparent;
+            this.PicLogo.Location = new System.Drawing.Point(12, 78);
+            this.PicLogo.Name = "PicLogo";
+            this.PicLogo.Size = new System.Drawing.Size(220, 220);
+            this.PicLogo.TabIndex = 13;
+            this.PicLogo.TabStop = false;
             // 
             // Login
             // 
@@ -282,6 +293,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(774, 513);
+            this.Controls.Add(this.PicLogo);
             this.Controls.Add(this.lbl_Login_false);
             this.Controls.Add(this.btn_anmelden);
             this.Controls.Add(this.btn_registrieren);
@@ -300,6 +312,7 @@
             this.Text = "Anmeldung";
             this.TransparencyKey = System.Drawing.Color.Fuchsia;
             this.Load += new System.EventHandler(this.Login_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.PicLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,6 +333,7 @@
         private Zeroit.Framework.Button.ZeroitDummyControl btn_registrieren;
         private Zeroit.Framework.Button.ZeroitDummyControl btn_anmelden;
         private System.Windows.Forms.Label lbl_Login_false;
+        private System.Windows.Forms.PictureBox PicLogo;
     }
 }
 
