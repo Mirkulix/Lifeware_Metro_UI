@@ -97,11 +97,15 @@
             this.zeroitMaterialLabel29 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel30 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.ambianceRichTextBox8 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
-            this.zeroitMaterialRadioButton1 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
+            this.rd_btn_padfafü = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
             this.zeroitMaterialRadioButton2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
             this.zeroitMaterialRadioButton3 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
             this.zeroitMaterialRadioButton4 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
             this.ambianceRichTextBox9 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.aButton1 = new Zeroit.Framework.UIThemes.Atrocity.aButton();
+            this.aButton2 = new Zeroit.Framework.UIThemes.Atrocity.aButton();
+            this.aButton3 = new Zeroit.Framework.UIThemes.Atrocity.aButton();
+            this.aButton4 = new Zeroit.Framework.UIThemes.Atrocity.aButton();
             this.xuiFlatTabControl.SuspendLayout();
             this.tbaNotfalldaten.SuspendLayout();
             this.tabMDDaten.SuspendLayout();
@@ -906,11 +910,15 @@
             // tabDokumente
             // 
             this.tabDokumente.BackColor = System.Drawing.Color.White;
+            this.tabDokumente.Controls.Add(this.aButton4);
+            this.tabDokumente.Controls.Add(this.aButton3);
+            this.tabDokumente.Controls.Add(this.aButton2);
+            this.tabDokumente.Controls.Add(this.aButton1);
             this.tabDokumente.Controls.Add(this.ambianceRichTextBox9);
             this.tabDokumente.Controls.Add(this.zeroitMaterialRadioButton4);
             this.tabDokumente.Controls.Add(this.zeroitMaterialRadioButton3);
             this.tabDokumente.Controls.Add(this.zeroitMaterialRadioButton2);
-            this.tabDokumente.Controls.Add(this.zeroitMaterialRadioButton1);
+            this.tabDokumente.Controls.Add(this.rd_btn_padfafü);
             this.tabDokumente.Location = new System.Drawing.Point(4, 20);
             this.tabDokumente.Name = "tabDokumente";
             this.tabDokumente.Size = new System.Drawing.Size(664, 497);
@@ -1024,7 +1032,7 @@
             this.ambianceRichTextBox4.ReadOnly = false;
             this.ambianceRichTextBox4.Size = new System.Drawing.Size(611, 108);
             this.ambianceRichTextBox4.TabIndex = 15;
-            this.ambianceRichTextBox4.Text = "keine ";
+            this.ambianceRichTextBox4.Text = "keine";
             this.ambianceRichTextBox4.WordWrap = true;
             // 
             // ambianceRichTextBox5
@@ -1038,7 +1046,7 @@
             this.ambianceRichTextBox5.ReadOnly = false;
             this.ambianceRichTextBox5.Size = new System.Drawing.Size(611, 108);
             this.ambianceRichTextBox5.TabIndex = 14;
-            this.ambianceRichTextBox5.Text = "Gräser, Pollen,Birken";
+            this.ambianceRichTextBox5.Text = "Maria Müller (Mutter) Te.: 040-567 88 97";
             this.ambianceRichTextBox5.WordWrap = true;
             // 
             // ambianceRichTextBox6
@@ -1064,9 +1072,9 @@
             this.zeroitMaterialLabel26.Location = new System.Drawing.Point(27, 330);
             this.zeroitMaterialLabel26.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.zeroitMaterialLabel26.Name = "zeroitMaterialLabel26";
-            this.zeroitMaterialLabel26.Size = new System.Drawing.Size(49, 19);
+            this.zeroitMaterialLabel26.Size = new System.Drawing.Size(111, 19);
             this.zeroitMaterialLabel26.TabIndex = 12;
-            this.zeroitMaterialLabel26.Text = "Geräte";
+            this.zeroitMaterialLabel26.Text = "Besonderheiten";
             // 
             // zeroitMaterialLabel27
             // 
@@ -1077,9 +1085,9 @@
             this.zeroitMaterialLabel27.Location = new System.Drawing.Point(27, 176);
             this.zeroitMaterialLabel27.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.zeroitMaterialLabel27.Name = "zeroitMaterialLabel27";
-            this.zeroitMaterialLabel27.Size = new System.Drawing.Size(65, 19);
+            this.zeroitMaterialLabel27.Size = new System.Drawing.Size(101, 19);
             this.zeroitMaterialLabel27.TabIndex = 11;
-            this.zeroitMaterialLabel27.Text = "Allergien";
+            this.zeroitMaterialLabel27.Text = "Notfallkontakt";
             // 
             // zeroitMaterialLabel28
             // 
@@ -1148,21 +1156,21 @@
             this.ambianceRichTextBox8.Text = "Dr. med. Müller, Musterstraße 9,  20259 Hamburg";
             this.ambianceRichTextBox8.WordWrap = true;
             // 
-            // zeroitMaterialRadioButton1
+            // rd_btn_padfafü
             // 
-            this.zeroitMaterialRadioButton1.AllowTransparency = true;
-            this.zeroitMaterialRadioButton1.Checked = false;
-            this.zeroitMaterialRadioButton1.Depth = 0;
-            this.zeroitMaterialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
-            this.zeroitMaterialRadioButton1.Location = new System.Drawing.Point(38, 39);
-            this.zeroitMaterialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.zeroitMaterialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.zeroitMaterialRadioButton1.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialRadioButton1.Name = "zeroitMaterialRadioButton1";
-            this.zeroitMaterialRadioButton1.Ripple = true;
-            this.zeroitMaterialRadioButton1.Size = new System.Drawing.Size(285, 23);
-            this.zeroitMaterialRadioButton1.TabIndex = 4;
-            this.zeroitMaterialRadioButton1.Text = "Patientenverfügung";
+            this.rd_btn_padfafü.AllowTransparency = true;
+            this.rd_btn_padfafü.Checked = false;
+            this.rd_btn_padfafü.Depth = 0;
+            this.rd_btn_padfafü.Font = new System.Drawing.Font("Roboto", 10F);
+            this.rd_btn_padfafü.Location = new System.Drawing.Point(38, 39);
+            this.rd_btn_padfafü.Margin = new System.Windows.Forms.Padding(0);
+            this.rd_btn_padfafü.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rd_btn_padfafü.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.rd_btn_padfafü.Name = "rd_btn_padfafü";
+            this.rd_btn_padfafü.Ripple = true;
+            this.rd_btn_padfafü.Size = new System.Drawing.Size(285, 23);
+            this.rd_btn_padfafü.TabIndex = 4;
+            this.rd_btn_padfafü.Text = "Patientenverfügung";
             // 
             // zeroitMaterialRadioButton2
             // 
@@ -1186,7 +1194,7 @@
             this.zeroitMaterialRadioButton3.Checked = false;
             this.zeroitMaterialRadioButton3.Depth = 0;
             this.zeroitMaterialRadioButton3.Font = new System.Drawing.Font("Roboto", 10F);
-            this.zeroitMaterialRadioButton3.Location = new System.Drawing.Point(38, 100);
+            this.zeroitMaterialRadioButton3.Location = new System.Drawing.Point(38, 99);
             this.zeroitMaterialRadioButton3.Margin = new System.Windows.Forms.Padding(0);
             this.zeroitMaterialRadioButton3.MouseLocation = new System.Drawing.Point(-1, -1);
             this.zeroitMaterialRadioButton3.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -1225,6 +1233,59 @@
             this.ambianceRichTextBox9.TabIndex = 8;
             this.ambianceRichTextBox9.Text = "kein Eintarg";
             this.ambianceRichTextBox9.WordWrap = true;
+            // 
+            // aButton1
+            // 
+            this.aButton1.Customization = "S0VI/xoXGP8aFxj/S0VI/52FAP9BQUH/S0tL/w==";
+            this.aButton1.Font = new System.Drawing.Font("Verdana", 8F);
+            this.aButton1.Image = null;
+            this.aButton1.Location = new System.Drawing.Point(221, 40);
+            this.aButton1.Name = "aButton1";
+            this.aButton1.NoRounding = false;
+            this.aButton1.Size = new System.Drawing.Size(102, 23);
+            this.aButton1.TabIndex = 9;
+            this.aButton1.Text = "Hochladen";
+            this.aButton1.Transparent = false;
+            this.aButton1.Click += new System.EventHandler(this.AButton1_Click);
+            // 
+            // aButton2
+            // 
+            this.aButton2.Customization = "S0VI/xoXGP8aFxj/S0VI/52FAP9BQUH/S0tL/w==";
+            this.aButton2.Font = new System.Drawing.Font("Verdana", 8F);
+            this.aButton2.Image = null;
+            this.aButton2.Location = new System.Drawing.Point(221, 70);
+            this.aButton2.Name = "aButton2";
+            this.aButton2.NoRounding = false;
+            this.aButton2.Size = new System.Drawing.Size(102, 23);
+            this.aButton2.TabIndex = 10;
+            this.aButton2.Text = "Hochladen";
+            this.aButton2.Transparent = false;
+            // 
+            // aButton3
+            // 
+            this.aButton3.Customization = "S0VI/xoXGP8aFxj/S0VI/52FAP9BQUH/S0tL/w==";
+            this.aButton3.Font = new System.Drawing.Font("Verdana", 8F);
+            this.aButton3.Image = null;
+            this.aButton3.Location = new System.Drawing.Point(221, 100);
+            this.aButton3.Name = "aButton3";
+            this.aButton3.NoRounding = false;
+            this.aButton3.Size = new System.Drawing.Size(102, 23);
+            this.aButton3.TabIndex = 11;
+            this.aButton3.Text = "Hochladen";
+            this.aButton3.Transparent = false;
+            // 
+            // aButton4
+            // 
+            this.aButton4.Customization = "S0VI/xoXGP8aFxj/S0VI/52FAP9BQUH/S0tL/w==";
+            this.aButton4.Font = new System.Drawing.Font("Verdana", 8F);
+            this.aButton4.Image = null;
+            this.aButton4.Location = new System.Drawing.Point(221, 129);
+            this.aButton4.Name = "aButton4";
+            this.aButton4.NoRounding = false;
+            this.aButton4.Size = new System.Drawing.Size(102, 23);
+            this.aButton4.TabIndex = 12;
+            this.aButton4.Text = "Hochladen";
+            this.aButton4.Transparent = false;
             // 
             // Form_Dashboard
             // 
@@ -1352,7 +1413,11 @@
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton zeroitMaterialRadioButton4;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton zeroitMaterialRadioButton3;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton zeroitMaterialRadioButton2;
-        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton zeroitMaterialRadioButton1;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton rd_btn_padfafü;
         private Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox ambianceRichTextBox9;
+        private Zeroit.Framework.UIThemes.Atrocity.aButton aButton4;
+        private Zeroit.Framework.UIThemes.Atrocity.aButton aButton3;
+        private Zeroit.Framework.UIThemes.Atrocity.aButton aButton2;
+        private Zeroit.Framework.UIThemes.Atrocity.aButton aButton1;
     }
 }

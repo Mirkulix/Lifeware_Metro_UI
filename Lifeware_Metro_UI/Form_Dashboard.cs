@@ -318,6 +318,29 @@ namespace Lifeware_Metro_UI
         private void Tbx_pd_anrede_TextChanged(object sender, EventArgs e)
         {
             lbl_Dashboard_Status.Text = "In Bearbeitung";
+
+            
+        }
+
+        private void AButton1_Click(object sender, EventArgs e)
+        {
+            if (rd_btn_padfafü.Checked == true)
+            {
+                OpenFileDialog DateiAuswahl = new OpenFileDialog();
+                DateiAuswahl.Filter = "image files (*.PDF)| *.pdf | All files (*.*) | *.*";
+                DateiAuswahl.InitialDirectory = "";
+                DateiAuswahl.Title = "Profilbild wählen";
+
+
+
+                if (DateiAuswahl.ShowDialog() == DialogResult.OK)
+                {
+
+                    //picbox_pd_meinBild.SizeMode = PictureBoxSizeMode.StretchImage;
+                    //picbox_pd_meinBild.ImageLocation = DateiAuswahl.FileName;
+
+                }
+            }
         }
     }
 }
