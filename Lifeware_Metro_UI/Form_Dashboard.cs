@@ -13,6 +13,8 @@ using XanderUI;
 using System.Text.RegularExpressions;
 using System.IO;
 using System.Data.Entity;
+using Leadtools;
+
 
 /// <summary>
 ///  Diese Applikation ist eine Digitale Notfallakte. Sie diehnt der Idee im Notfall alle medizinischen relevanten Daten zu haben.
@@ -36,6 +38,7 @@ namespace Lifeware_Metro_UI
 
         // Hier wird der Schlüssel übergeben Master-Key.
         public string key_User_Cryt;
+        public byte[] DataFile;
 
 
 
@@ -195,7 +198,7 @@ namespace Lifeware_Metro_UI
 
             /// Table Persönliche Daten /// Die Abhängkeiten klar rausarbeiten... 
             Patients pat = new Patients();
-
+            Dokumentes dc = new Dokumentes();
             if (picbox_pd_meinBild.ImageLocation != null)
             {
                 byte[] imgData;
@@ -249,8 +252,11 @@ namespace Lifeware_Metro_UI
                 pat.KrankenkassenNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_kk_nummer.Text);
                 pat.PersonalausweisNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_personalberater_nr.Text);
                 pat.FührerscheinNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_fuehrerschein_nr.Text);
+                dc.Id_Dokumente = userID_H;
+                dc.Datei = DataFile;
 
                 db.Patients.Add(pat);
+                db.Dokumentes.Add(dc);
                 db.SaveChanges();
 
                 lbl_Dashboard_Status.ForeColor = Color.Red;
@@ -319,27 +325,36 @@ namespace Lifeware_Metro_UI
         {
             lbl_Dashboard_Status.Text = "In Bearbeitung";
 
-            
+
         }
 
-        private void AButton1_Click(object sender, EventArgs e)
+        private void btn_pat_Click(object sender, EventArgs e)
         {
+            DatabaseConnectingHandler db = new DatabaseConnectingHandler();
+            Dokumentes dc = new Dokumentes();
             if (rd_btn_padfafü.Checked == true)
             {
                 OpenFileDialog DateiAuswahl = new OpenFileDialog();
-                DateiAuswahl.Filter = "image files (*.PDF)| *.pdf | All files (*.*) | *.*";
+                DateiAuswahl.Filter = "PDF Files (*.PDF)| *.pdf | All files (*.*) | *.*";
                 DateiAuswahl.InitialDirectory = "";
-                DateiAuswahl.Title = "Profilbild wählen";
+                DateiAuswahl.Title = "Dokument Auswählen";
 
 
 
                 if (DateiAuswahl.ShowDialog() == DialogResult.OK)
                 {
 
-                    //picbox_pd_meinBild.SizeMode = PictureBoxSizeMode.StretchImage;
-                    //picbox_pd_meinBild.ImageLocation = DateiAuswahl.FileName;
+                    Gnostice.Documents.Framework.ActivateLicense("4C9B-7284-6211-4DA4-A2A9-95A0-ADE1-FF24-9614-645D-D502-E17E");
+                    // DocViewer dboard = new DocViewer(DateiAuswahl.FileName);
 
-                }
+                    DViewer.LoadDocument(DateiAuswahl.FileName);
+
+                    // byte[] DataFile;
+                    DataFile = File.ReadAllBytes(DateiAuswahl.FileName);
+                    dc.Datei = DataFile;
+
+                    
+                    }
             }
         }
     }

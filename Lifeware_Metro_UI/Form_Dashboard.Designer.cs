@@ -29,6 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
+            Gnostice.Documents.FormatterSettings formatterSettings1 = new Gnostice.Documents.FormatterSettings();
+            Gnostice.Documents.Spreadsheet.SpreadSheetFormatterSettings spreadSheetFormatterSettings1 = new Gnostice.Documents.Spreadsheet.SpreadSheetFormatterSettings();
+            Gnostice.Documents.PageSettings pageSettings1 = new Gnostice.Documents.PageSettings();
+            Gnostice.Documents.Margins margins1 = new Gnostice.Documents.Margins();
+            Gnostice.Documents.Spreadsheet.SheetOptions sheetOptions1 = new Gnostice.Documents.Spreadsheet.SheetOptions();
+            Gnostice.Documents.Spreadsheet.SheetOptions sheetOptions2 = new Gnostice.Documents.Spreadsheet.SheetOptions();
+            Gnostice.Documents.TXTFormatterSettings txtFormatterSettings1 = new Gnostice.Documents.TXTFormatterSettings();
+            Gnostice.Documents.PageSettings pageSettings2 = new Gnostice.Documents.PageSettings();
+            Gnostice.Documents.Margins margins2 = new Gnostice.Documents.Margins();
+            Gnostice.Graphics.RenderingSettings renderingSettings1 = new Gnostice.Graphics.RenderingSettings();
+            Gnostice.Graphics.ImageRenderingSettings imageRenderingSettings1 = new Gnostice.Graphics.ImageRenderingSettings();
+            Gnostice.Graphics.LineArtRenderingSettings lineArtRenderingSettings1 = new Gnostice.Graphics.LineArtRenderingSettings();
+            Gnostice.Graphics.ResolutionSettings resolutionSettings1 = new Gnostice.Graphics.ResolutionSettings();
+            Gnostice.Graphics.TextRenderingSettings textRenderingSettings1 = new Gnostice.Graphics.TextRenderingSettings();
             this.zeroitMaterialLabel2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel3 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel4 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
@@ -101,11 +115,9 @@
             this.zeroitMaterialRadioButton2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
             this.zeroitMaterialRadioButton3 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
             this.zeroitMaterialRadioButton4 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
-            this.ambianceRichTextBox9 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
-            this.aButton1 = new Zeroit.Framework.UIThemes.Atrocity.aButton();
-            this.aButton2 = new Zeroit.Framework.UIThemes.Atrocity.aButton();
-            this.aButton3 = new Zeroit.Framework.UIThemes.Atrocity.aButton();
-            this.aButton4 = new Zeroit.Framework.UIThemes.Atrocity.aButton();
+            this.DViewer = new Gnostice.Documents.Controls.WinForms.DocumentViewer();
+            this.btn_pat = new Zeroit.Framework.UIThemes.BetaBlue.BetaBlueButton();
+            this.zeroitMaterialLabel1 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.xuiFlatTabControl.SuspendLayout();
             this.tbaNotfalldaten.SuspendLayout();
             this.tabMDDaten.SuspendLayout();
@@ -588,7 +600,7 @@
             this.xuiFlatTabControl.OnlyTopLine = true;
             this.xuiFlatTabControl.PageColor = System.Drawing.Color.White;
             this.xuiFlatTabControl.SelectedIndex = 0;
-            this.xuiFlatTabControl.Size = new System.Drawing.Size(672, 521);
+            this.xuiFlatTabControl.Size = new System.Drawing.Size(864, 521);
             this.xuiFlatTabControl.TabIndex = 34;
             // 
             // tbaNotfalldaten
@@ -617,7 +629,7 @@
             this.tbaNotfalldaten.Location = new System.Drawing.Point(4, 20);
             this.tbaNotfalldaten.Name = "tbaNotfalldaten";
             this.tbaNotfalldaten.Padding = new System.Windows.Forms.Padding(3);
-            this.tbaNotfalldaten.Size = new System.Drawing.Size(664, 497);
+            this.tbaNotfalldaten.Size = new System.Drawing.Size(856, 497);
             this.tbaNotfalldaten.TabIndex = 0;
             this.tbaNotfalldaten.Text = "Notfalldaten";
             // 
@@ -874,7 +886,7 @@
             this.tabMDDaten.Location = new System.Drawing.Point(4, 20);
             this.tabMDDaten.Name = "tabMDDaten";
             this.tabMDDaten.Padding = new System.Windows.Forms.Padding(3);
-            this.tabMDDaten.Size = new System.Drawing.Size(664, 497);
+            this.tabMDDaten.Size = new System.Drawing.Size(856, 497);
             this.tabMDDaten.TabIndex = 1;
             this.tabMDDaten.Text = "MED Daten";
             // 
@@ -899,7 +911,7 @@
             this.btn_speichern.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
             this.btn_speichern.HoverTextColor = System.Drawing.Color.DodgerBlue;
             this.btn_speichern.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btn_speichern.Location = new System.Drawing.Point(934, 616);
+            this.btn_speichern.Location = new System.Drawing.Point(1122, 612);
             this.btn_speichern.Name = "btn_speichern";
             this.btn_speichern.Size = new System.Drawing.Size(200, 50);
             this.btn_speichern.TabIndex = 0;
@@ -910,18 +922,15 @@
             // tabDokumente
             // 
             this.tabDokumente.BackColor = System.Drawing.Color.White;
-            this.tabDokumente.Controls.Add(this.aButton4);
-            this.tabDokumente.Controls.Add(this.aButton3);
-            this.tabDokumente.Controls.Add(this.aButton2);
-            this.tabDokumente.Controls.Add(this.aButton1);
-            this.tabDokumente.Controls.Add(this.ambianceRichTextBox9);
+            this.tabDokumente.Controls.Add(this.btn_pat);
+            this.tabDokumente.Controls.Add(this.DViewer);
             this.tabDokumente.Controls.Add(this.zeroitMaterialRadioButton4);
             this.tabDokumente.Controls.Add(this.zeroitMaterialRadioButton3);
             this.tabDokumente.Controls.Add(this.zeroitMaterialRadioButton2);
             this.tabDokumente.Controls.Add(this.rd_btn_padfafü);
             this.tabDokumente.Location = new System.Drawing.Point(4, 20);
             this.tabDokumente.Name = "tabDokumente";
-            this.tabDokumente.Size = new System.Drawing.Size(664, 497);
+            this.tabDokumente.Size = new System.Drawing.Size(856, 497);
             this.tabDokumente.TabIndex = 2;
             this.tabDokumente.Text = "Dokumente";
             // 
@@ -1220,78 +1229,123 @@
             this.zeroitMaterialRadioButton4.TabIndex = 7;
             this.zeroitMaterialRadioButton4.Text = "Organspendeausweis";
             // 
-            // ambianceRichTextBox9
+            // DViewer
             // 
-            this.ambianceRichTextBox9.AutoWordSelection = false;
-            this.ambianceRichTextBox9.BackColor = System.Drawing.Color.Transparent;
-            this.ambianceRichTextBox9.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.ambianceRichTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.ambianceRichTextBox9.Location = new System.Drawing.Point(28, 166);
-            this.ambianceRichTextBox9.Name = "ambianceRichTextBox9";
-            this.ambianceRichTextBox9.ReadOnly = false;
-            this.ambianceRichTextBox9.Size = new System.Drawing.Size(611, 310);
-            this.ambianceRichTextBox9.TabIndex = 8;
-            this.ambianceRichTextBox9.Text = "kein Eintarg";
-            this.ambianceRichTextBox9.WordWrap = true;
+            this.DViewer.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.DViewer.BorderWidth = 10;
+            this.DViewer.CurrentPage = 0;
+            this.DViewer.HScrollBar.LargeChange = 40;
+            this.DViewer.HScrollBar.SmallChange = 20;
+            this.DViewer.HScrollBar.Value = 0;
+            this.DViewer.HScrollBar.Visibility = Gnostice.Documents.Controls.WinForms.ScrollBarVisibility.Always;
+            this.DViewer.Location = new System.Drawing.Point(29, 174);
+            this.DViewer.MouseMode = Gnostice.DOM.CursorPreferences.AreaSelection;
+            this.DViewer.Name = "DViewer";
             // 
-            // aButton1
             // 
-            this.aButton1.Customization = "S0VI/xoXGP8aFxj/S0VI/52FAP9BQUH/S0tL/w==";
-            this.aButton1.Font = new System.Drawing.Font("Verdana", 8F);
-            this.aButton1.Image = null;
-            this.aButton1.Location = new System.Drawing.Point(221, 40);
-            this.aButton1.Name = "aButton1";
-            this.aButton1.NoRounding = false;
-            this.aButton1.Size = new System.Drawing.Size(102, 23);
-            this.aButton1.TabIndex = 9;
-            this.aButton1.Text = "Hochladen";
-            this.aButton1.Transparent = false;
-            this.aButton1.Click += new System.EventHandler(this.AButton1_Click);
             // 
-            // aButton2
+            this.DViewer.NavigationPane.ActivePage = null;
+            this.DViewer.NavigationPane.Location = new System.Drawing.Point(0, 0);
+            this.DViewer.NavigationPane.Name = "";
+            this.DViewer.NavigationPane.TabIndex = 0;
+            this.DViewer.NavigationPane.Visibility = Gnostice.Documents.Controls.WinForms.Visibility.Auto;
+            this.DViewer.NavigationPane.WidthPercentage = 20;
+            this.DViewer.PageLayout = null;
+            this.DViewer.PageRotation = Gnostice.Documents.Controls.WinForms.RotationAngle.Zero;
+            this.DViewer.Preferences.Cursor = Gnostice.DOM.CursorPreferences.Pan;
+            spreadSheetFormatterSettings1.FormattingMode = Gnostice.DOM.FormattingMode.PreferDocumentSettings;
+            spreadSheetFormatterSettings1.PageOrder = Gnostice.Documents.Spreadsheet.LayoutDirection.BackwardN;
+            pageSettings1.Height = 11.6929F;
+            margins1.Bottom = 1F;
+            margins1.Footer = 0F;
+            margins1.Header = 0F;
+            margins1.Left = 1F;
+            margins1.Right = 1F;
+            margins1.Top = 1F;
+            pageSettings1.Margin = margins1;
+            pageSettings1.Orientation = Gnostice.Graphics.Orientation.Portrait;
+            pageSettings1.PageSize = Gnostice.Documents.PageSize.A4;
+            pageSettings1.Width = 8.2677F;
+            spreadSheetFormatterSettings1.PageSettings = pageSettings1;
+            sheetOptions1.Print = false;
+            sheetOptions1.View = true;
+            spreadSheetFormatterSettings1.ShowGridlines = sheetOptions1;
+            sheetOptions2.Print = false;
+            sheetOptions2.View = true;
+            spreadSheetFormatterSettings1.ShowHeadings = sheetOptions2;
+            formatterSettings1.SpreadSheet = spreadSheetFormatterSettings1;
+            txtFormatterSettings1.Font = new System.Drawing.Font("Calibri", 12F);
+            pageSettings2.Height = 11.6929F;
+            margins2.Bottom = 1F;
+            margins2.Footer = 0F;
+            margins2.Header = 0F;
+            margins2.Left = 1F;
+            margins2.Right = 1F;
+            margins2.Top = 1F;
+            pageSettings2.Margin = margins2;
+            pageSettings2.Orientation = Gnostice.Graphics.Orientation.Portrait;
+            pageSettings2.PageSize = Gnostice.Documents.PageSize.A4;
+            pageSettings2.Width = 8.2677F;
+            txtFormatterSettings1.PageSettings = pageSettings2;
+            formatterSettings1.TXT = txtFormatterSettings1;
+            this.DViewer.Preferences.FormatterSettings = formatterSettings1;
+            this.DViewer.Preferences.KeyNavigation = true;
+            imageRenderingSettings1.CompositingMode = Gnostice.Graphics.CompositingMode.SourceOver;
+            imageRenderingSettings1.CompositingQuality = Gnostice.Graphics.CompositingQuality.Default;
+            imageRenderingSettings1.InterpolationMode = Gnostice.Graphics.InterpolationMode.NearestNeighbor;
+            imageRenderingSettings1.PixelOffsetMode = Gnostice.Graphics.PixelOffsetMode.HighQuality;
+            renderingSettings1.Image = imageRenderingSettings1;
+            lineArtRenderingSettings1.SmoothingMode = Gnostice.Graphics.SmoothingMode.AntiAlias;
+            renderingSettings1.LineArt = lineArtRenderingSettings1;
+            resolutionSettings1.DpiX = 96F;
+            resolutionSettings1.DpiY = 96F;
+            resolutionSettings1.ResolutionMode = Gnostice.Graphics.ResolutionMode.UseSource;
+            renderingSettings1.Resolution = resolutionSettings1;
+            textRenderingSettings1.TextContrast = 3;
+            textRenderingSettings1.TextRenderingHint = Gnostice.Graphics.TextRenderingHint.AntiAlias;
+            renderingSettings1.Text = textRenderingSettings1;
+            this.DViewer.Preferences.RenderingSettings = renderingSettings1;
+            this.DViewer.Preferences.Units = Gnostice.Graphics.MeasurementUnit.Inches;
+            this.DViewer.Size = new System.Drawing.Size(808, 302);
+            this.DViewer.TabIndex = 13;
+            this.DViewer.VScrollBar.LargeChange = 40;
+            this.DViewer.VScrollBar.SmallChange = 20;
+            this.DViewer.VScrollBar.Value = 0;
+            this.DViewer.VScrollBar.Visibility = Gnostice.Documents.Controls.WinForms.ScrollBarVisibility.Always;
+            this.DViewer.Zoom.ZoomMode = Gnostice.Documents.Controls.WinForms.ZoomMode.ActualSize;
+            this.DViewer.Zoom.ZoomPercent = 100D;
             // 
-            this.aButton2.Customization = "S0VI/xoXGP8aFxj/S0VI/52FAP9BQUH/S0tL/w==";
-            this.aButton2.Font = new System.Drawing.Font("Verdana", 8F);
-            this.aButton2.Image = null;
-            this.aButton2.Location = new System.Drawing.Point(221, 70);
-            this.aButton2.Name = "aButton2";
-            this.aButton2.NoRounding = false;
-            this.aButton2.Size = new System.Drawing.Size(102, 23);
-            this.aButton2.TabIndex = 10;
-            this.aButton2.Text = "Hochladen";
-            this.aButton2.Transparent = false;
+            // btn_pat
             // 
-            // aButton3
+            this.btn_pat.Dark = false;
+            this.btn_pat.Image = null;
+            this.btn_pat.Location = new System.Drawing.Point(225, 39);
+            this.btn_pat.Name = "btn_pat";
+            this.btn_pat.NoRounding = false;
+            this.btn_pat.Size = new System.Drawing.Size(128, 23);
+            this.btn_pat.TabIndex = 14;
+            this.btn_pat.Text = "Hochladen";
+            this.btn_pat.Click += new System.EventHandler(this.btn_pat_Click);
             // 
-            this.aButton3.Customization = "S0VI/xoXGP8aFxj/S0VI/52FAP9BQUH/S0tL/w==";
-            this.aButton3.Font = new System.Drawing.Font("Verdana", 8F);
-            this.aButton3.Image = null;
-            this.aButton3.Location = new System.Drawing.Point(221, 100);
-            this.aButton3.Name = "aButton3";
-            this.aButton3.NoRounding = false;
-            this.aButton3.Size = new System.Drawing.Size(102, 23);
-            this.aButton3.TabIndex = 11;
-            this.aButton3.Text = "Hochladen";
-            this.aButton3.Transparent = false;
+            // zeroitMaterialLabel1
             // 
-            // aButton4
-            // 
-            this.aButton4.Customization = "S0VI/xoXGP8aFxj/S0VI/52FAP9BQUH/S0tL/w==";
-            this.aButton4.Font = new System.Drawing.Font("Verdana", 8F);
-            this.aButton4.Image = null;
-            this.aButton4.Location = new System.Drawing.Point(221, 129);
-            this.aButton4.Name = "aButton4";
-            this.aButton4.NoRounding = false;
-            this.aButton4.Size = new System.Drawing.Size(102, 23);
-            this.aButton4.TabIndex = 12;
-            this.aButton4.Text = "Hochladen";
-            this.aButton4.Transparent = false;
+            this.zeroitMaterialLabel1.AllowTransparency = true;
+            this.zeroitMaterialLabel1.Depth = 0;
+            this.zeroitMaterialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel1.Location = new System.Drawing.Point(13, 282);
+            this.zeroitMaterialLabel1.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel1.Name = "zeroitMaterialLabel1";
+            this.zeroitMaterialLabel1.Size = new System.Drawing.Size(53, 19);
+            this.zeroitMaterialLabel1.TabIndex = 35;
+            this.zeroitMaterialLabel1.Text = "Anrede";
             // 
             // Form_Dashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 674);
+            this.ClientSize = new System.Drawing.Size(1352, 674);
+            this.Controls.Add(this.zeroitMaterialLabel1);
             this.Controls.Add(this.xuiFlatTabControl);
             this.Controls.Add(this.lbl_Dashboard_Status);
             this.Controls.Add(this.picbox_pd_meinBild);
@@ -1414,10 +1468,8 @@
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton zeroitMaterialRadioButton3;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton zeroitMaterialRadioButton2;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton rd_btn_padfafü;
-        private Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox ambianceRichTextBox9;
-        private Zeroit.Framework.UIThemes.Atrocity.aButton aButton4;
-        private Zeroit.Framework.UIThemes.Atrocity.aButton aButton3;
-        private Zeroit.Framework.UIThemes.Atrocity.aButton aButton2;
-        private Zeroit.Framework.UIThemes.Atrocity.aButton aButton1;
+        private Gnostice.Documents.Controls.WinForms.DocumentViewer DViewer;
+        private Zeroit.Framework.UIThemes.BetaBlue.BetaBlueButton btn_pat;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel1;
     }
 }
