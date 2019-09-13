@@ -163,10 +163,14 @@ namespace Lifeware_Metro_UI
         private void Btn_picbox_speichern_Click(object sender, EventArgs e)
         {
             OpenFileDialog DateiAuswahl = new OpenFileDialog();
-            DateiAuswahl.Filter = "image files (*.png)| *.png | All files (*.*) | *.*";
-            DateiAuswahl.InitialDirectory = "";
-            DateiAuswahl.Title = "Profilbild wählen";
+            {
+                
+                DateiAuswahl.Filter = "image files (*.png)| *.png | All files (*.*) | *.*";
+                DateiAuswahl.InitialDirectory = "";
+                DateiAuswahl.Title = "Profilbild wählen";
 
+            };
+            
 
 
             if (DateiAuswahl.ShowDialog() == DialogResult.OK)
