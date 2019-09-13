@@ -319,7 +319,6 @@ namespace Lifeware_Metro_UI
         {
             lbl_Dashboard_Status.Text = "In Bearbeitung";
         }
-
     }
 }
 

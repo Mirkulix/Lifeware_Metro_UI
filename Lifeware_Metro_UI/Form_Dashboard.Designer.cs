@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
-            this.zeroitMaterialLabel1 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel3 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel4 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
@@ -80,29 +79,42 @@
             this.tabMDDaten = new System.Windows.Forms.TabPage();
             this.picbox_pd_meinBild = new System.Windows.Forms.PictureBox();
             this.btn_speichern = new XanderUI.XUIButton();
+            this.tabDokumente = new System.Windows.Forms.TabPage();
+            this.zeroitMaterialLabel23 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel24 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel25 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.ambianceRichTextBox1 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.ambianceRichTextBox2 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.ambianceRichTextBox3 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.tabNotfallkation = new System.Windows.Forms.TabPage();
+            this.ambianceRichTextBox4 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.ambianceRichTextBox5 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.ambianceRichTextBox6 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.zeroitMaterialLabel26 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel27 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel28 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.ambianceRichTextBox7 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.zeroitMaterialLabel29 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel30 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.ambianceRichTextBox8 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.zeroitMaterialRadioButton1 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
+            this.zeroitMaterialRadioButton2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
+            this.zeroitMaterialRadioButton3 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
+            this.zeroitMaterialRadioButton4 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
+            this.ambianceRichTextBox9 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
             this.xuiFlatTabControl.SuspendLayout();
             this.tbaNotfalldaten.SuspendLayout();
+            this.tabMDDaten.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).BeginInit();
+            this.tabDokumente.SuspendLayout();
+            this.tabNotfallkation.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // zeroitMaterialLabel1
-            // 
-            this.zeroitMaterialLabel1.AllowTransparency = true;
-            this.zeroitMaterialLabel1.Depth = 0;
-            this.zeroitMaterialLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.zeroitMaterialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel1.Location = new System.Drawing.Point(12, 283);
-            this.zeroitMaterialLabel1.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel1.Name = "zeroitMaterialLabel1";
-            this.zeroitMaterialLabel1.Size = new System.Drawing.Size(53, 19);
-            this.zeroitMaterialLabel1.TabIndex = 3;
-            this.zeroitMaterialLabel1.Text = "Anrede";
             // 
             // zeroitMaterialLabel2
             // 
             this.zeroitMaterialLabel2.AllowTransparency = true;
             this.zeroitMaterialLabel2.Depth = 0;
-            this.zeroitMaterialLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel2.Location = new System.Drawing.Point(12, 308);
             this.zeroitMaterialLabel2.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -115,7 +127,7 @@
             // 
             this.zeroitMaterialLabel3.AllowTransparency = true;
             this.zeroitMaterialLabel3.Depth = 0;
-            this.zeroitMaterialLabel3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel3.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel3.Location = new System.Drawing.Point(12, 333);
             this.zeroitMaterialLabel3.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -128,7 +140,7 @@
             // 
             this.zeroitMaterialLabel4.AllowTransparency = true;
             this.zeroitMaterialLabel4.Depth = 0;
-            this.zeroitMaterialLabel4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel4.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel4.Location = new System.Drawing.Point(12, 360);
             this.zeroitMaterialLabel4.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -141,7 +153,7 @@
             // 
             this.zeroitMaterialLabel5.AllowTransparency = true;
             this.zeroitMaterialLabel5.Depth = 0;
-            this.zeroitMaterialLabel5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel5.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel5.Location = new System.Drawing.Point(12, 385);
             this.zeroitMaterialLabel5.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -154,7 +166,7 @@
             // 
             this.zeroitMaterialLabel6.AllowTransparency = true;
             this.zeroitMaterialLabel6.Depth = 0;
-            this.zeroitMaterialLabel6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel6.Location = new System.Drawing.Point(13, 411);
             this.zeroitMaterialLabel6.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -167,7 +179,7 @@
             // 
             this.zeroitMaterialLabel7.AllowTransparency = true;
             this.zeroitMaterialLabel7.Depth = 0;
-            this.zeroitMaterialLabel7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel7.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel7.Location = new System.Drawing.Point(13, 437);
             this.zeroitMaterialLabel7.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -307,7 +319,7 @@
             // 
             this.zeroitMaterialLabel8.AllowTransparency = true;
             this.zeroitMaterialLabel8.Depth = 0;
-            this.zeroitMaterialLabel8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel8.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel8.Location = new System.Drawing.Point(12, 462);
             this.zeroitMaterialLabel8.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -320,7 +332,7 @@
             // 
             this.zeroitMaterialLabel9.AllowTransparency = true;
             this.zeroitMaterialLabel9.Depth = 0;
-            this.zeroitMaterialLabel9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel9.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel9.Location = new System.Drawing.Point(13, 487);
             this.zeroitMaterialLabel9.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -333,7 +345,7 @@
             // 
             this.zeroitMaterialLabel10.AllowTransparency = true;
             this.zeroitMaterialLabel10.Depth = 0;
-            this.zeroitMaterialLabel10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel10.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel10.Location = new System.Drawing.Point(12, 512);
             this.zeroitMaterialLabel10.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -346,7 +358,7 @@
             // 
             this.zeroitMaterialLabel11.AllowTransparency = true;
             this.zeroitMaterialLabel11.Depth = 0;
-            this.zeroitMaterialLabel11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel11.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel11.Location = new System.Drawing.Point(12, 537);
             this.zeroitMaterialLabel11.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -359,7 +371,7 @@
             // 
             this.zeroitMaterialLabel12.AllowTransparency = true;
             this.zeroitMaterialLabel12.Depth = 0;
-            this.zeroitMaterialLabel12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel12.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel12.Location = new System.Drawing.Point(12, 562);
             this.zeroitMaterialLabel12.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -372,7 +384,7 @@
             // 
             this.zeroitMaterialLabel13.AllowTransparency = true;
             this.zeroitMaterialLabel13.Depth = 0;
-            this.zeroitMaterialLabel13.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel13.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel13.Location = new System.Drawing.Point(12, 587);
             this.zeroitMaterialLabel13.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -385,7 +397,7 @@
             // 
             this.zeroitMaterialLabel14.AllowTransparency = true;
             this.zeroitMaterialLabel14.Depth = 0;
-            this.zeroitMaterialLabel14.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel14.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel14.Location = new System.Drawing.Point(12, 612);
             this.zeroitMaterialLabel14.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -561,6 +573,8 @@
             this.xuiFlatTabControl.BorderColor = System.Drawing.Color.DodgerBlue;
             this.xuiFlatTabControl.Controls.Add(this.tbaNotfalldaten);
             this.xuiFlatTabControl.Controls.Add(this.tabMDDaten);
+            this.xuiFlatTabControl.Controls.Add(this.tabDokumente);
+            this.xuiFlatTabControl.Controls.Add(this.tabNotfallkation);
             this.xuiFlatTabControl.HeaderBackgroundColor = System.Drawing.Color.White;
             this.xuiFlatTabControl.InActiveHeaderColor = System.Drawing.Color.RoyalBlue;
             this.xuiFlatTabControl.InActiveTextColor = System.Drawing.Color.White;
@@ -576,6 +590,10 @@
             // tbaNotfalldaten
             // 
             this.tbaNotfalldaten.BackColor = System.Drawing.Color.White;
+            this.tbaNotfalldaten.Controls.Add(this.ambianceRichTextBox8);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLabel30);
+            this.tbaNotfalldaten.Controls.Add(this.ambianceRichTextBox7);
+            this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLabel29);
             this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLabel22);
             this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLineTextField1);
             this.tbaNotfalldaten.Controls.Add(this.zeroitMaterialLineTextField2);
@@ -603,7 +621,7 @@
             // 
             this.zeroitMaterialLabel22.AllowTransparency = true;
             this.zeroitMaterialLabel22.Depth = 0;
-            this.zeroitMaterialLabel22.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel22.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel22.Location = new System.Drawing.Point(31, 84);
             this.zeroitMaterialLabel22.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -616,7 +634,7 @@
             // 
             this.zeroitMaterialLineTextField1.Depth = 0;
             this.zeroitMaterialLineTextField1.Hint = "";
-            this.zeroitMaterialLineTextField1.Location = new System.Drawing.Point(173, 263);
+            this.zeroitMaterialLineTextField1.Location = new System.Drawing.Point(173, 213);
             this.zeroitMaterialLineTextField1.MaxLength = 32767;
             this.zeroitMaterialLineTextField1.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.zeroitMaterialLineTextField1.Name = "zeroitMaterialLineTextField1";
@@ -753,9 +771,9 @@
             // 
             this.zeroitMaterialLabel21.AllowTransparency = true;
             this.zeroitMaterialLabel21.Depth = 0;
-            this.zeroitMaterialLabel21.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel21.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel21.Location = new System.Drawing.Point(31, 267);
+            this.zeroitMaterialLabel21.Location = new System.Drawing.Point(31, 213);
             this.zeroitMaterialLabel21.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
             this.zeroitMaterialLabel21.Name = "zeroitMaterialLabel21";
             this.zeroitMaterialLabel21.Size = new System.Drawing.Size(112, 19);
@@ -766,7 +784,7 @@
             // 
             this.zeroitMaterialLabel20.AllowTransparency = true;
             this.zeroitMaterialLabel20.Depth = 0;
-            this.zeroitMaterialLabel20.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel20.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel20.Location = new System.Drawing.Point(31, 188);
             this.zeroitMaterialLabel20.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -779,7 +797,7 @@
             // 
             this.zeroitMaterialLabel19.AllowTransparency = true;
             this.zeroitMaterialLabel19.Depth = 0;
-            this.zeroitMaterialLabel19.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel19.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel19.Location = new System.Drawing.Point(31, 162);
             this.zeroitMaterialLabel19.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -792,7 +810,7 @@
             // 
             this.zeroitMaterialLabel18.AllowTransparency = true;
             this.zeroitMaterialLabel18.Depth = 0;
-            this.zeroitMaterialLabel18.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel18.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel18.Location = new System.Drawing.Point(31, 136);
             this.zeroitMaterialLabel18.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -805,7 +823,7 @@
             // 
             this.zeroitMaterialLabel17.AllowTransparency = true;
             this.zeroitMaterialLabel17.Depth = 0;
-            this.zeroitMaterialLabel17.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel17.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel17.Location = new System.Drawing.Point(31, 111);
             this.zeroitMaterialLabel17.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -818,7 +836,7 @@
             // 
             this.zeroitMaterialLabel16.AllowTransparency = true;
             this.zeroitMaterialLabel16.Depth = 0;
-            this.zeroitMaterialLabel16.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel16.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel16.Location = new System.Drawing.Point(31, 59);
             this.zeroitMaterialLabel16.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -831,7 +849,7 @@
             // 
             this.zeroitMaterialLabel15.AllowTransparency = true;
             this.zeroitMaterialLabel15.Depth = 0;
-            this.zeroitMaterialLabel15.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            this.zeroitMaterialLabel15.Font = new System.Drawing.Font("Roboto", 11F);
             this.zeroitMaterialLabel15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.zeroitMaterialLabel15.Location = new System.Drawing.Point(31, 34);
             this.zeroitMaterialLabel15.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
@@ -843,6 +861,12 @@
             // tabMDDaten
             // 
             this.tabMDDaten.BackColor = System.Drawing.Color.White;
+            this.tabMDDaten.Controls.Add(this.ambianceRichTextBox3);
+            this.tabMDDaten.Controls.Add(this.ambianceRichTextBox2);
+            this.tabMDDaten.Controls.Add(this.ambianceRichTextBox1);
+            this.tabMDDaten.Controls.Add(this.zeroitMaterialLabel25);
+            this.tabMDDaten.Controls.Add(this.zeroitMaterialLabel24);
+            this.tabMDDaten.Controls.Add(this.zeroitMaterialLabel23);
             this.tabMDDaten.Location = new System.Drawing.Point(4, 20);
             this.tabMDDaten.Name = "tabMDDaten";
             this.tabMDDaten.Padding = new System.Windows.Forms.Padding(3);
@@ -878,6 +902,329 @@
             this.btn_speichern.TextColor = System.Drawing.Color.DodgerBlue;
             this.btn_speichern.Vertical_Alignment = System.Drawing.StringAlignment.Center;
             this.btn_speichern.Click += new System.EventHandler(this.Btn_speichern_Click);
+            // 
+            // tabDokumente
+            // 
+            this.tabDokumente.BackColor = System.Drawing.Color.White;
+            this.tabDokumente.Controls.Add(this.ambianceRichTextBox9);
+            this.tabDokumente.Controls.Add(this.zeroitMaterialRadioButton4);
+            this.tabDokumente.Controls.Add(this.zeroitMaterialRadioButton3);
+            this.tabDokumente.Controls.Add(this.zeroitMaterialRadioButton2);
+            this.tabDokumente.Controls.Add(this.zeroitMaterialRadioButton1);
+            this.tabDokumente.Location = new System.Drawing.Point(4, 20);
+            this.tabDokumente.Name = "tabDokumente";
+            this.tabDokumente.Size = new System.Drawing.Size(664, 497);
+            this.tabDokumente.TabIndex = 2;
+            this.tabDokumente.Text = "Dokumente";
+            // 
+            // zeroitMaterialLabel23
+            // 
+            this.zeroitMaterialLabel23.AllowTransparency = true;
+            this.zeroitMaterialLabel23.Depth = 0;
+            this.zeroitMaterialLabel23.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel23.Location = new System.Drawing.Point(24, 35);
+            this.zeroitMaterialLabel23.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel23.Name = "zeroitMaterialLabel23";
+            this.zeroitMaterialLabel23.Size = new System.Drawing.Size(151, 19);
+            this.zeroitMaterialLabel23.TabIndex = 4;
+            this.zeroitMaterialLabel23.Text = "Medizinische Historie";
+            // 
+            // zeroitMaterialLabel24
+            // 
+            this.zeroitMaterialLabel24.AllowTransparency = true;
+            this.zeroitMaterialLabel24.Depth = 0;
+            this.zeroitMaterialLabel24.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel24.Location = new System.Drawing.Point(24, 178);
+            this.zeroitMaterialLabel24.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel24.Name = "zeroitMaterialLabel24";
+            this.zeroitMaterialLabel24.Size = new System.Drawing.Size(65, 19);
+            this.zeroitMaterialLabel24.TabIndex = 5;
+            this.zeroitMaterialLabel24.Text = "Allergien";
+            // 
+            // zeroitMaterialLabel25
+            // 
+            this.zeroitMaterialLabel25.AllowTransparency = true;
+            this.zeroitMaterialLabel25.Depth = 0;
+            this.zeroitMaterialLabel25.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel25.Location = new System.Drawing.Point(24, 332);
+            this.zeroitMaterialLabel25.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel25.Name = "zeroitMaterialLabel25";
+            this.zeroitMaterialLabel25.Size = new System.Drawing.Size(49, 19);
+            this.zeroitMaterialLabel25.TabIndex = 6;
+            this.zeroitMaterialLabel25.Text = "Geräte";
+            // 
+            // ambianceRichTextBox1
+            // 
+            this.ambianceRichTextBox1.AutoWordSelection = false;
+            this.ambianceRichTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox1.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox1.Location = new System.Drawing.Point(24, 60);
+            this.ambianceRichTextBox1.Name = "ambianceRichTextBox1";
+            this.ambianceRichTextBox1.ReadOnly = false;
+            this.ambianceRichTextBox1.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox1.TabIndex = 7;
+            this.ambianceRichTextBox1.Text = "kein Eintarg";
+            this.ambianceRichTextBox1.WordWrap = true;
+            // 
+            // ambianceRichTextBox2
+            // 
+            this.ambianceRichTextBox2.AutoWordSelection = false;
+            this.ambianceRichTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox2.Location = new System.Drawing.Point(24, 203);
+            this.ambianceRichTextBox2.Name = "ambianceRichTextBox2";
+            this.ambianceRichTextBox2.ReadOnly = false;
+            this.ambianceRichTextBox2.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox2.TabIndex = 8;
+            this.ambianceRichTextBox2.Text = "Gräser, Pollen,Birken";
+            this.ambianceRichTextBox2.WordWrap = true;
+            // 
+            // ambianceRichTextBox3
+            // 
+            this.ambianceRichTextBox3.AutoWordSelection = false;
+            this.ambianceRichTextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox3.Location = new System.Drawing.Point(24, 357);
+            this.ambianceRichTextBox3.Name = "ambianceRichTextBox3";
+            this.ambianceRichTextBox3.ReadOnly = false;
+            this.ambianceRichTextBox3.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox3.TabIndex = 9;
+            this.ambianceRichTextBox3.Text = "keine ";
+            this.ambianceRichTextBox3.WordWrap = true;
+            // 
+            // tabNotfallkation
+            // 
+            this.tabNotfallkation.BackColor = System.Drawing.Color.White;
+            this.tabNotfallkation.Controls.Add(this.ambianceRichTextBox4);
+            this.tabNotfallkation.Controls.Add(this.ambianceRichTextBox5);
+            this.tabNotfallkation.Controls.Add(this.ambianceRichTextBox6);
+            this.tabNotfallkation.Controls.Add(this.zeroitMaterialLabel26);
+            this.tabNotfallkation.Controls.Add(this.zeroitMaterialLabel27);
+            this.tabNotfallkation.Controls.Add(this.zeroitMaterialLabel28);
+            this.tabNotfallkation.Location = new System.Drawing.Point(4, 20);
+            this.tabNotfallkation.Name = "tabNotfallkation";
+            this.tabNotfallkation.Size = new System.Drawing.Size(664, 497);
+            this.tabNotfallkation.TabIndex = 3;
+            this.tabNotfallkation.Text = "Notfallaktionen";
+            // 
+            // ambianceRichTextBox4
+            // 
+            this.ambianceRichTextBox4.AutoWordSelection = false;
+            this.ambianceRichTextBox4.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox4.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox4.Location = new System.Drawing.Point(27, 355);
+            this.ambianceRichTextBox4.Name = "ambianceRichTextBox4";
+            this.ambianceRichTextBox4.ReadOnly = false;
+            this.ambianceRichTextBox4.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox4.TabIndex = 15;
+            this.ambianceRichTextBox4.Text = "keine ";
+            this.ambianceRichTextBox4.WordWrap = true;
+            // 
+            // ambianceRichTextBox5
+            // 
+            this.ambianceRichTextBox5.AutoWordSelection = false;
+            this.ambianceRichTextBox5.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox5.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox5.Location = new System.Drawing.Point(27, 201);
+            this.ambianceRichTextBox5.Name = "ambianceRichTextBox5";
+            this.ambianceRichTextBox5.ReadOnly = false;
+            this.ambianceRichTextBox5.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox5.TabIndex = 14;
+            this.ambianceRichTextBox5.Text = "Gräser, Pollen,Birken";
+            this.ambianceRichTextBox5.WordWrap = true;
+            // 
+            // ambianceRichTextBox6
+            // 
+            this.ambianceRichTextBox6.AutoWordSelection = false;
+            this.ambianceRichTextBox6.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox6.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox6.Location = new System.Drawing.Point(27, 58);
+            this.ambianceRichTextBox6.Name = "ambianceRichTextBox6";
+            this.ambianceRichTextBox6.ReadOnly = false;
+            this.ambianceRichTextBox6.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox6.TabIndex = 13;
+            this.ambianceRichTextBox6.Text = "Kind im Kindergarten";
+            this.ambianceRichTextBox6.WordWrap = true;
+            // 
+            // zeroitMaterialLabel26
+            // 
+            this.zeroitMaterialLabel26.AllowTransparency = true;
+            this.zeroitMaterialLabel26.Depth = 0;
+            this.zeroitMaterialLabel26.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel26.Location = new System.Drawing.Point(27, 330);
+            this.zeroitMaterialLabel26.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel26.Name = "zeroitMaterialLabel26";
+            this.zeroitMaterialLabel26.Size = new System.Drawing.Size(49, 19);
+            this.zeroitMaterialLabel26.TabIndex = 12;
+            this.zeroitMaterialLabel26.Text = "Geräte";
+            // 
+            // zeroitMaterialLabel27
+            // 
+            this.zeroitMaterialLabel27.AllowTransparency = true;
+            this.zeroitMaterialLabel27.Depth = 0;
+            this.zeroitMaterialLabel27.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel27.Location = new System.Drawing.Point(27, 176);
+            this.zeroitMaterialLabel27.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel27.Name = "zeroitMaterialLabel27";
+            this.zeroitMaterialLabel27.Size = new System.Drawing.Size(65, 19);
+            this.zeroitMaterialLabel27.TabIndex = 11;
+            this.zeroitMaterialLabel27.Text = "Allergien";
+            // 
+            // zeroitMaterialLabel28
+            // 
+            this.zeroitMaterialLabel28.AllowTransparency = true;
+            this.zeroitMaterialLabel28.Depth = 0;
+            this.zeroitMaterialLabel28.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel28.Location = new System.Drawing.Point(27, 33);
+            this.zeroitMaterialLabel28.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel28.Name = "zeroitMaterialLabel28";
+            this.zeroitMaterialLabel28.Size = new System.Drawing.Size(48, 19);
+            this.zeroitMaterialLabel28.TabIndex = 10;
+            this.zeroitMaterialLabel28.Text = "Aktion";
+            // 
+            // ambianceRichTextBox7
+            // 
+            this.ambianceRichTextBox7.AutoWordSelection = false;
+            this.ambianceRichTextBox7.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox7.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox7.Location = new System.Drawing.Point(27, 356);
+            this.ambianceRichTextBox7.Name = "ambianceRichTextBox7";
+            this.ambianceRichTextBox7.ReadOnly = false;
+            this.ambianceRichTextBox7.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox7.TabIndex = 37;
+            this.ambianceRichTextBox7.Text = "kein Eintarg";
+            this.ambianceRichTextBox7.WordWrap = true;
+            // 
+            // zeroitMaterialLabel29
+            // 
+            this.zeroitMaterialLabel29.AllowTransparency = true;
+            this.zeroitMaterialLabel29.Depth = 0;
+            this.zeroitMaterialLabel29.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel29.Location = new System.Drawing.Point(31, 332);
+            this.zeroitMaterialLabel29.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel29.Name = "zeroitMaterialLabel29";
+            this.zeroitMaterialLabel29.Size = new System.Drawing.Size(151, 19);
+            this.zeroitMaterialLabel29.TabIndex = 36;
+            this.zeroitMaterialLabel29.Text = "Medizinische Historie";
+            // 
+            // zeroitMaterialLabel30
+            // 
+            this.zeroitMaterialLabel30.AllowTransparency = true;
+            this.zeroitMaterialLabel30.Depth = 0;
+            this.zeroitMaterialLabel30.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel30.Location = new System.Drawing.Point(31, 251);
+            this.zeroitMaterialLabel30.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel30.Name = "zeroitMaterialLabel30";
+            this.zeroitMaterialLabel30.Size = new System.Drawing.Size(137, 19);
+            this.zeroitMaterialLabel30.TabIndex = 38;
+            this.zeroitMaterialLabel30.Text = "Ärzte des Patienten";
+            // 
+            // ambianceRichTextBox8
+            // 
+            this.ambianceRichTextBox8.AutoWordSelection = false;
+            this.ambianceRichTextBox8.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox8.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox8.Location = new System.Drawing.Point(27, 276);
+            this.ambianceRichTextBox8.Name = "ambianceRichTextBox8";
+            this.ambianceRichTextBox8.ReadOnly = false;
+            this.ambianceRichTextBox8.Size = new System.Drawing.Size(611, 49);
+            this.ambianceRichTextBox8.TabIndex = 39;
+            this.ambianceRichTextBox8.Text = "Dr. med. Müller, Musterstraße 9,  20259 Hamburg";
+            this.ambianceRichTextBox8.WordWrap = true;
+            // 
+            // zeroitMaterialRadioButton1
+            // 
+            this.zeroitMaterialRadioButton1.AllowTransparency = true;
+            this.zeroitMaterialRadioButton1.Checked = false;
+            this.zeroitMaterialRadioButton1.Depth = 0;
+            this.zeroitMaterialRadioButton1.Font = new System.Drawing.Font("Roboto", 10F);
+            this.zeroitMaterialRadioButton1.Location = new System.Drawing.Point(38, 39);
+            this.zeroitMaterialRadioButton1.Margin = new System.Windows.Forms.Padding(0);
+            this.zeroitMaterialRadioButton1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.zeroitMaterialRadioButton1.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialRadioButton1.Name = "zeroitMaterialRadioButton1";
+            this.zeroitMaterialRadioButton1.Ripple = true;
+            this.zeroitMaterialRadioButton1.Size = new System.Drawing.Size(285, 23);
+            this.zeroitMaterialRadioButton1.TabIndex = 4;
+            this.zeroitMaterialRadioButton1.Text = "Patientenverfügung";
+            // 
+            // zeroitMaterialRadioButton2
+            // 
+            this.zeroitMaterialRadioButton2.AllowTransparency = true;
+            this.zeroitMaterialRadioButton2.Checked = false;
+            this.zeroitMaterialRadioButton2.Depth = 0;
+            this.zeroitMaterialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
+            this.zeroitMaterialRadioButton2.Location = new System.Drawing.Point(38, 69);
+            this.zeroitMaterialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.zeroitMaterialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.zeroitMaterialRadioButton2.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialRadioButton2.Name = "zeroitMaterialRadioButton2";
+            this.zeroitMaterialRadioButton2.Ripple = true;
+            this.zeroitMaterialRadioButton2.Size = new System.Drawing.Size(252, 23);
+            this.zeroitMaterialRadioButton2.TabIndex = 5;
+            this.zeroitMaterialRadioButton2.Text = "Vorsorgevollmacht";
+            // 
+            // zeroitMaterialRadioButton3
+            // 
+            this.zeroitMaterialRadioButton3.AllowTransparency = true;
+            this.zeroitMaterialRadioButton3.Checked = false;
+            this.zeroitMaterialRadioButton3.Depth = 0;
+            this.zeroitMaterialRadioButton3.Font = new System.Drawing.Font("Roboto", 10F);
+            this.zeroitMaterialRadioButton3.Location = new System.Drawing.Point(38, 100);
+            this.zeroitMaterialRadioButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.zeroitMaterialRadioButton3.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.zeroitMaterialRadioButton3.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialRadioButton3.Name = "zeroitMaterialRadioButton3";
+            this.zeroitMaterialRadioButton3.Ripple = true;
+            this.zeroitMaterialRadioButton3.Size = new System.Drawing.Size(191, 23);
+            this.zeroitMaterialRadioButton3.TabIndex = 6;
+            this.zeroitMaterialRadioButton3.Text = "Beteuungsverfügung";
+            // 
+            // zeroitMaterialRadioButton4
+            // 
+            this.zeroitMaterialRadioButton4.AllowTransparency = true;
+            this.zeroitMaterialRadioButton4.Checked = false;
+            this.zeroitMaterialRadioButton4.Depth = 0;
+            this.zeroitMaterialRadioButton4.Font = new System.Drawing.Font("Roboto", 10F);
+            this.zeroitMaterialRadioButton4.Location = new System.Drawing.Point(38, 129);
+            this.zeroitMaterialRadioButton4.Margin = new System.Windows.Forms.Padding(0);
+            this.zeroitMaterialRadioButton4.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.zeroitMaterialRadioButton4.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialRadioButton4.Name = "zeroitMaterialRadioButton4";
+            this.zeroitMaterialRadioButton4.Ripple = true;
+            this.zeroitMaterialRadioButton4.Size = new System.Drawing.Size(285, 23);
+            this.zeroitMaterialRadioButton4.TabIndex = 7;
+            this.zeroitMaterialRadioButton4.Text = "Organspendeausweis";
+            // 
+            // ambianceRichTextBox9
+            // 
+            this.ambianceRichTextBox9.AutoWordSelection = false;
+            this.ambianceRichTextBox9.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox9.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox9.Location = new System.Drawing.Point(28, 166);
+            this.ambianceRichTextBox9.Name = "ambianceRichTextBox9";
+            this.ambianceRichTextBox9.ReadOnly = false;
+            this.ambianceRichTextBox9.Size = new System.Drawing.Size(611, 310);
+            this.ambianceRichTextBox9.TabIndex = 8;
+            this.ambianceRichTextBox9.Text = "kein Eintarg";
+            this.ambianceRichTextBox9.WordWrap = true;
             // 
             // Form_Dashboard
             // 
@@ -915,7 +1262,6 @@
             this.Controls.Add(this.zeroitMaterialLabel4);
             this.Controls.Add(this.zeroitMaterialLabel3);
             this.Controls.Add(this.zeroitMaterialLabel2);
-            this.Controls.Add(this.zeroitMaterialLabel1);
             this.Controls.Add(this.btn_speichern);
             this.Name = "Form_Dashboard";
             this.Text = "Dashboard";
@@ -924,7 +1270,10 @@
             this.Enter += new System.EventHandler(this.Tbx_pd_telefonnummer_Format);
             this.xuiFlatTabControl.ResumeLayout(false);
             this.tbaNotfalldaten.ResumeLayout(false);
+            this.tabMDDaten.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).EndInit();
+            this.tabDokumente.ResumeLayout(false);
+            this.tabNotfallkation.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -933,7 +1282,6 @@
         #endregion
 
         private XanderUI.XUIButton btn_speichern;
-        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel1;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel2;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel3;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel4;
@@ -983,5 +1331,28 @@
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel16;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel15;
         private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel22;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel25;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel24;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel23;
+        private System.Windows.Forms.TabPage tabDokumente;
+        private Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox ambianceRichTextBox3;
+        private Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox ambianceRichTextBox2;
+        private Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox ambianceRichTextBox1;
+        private Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox ambianceRichTextBox8;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel30;
+        private Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox ambianceRichTextBox7;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel29;
+        private System.Windows.Forms.TabPage tabNotfallkation;
+        private Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox ambianceRichTextBox4;
+        private Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox ambianceRichTextBox5;
+        private Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox ambianceRichTextBox6;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel26;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel27;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel zeroitMaterialLabel28;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton zeroitMaterialRadioButton4;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton zeroitMaterialRadioButton3;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton zeroitMaterialRadioButton2;
+        private Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton zeroitMaterialRadioButton1;
+        private Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox ambianceRichTextBox9;
     }
 }
