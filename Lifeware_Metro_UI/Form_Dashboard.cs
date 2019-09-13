@@ -252,11 +252,11 @@ namespace Lifeware_Metro_UI
                 pat.KrankenkassenNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_kk_nummer.Text);
                 pat.PersonalausweisNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_personalberater_nr.Text);
                 pat.FührerscheinNR = AesOperation.EncryptString(key_User_Cryt, tbx_pd_fuehrerschein_nr.Text);
-                dc.Id_Dokumente = userID_H;
-                dc.Datei = DataFile;
+                // dc.Id_Dokumente = userID_H;
+                // dc.Datei = DataFile;
 
                 db.Patients.Add(pat);
-                db.Dokumentes.Add(dc);
+                //db.Dokumentes.Add(dc);
                 db.SaveChanges();
 
                 lbl_Dashboard_Status.ForeColor = Color.Red;
@@ -350,11 +350,11 @@ namespace Lifeware_Metro_UI
                     DViewer.LoadDocument(DateiAuswahl.FileName);
 
                     // byte[] DataFile;
-                    DataFile = File.ReadAllBytes(DateiAuswahl.FileName);
-                    dc.Datei = DataFile;
+                    //DataFile = File.ReadAllBytes(DateiAuswahl.FileName);
+                    //dc.Datei = DataFile;
 
-                    
-                    }
+
+                }
             }
         }
     }

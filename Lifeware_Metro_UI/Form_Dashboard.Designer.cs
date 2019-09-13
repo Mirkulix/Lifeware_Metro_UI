@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             Gnostice.Documents.FormatterSettings formatterSettings1 = new Gnostice.Documents.FormatterSettings();
             Gnostice.Documents.Spreadsheet.SpreadSheetFormatterSettings spreadSheetFormatterSettings1 = new Gnostice.Documents.Spreadsheet.SpreadSheetFormatterSettings();
             Gnostice.Documents.PageSettings pageSettings1 = new Gnostice.Documents.PageSettings();
@@ -43,6 +42,7 @@
             Gnostice.Graphics.LineArtRenderingSettings lineArtRenderingSettings1 = new Gnostice.Graphics.LineArtRenderingSettings();
             Gnostice.Graphics.ResolutionSettings resolutionSettings1 = new Gnostice.Graphics.ResolutionSettings();
             Gnostice.Graphics.TextRenderingSettings textRenderingSettings1 = new Gnostice.Graphics.TextRenderingSettings();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Dashboard));
             this.zeroitMaterialLabel2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel3 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel4 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
@@ -74,6 +74,10 @@
             this.lbl_Dashboard_Status = new Zeroit.Framework.Labels.ZeroitDottedMatrix();
             this.xuiFlatTabControl = new XanderUI.XUIFlatTab();
             this.tbaNotfalldaten = new System.Windows.Forms.TabPage();
+            this.ambianceRichTextBox8 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.zeroitMaterialLabel30 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.ambianceRichTextBox7 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.zeroitMaterialLabel29 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel22 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLineTextField1 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
             this.zeroitMaterialLineTextField2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLineTextField();
@@ -91,15 +95,19 @@
             this.zeroitMaterialLabel16 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel15 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.tabMDDaten = new System.Windows.Forms.TabPage();
-            this.picbox_pd_meinBild = new System.Windows.Forms.PictureBox();
-            this.btn_speichern = new XanderUI.XUIButton();
-            this.tabDokumente = new System.Windows.Forms.TabPage();
-            this.zeroitMaterialLabel23 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.zeroitMaterialLabel24 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.zeroitMaterialLabel25 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.ambianceRichTextBox1 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
-            this.ambianceRichTextBox2 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
             this.ambianceRichTextBox3 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.ambianceRichTextBox2 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.ambianceRichTextBox1 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
+            this.zeroitMaterialLabel25 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel24 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.zeroitMaterialLabel23 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
+            this.tabDokumente = new System.Windows.Forms.TabPage();
+            this.btn_pat = new Zeroit.Framework.UIThemes.BetaBlue.BetaBlueButton();
+            this.DViewer = new Gnostice.Documents.Controls.WinForms.DocumentViewer();
+            this.zeroitMaterialRadioButton4 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
+            this.zeroitMaterialRadioButton3 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
+            this.zeroitMaterialRadioButton2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
+            this.rd_btn_padfafü = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
             this.tabNotfallkation = new System.Windows.Forms.TabPage();
             this.ambianceRichTextBox4 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
             this.ambianceRichTextBox5 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
@@ -107,23 +115,15 @@
             this.zeroitMaterialLabel26 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel27 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.zeroitMaterialLabel28 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.ambianceRichTextBox7 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
-            this.zeroitMaterialLabel29 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.zeroitMaterialLabel30 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
-            this.ambianceRichTextBox8 = new Zeroit.Framework.UIThemes.Ambience.AmbianceRichTextBox();
-            this.rd_btn_padfafü = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
-            this.zeroitMaterialRadioButton2 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
-            this.zeroitMaterialRadioButton3 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
-            this.zeroitMaterialRadioButton4 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialRadioButton();
-            this.DViewer = new Gnostice.Documents.Controls.WinForms.DocumentViewer();
-            this.btn_pat = new Zeroit.Framework.UIThemes.BetaBlue.BetaBlueButton();
+            this.picbox_pd_meinBild = new System.Windows.Forms.PictureBox();
+            this.btn_speichern = new XanderUI.XUIButton();
             this.zeroitMaterialLabel1 = new Zeroit.Framework.MaterialDesign.Controls.ZeroitMaterialLabel();
             this.xuiFlatTabControl.SuspendLayout();
             this.tbaNotfalldaten.SuspendLayout();
             this.tabMDDaten.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).BeginInit();
             this.tabDokumente.SuspendLayout();
             this.tabNotfallkation.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).BeginInit();
             this.SuspendLayout();
             // 
             // zeroitMaterialLabel2
@@ -633,6 +633,60 @@
             this.tbaNotfalldaten.TabIndex = 0;
             this.tbaNotfalldaten.Text = "Notfalldaten";
             // 
+            // ambianceRichTextBox8
+            // 
+            this.ambianceRichTextBox8.AutoWordSelection = false;
+            this.ambianceRichTextBox8.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox8.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox8.Location = new System.Drawing.Point(27, 276);
+            this.ambianceRichTextBox8.Name = "ambianceRichTextBox8";
+            this.ambianceRichTextBox8.ReadOnly = false;
+            this.ambianceRichTextBox8.Size = new System.Drawing.Size(611, 49);
+            this.ambianceRichTextBox8.TabIndex = 39;
+            this.ambianceRichTextBox8.Text = "Dr. med. Müller, Musterstraße 9,  20259 Hamburg";
+            this.ambianceRichTextBox8.WordWrap = true;
+            // 
+            // zeroitMaterialLabel30
+            // 
+            this.zeroitMaterialLabel30.AllowTransparency = true;
+            this.zeroitMaterialLabel30.Depth = 0;
+            this.zeroitMaterialLabel30.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel30.Location = new System.Drawing.Point(31, 251);
+            this.zeroitMaterialLabel30.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel30.Name = "zeroitMaterialLabel30";
+            this.zeroitMaterialLabel30.Size = new System.Drawing.Size(137, 19);
+            this.zeroitMaterialLabel30.TabIndex = 38;
+            this.zeroitMaterialLabel30.Text = "Ärzte des Patienten";
+            // 
+            // ambianceRichTextBox7
+            // 
+            this.ambianceRichTextBox7.AutoWordSelection = false;
+            this.ambianceRichTextBox7.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox7.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox7.Location = new System.Drawing.Point(27, 356);
+            this.ambianceRichTextBox7.Name = "ambianceRichTextBox7";
+            this.ambianceRichTextBox7.ReadOnly = false;
+            this.ambianceRichTextBox7.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox7.TabIndex = 37;
+            this.ambianceRichTextBox7.Text = "kein Eintarg";
+            this.ambianceRichTextBox7.WordWrap = true;
+            // 
+            // zeroitMaterialLabel29
+            // 
+            this.zeroitMaterialLabel29.AllowTransparency = true;
+            this.zeroitMaterialLabel29.Depth = 0;
+            this.zeroitMaterialLabel29.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel29.Location = new System.Drawing.Point(31, 332);
+            this.zeroitMaterialLabel29.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel29.Name = "zeroitMaterialLabel29";
+            this.zeroitMaterialLabel29.Size = new System.Drawing.Size(151, 19);
+            this.zeroitMaterialLabel29.TabIndex = 36;
+            this.zeroitMaterialLabel29.Text = "Medizinische Historie";
+            // 
             // zeroitMaterialLabel22
             // 
             this.zeroitMaterialLabel22.AllowTransparency = true;
@@ -890,34 +944,86 @@
             this.tabMDDaten.TabIndex = 1;
             this.tabMDDaten.Text = "MED Daten";
             // 
-            // picbox_pd_meinBild
+            // ambianceRichTextBox3
             // 
-            this.picbox_pd_meinBild.Location = new System.Drawing.Point(260, 85);
-            this.picbox_pd_meinBild.Name = "picbox_pd_meinBild";
-            this.picbox_pd_meinBild.Size = new System.Drawing.Size(134, 146);
-            this.picbox_pd_meinBild.TabIndex = 32;
-            this.picbox_pd_meinBild.TabStop = false;
+            this.ambianceRichTextBox3.AutoWordSelection = false;
+            this.ambianceRichTextBox3.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox3.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox3.Location = new System.Drawing.Point(24, 357);
+            this.ambianceRichTextBox3.Name = "ambianceRichTextBox3";
+            this.ambianceRichTextBox3.ReadOnly = false;
+            this.ambianceRichTextBox3.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox3.TabIndex = 9;
+            this.ambianceRichTextBox3.Text = "keine ";
+            this.ambianceRichTextBox3.WordWrap = true;
             // 
-            // btn_speichern
+            // ambianceRichTextBox2
             // 
-            this.btn_speichern.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.btn_speichern.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btn_speichern.ButtonImage")));
-            this.btn_speichern.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
-            this.btn_speichern.ButtonText = "Speichern";
-            this.btn_speichern.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
-            this.btn_speichern.ClickTextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_speichern.CornerRadius = 5;
-            this.btn_speichern.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
-            this.btn_speichern.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
-            this.btn_speichern.HoverTextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_speichern.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
-            this.btn_speichern.Location = new System.Drawing.Point(1122, 612);
-            this.btn_speichern.Name = "btn_speichern";
-            this.btn_speichern.Size = new System.Drawing.Size(200, 50);
-            this.btn_speichern.TabIndex = 0;
-            this.btn_speichern.TextColor = System.Drawing.Color.DodgerBlue;
-            this.btn_speichern.Vertical_Alignment = System.Drawing.StringAlignment.Center;
-            this.btn_speichern.Click += new System.EventHandler(this.Btn_speichern_Click);
+            this.ambianceRichTextBox2.AutoWordSelection = false;
+            this.ambianceRichTextBox2.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox2.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox2.Location = new System.Drawing.Point(24, 203);
+            this.ambianceRichTextBox2.Name = "ambianceRichTextBox2";
+            this.ambianceRichTextBox2.ReadOnly = false;
+            this.ambianceRichTextBox2.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox2.TabIndex = 8;
+            this.ambianceRichTextBox2.Text = "Gräser, Pollen,Birken";
+            this.ambianceRichTextBox2.WordWrap = true;
+            // 
+            // ambianceRichTextBox1
+            // 
+            this.ambianceRichTextBox1.AutoWordSelection = false;
+            this.ambianceRichTextBox1.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox1.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox1.Location = new System.Drawing.Point(24, 60);
+            this.ambianceRichTextBox1.Name = "ambianceRichTextBox1";
+            this.ambianceRichTextBox1.ReadOnly = false;
+            this.ambianceRichTextBox1.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox1.TabIndex = 7;
+            this.ambianceRichTextBox1.Text = "kein Eintarg";
+            this.ambianceRichTextBox1.WordWrap = true;
+            // 
+            // zeroitMaterialLabel25
+            // 
+            this.zeroitMaterialLabel25.AllowTransparency = true;
+            this.zeroitMaterialLabel25.Depth = 0;
+            this.zeroitMaterialLabel25.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel25.Location = new System.Drawing.Point(24, 332);
+            this.zeroitMaterialLabel25.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel25.Name = "zeroitMaterialLabel25";
+            this.zeroitMaterialLabel25.Size = new System.Drawing.Size(49, 19);
+            this.zeroitMaterialLabel25.TabIndex = 6;
+            this.zeroitMaterialLabel25.Text = "Geräte";
+            // 
+            // zeroitMaterialLabel24
+            // 
+            this.zeroitMaterialLabel24.AllowTransparency = true;
+            this.zeroitMaterialLabel24.Depth = 0;
+            this.zeroitMaterialLabel24.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel24.Location = new System.Drawing.Point(24, 178);
+            this.zeroitMaterialLabel24.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel24.Name = "zeroitMaterialLabel24";
+            this.zeroitMaterialLabel24.Size = new System.Drawing.Size(65, 19);
+            this.zeroitMaterialLabel24.TabIndex = 5;
+            this.zeroitMaterialLabel24.Text = "Allergien";
+            // 
+            // zeroitMaterialLabel23
+            // 
+            this.zeroitMaterialLabel23.AllowTransparency = true;
+            this.zeroitMaterialLabel23.Depth = 0;
+            this.zeroitMaterialLabel23.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel23.Location = new System.Drawing.Point(24, 35);
+            this.zeroitMaterialLabel23.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel23.Name = "zeroitMaterialLabel23";
+            this.zeroitMaterialLabel23.Size = new System.Drawing.Size(151, 19);
+            this.zeroitMaterialLabel23.TabIndex = 4;
+            this.zeroitMaterialLabel23.Text = "Medizinische Historie";
             // 
             // tabDokumente
             // 
@@ -934,300 +1040,17 @@
             this.tabDokumente.TabIndex = 2;
             this.tabDokumente.Text = "Dokumente";
             // 
-            // zeroitMaterialLabel23
+            // btn_pat
             // 
-            this.zeroitMaterialLabel23.AllowTransparency = true;
-            this.zeroitMaterialLabel23.Depth = 0;
-            this.zeroitMaterialLabel23.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel23.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel23.Location = new System.Drawing.Point(24, 35);
-            this.zeroitMaterialLabel23.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel23.Name = "zeroitMaterialLabel23";
-            this.zeroitMaterialLabel23.Size = new System.Drawing.Size(151, 19);
-            this.zeroitMaterialLabel23.TabIndex = 4;
-            this.zeroitMaterialLabel23.Text = "Medizinische Historie";
-            // 
-            // zeroitMaterialLabel24
-            // 
-            this.zeroitMaterialLabel24.AllowTransparency = true;
-            this.zeroitMaterialLabel24.Depth = 0;
-            this.zeroitMaterialLabel24.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel24.Location = new System.Drawing.Point(24, 178);
-            this.zeroitMaterialLabel24.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel24.Name = "zeroitMaterialLabel24";
-            this.zeroitMaterialLabel24.Size = new System.Drawing.Size(65, 19);
-            this.zeroitMaterialLabel24.TabIndex = 5;
-            this.zeroitMaterialLabel24.Text = "Allergien";
-            // 
-            // zeroitMaterialLabel25
-            // 
-            this.zeroitMaterialLabel25.AllowTransparency = true;
-            this.zeroitMaterialLabel25.Depth = 0;
-            this.zeroitMaterialLabel25.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel25.Location = new System.Drawing.Point(24, 332);
-            this.zeroitMaterialLabel25.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel25.Name = "zeroitMaterialLabel25";
-            this.zeroitMaterialLabel25.Size = new System.Drawing.Size(49, 19);
-            this.zeroitMaterialLabel25.TabIndex = 6;
-            this.zeroitMaterialLabel25.Text = "Geräte";
-            // 
-            // ambianceRichTextBox1
-            // 
-            this.ambianceRichTextBox1.AutoWordSelection = false;
-            this.ambianceRichTextBox1.BackColor = System.Drawing.Color.Transparent;
-            this.ambianceRichTextBox1.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.ambianceRichTextBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.ambianceRichTextBox1.Location = new System.Drawing.Point(24, 60);
-            this.ambianceRichTextBox1.Name = "ambianceRichTextBox1";
-            this.ambianceRichTextBox1.ReadOnly = false;
-            this.ambianceRichTextBox1.Size = new System.Drawing.Size(611, 108);
-            this.ambianceRichTextBox1.TabIndex = 7;
-            this.ambianceRichTextBox1.Text = "kein Eintarg";
-            this.ambianceRichTextBox1.WordWrap = true;
-            // 
-            // ambianceRichTextBox2
-            // 
-            this.ambianceRichTextBox2.AutoWordSelection = false;
-            this.ambianceRichTextBox2.BackColor = System.Drawing.Color.Transparent;
-            this.ambianceRichTextBox2.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.ambianceRichTextBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.ambianceRichTextBox2.Location = new System.Drawing.Point(24, 203);
-            this.ambianceRichTextBox2.Name = "ambianceRichTextBox2";
-            this.ambianceRichTextBox2.ReadOnly = false;
-            this.ambianceRichTextBox2.Size = new System.Drawing.Size(611, 108);
-            this.ambianceRichTextBox2.TabIndex = 8;
-            this.ambianceRichTextBox2.Text = "Gräser, Pollen,Birken";
-            this.ambianceRichTextBox2.WordWrap = true;
-            // 
-            // ambianceRichTextBox3
-            // 
-            this.ambianceRichTextBox3.AutoWordSelection = false;
-            this.ambianceRichTextBox3.BackColor = System.Drawing.Color.Transparent;
-            this.ambianceRichTextBox3.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.ambianceRichTextBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.ambianceRichTextBox3.Location = new System.Drawing.Point(24, 357);
-            this.ambianceRichTextBox3.Name = "ambianceRichTextBox3";
-            this.ambianceRichTextBox3.ReadOnly = false;
-            this.ambianceRichTextBox3.Size = new System.Drawing.Size(611, 108);
-            this.ambianceRichTextBox3.TabIndex = 9;
-            this.ambianceRichTextBox3.Text = "keine ";
-            this.ambianceRichTextBox3.WordWrap = true;
-            // 
-            // tabNotfallkation
-            // 
-            this.tabNotfallkation.BackColor = System.Drawing.Color.White;
-            this.tabNotfallkation.Controls.Add(this.ambianceRichTextBox4);
-            this.tabNotfallkation.Controls.Add(this.ambianceRichTextBox5);
-            this.tabNotfallkation.Controls.Add(this.ambianceRichTextBox6);
-            this.tabNotfallkation.Controls.Add(this.zeroitMaterialLabel26);
-            this.tabNotfallkation.Controls.Add(this.zeroitMaterialLabel27);
-            this.tabNotfallkation.Controls.Add(this.zeroitMaterialLabel28);
-            this.tabNotfallkation.Location = new System.Drawing.Point(4, 20);
-            this.tabNotfallkation.Name = "tabNotfallkation";
-            this.tabNotfallkation.Size = new System.Drawing.Size(664, 497);
-            this.tabNotfallkation.TabIndex = 3;
-            this.tabNotfallkation.Text = "Notfallaktionen";
-            // 
-            // ambianceRichTextBox4
-            // 
-            this.ambianceRichTextBox4.AutoWordSelection = false;
-            this.ambianceRichTextBox4.BackColor = System.Drawing.Color.Transparent;
-            this.ambianceRichTextBox4.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.ambianceRichTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.ambianceRichTextBox4.Location = new System.Drawing.Point(27, 355);
-            this.ambianceRichTextBox4.Name = "ambianceRichTextBox4";
-            this.ambianceRichTextBox4.ReadOnly = false;
-            this.ambianceRichTextBox4.Size = new System.Drawing.Size(611, 108);
-            this.ambianceRichTextBox4.TabIndex = 15;
-            this.ambianceRichTextBox4.Text = "keine";
-            this.ambianceRichTextBox4.WordWrap = true;
-            // 
-            // ambianceRichTextBox5
-            // 
-            this.ambianceRichTextBox5.AutoWordSelection = false;
-            this.ambianceRichTextBox5.BackColor = System.Drawing.Color.Transparent;
-            this.ambianceRichTextBox5.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.ambianceRichTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.ambianceRichTextBox5.Location = new System.Drawing.Point(27, 201);
-            this.ambianceRichTextBox5.Name = "ambianceRichTextBox5";
-            this.ambianceRichTextBox5.ReadOnly = false;
-            this.ambianceRichTextBox5.Size = new System.Drawing.Size(611, 108);
-            this.ambianceRichTextBox5.TabIndex = 14;
-            this.ambianceRichTextBox5.Text = "Maria Müller (Mutter) Te.: 040-567 88 97";
-            this.ambianceRichTextBox5.WordWrap = true;
-            // 
-            // ambianceRichTextBox6
-            // 
-            this.ambianceRichTextBox6.AutoWordSelection = false;
-            this.ambianceRichTextBox6.BackColor = System.Drawing.Color.Transparent;
-            this.ambianceRichTextBox6.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.ambianceRichTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.ambianceRichTextBox6.Location = new System.Drawing.Point(27, 58);
-            this.ambianceRichTextBox6.Name = "ambianceRichTextBox6";
-            this.ambianceRichTextBox6.ReadOnly = false;
-            this.ambianceRichTextBox6.Size = new System.Drawing.Size(611, 108);
-            this.ambianceRichTextBox6.TabIndex = 13;
-            this.ambianceRichTextBox6.Text = "Kind im Kindergarten";
-            this.ambianceRichTextBox6.WordWrap = true;
-            // 
-            // zeroitMaterialLabel26
-            // 
-            this.zeroitMaterialLabel26.AllowTransparency = true;
-            this.zeroitMaterialLabel26.Depth = 0;
-            this.zeroitMaterialLabel26.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel26.Location = new System.Drawing.Point(27, 330);
-            this.zeroitMaterialLabel26.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel26.Name = "zeroitMaterialLabel26";
-            this.zeroitMaterialLabel26.Size = new System.Drawing.Size(111, 19);
-            this.zeroitMaterialLabel26.TabIndex = 12;
-            this.zeroitMaterialLabel26.Text = "Besonderheiten";
-            // 
-            // zeroitMaterialLabel27
-            // 
-            this.zeroitMaterialLabel27.AllowTransparency = true;
-            this.zeroitMaterialLabel27.Depth = 0;
-            this.zeroitMaterialLabel27.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel27.Location = new System.Drawing.Point(27, 176);
-            this.zeroitMaterialLabel27.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel27.Name = "zeroitMaterialLabel27";
-            this.zeroitMaterialLabel27.Size = new System.Drawing.Size(101, 19);
-            this.zeroitMaterialLabel27.TabIndex = 11;
-            this.zeroitMaterialLabel27.Text = "Notfallkontakt";
-            // 
-            // zeroitMaterialLabel28
-            // 
-            this.zeroitMaterialLabel28.AllowTransparency = true;
-            this.zeroitMaterialLabel28.Depth = 0;
-            this.zeroitMaterialLabel28.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel28.Location = new System.Drawing.Point(27, 33);
-            this.zeroitMaterialLabel28.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel28.Name = "zeroitMaterialLabel28";
-            this.zeroitMaterialLabel28.Size = new System.Drawing.Size(48, 19);
-            this.zeroitMaterialLabel28.TabIndex = 10;
-            this.zeroitMaterialLabel28.Text = "Aktion";
-            // 
-            // ambianceRichTextBox7
-            // 
-            this.ambianceRichTextBox7.AutoWordSelection = false;
-            this.ambianceRichTextBox7.BackColor = System.Drawing.Color.Transparent;
-            this.ambianceRichTextBox7.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.ambianceRichTextBox7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.ambianceRichTextBox7.Location = new System.Drawing.Point(27, 356);
-            this.ambianceRichTextBox7.Name = "ambianceRichTextBox7";
-            this.ambianceRichTextBox7.ReadOnly = false;
-            this.ambianceRichTextBox7.Size = new System.Drawing.Size(611, 108);
-            this.ambianceRichTextBox7.TabIndex = 37;
-            this.ambianceRichTextBox7.Text = "kein Eintarg";
-            this.ambianceRichTextBox7.WordWrap = true;
-            // 
-            // zeroitMaterialLabel29
-            // 
-            this.zeroitMaterialLabel29.AllowTransparency = true;
-            this.zeroitMaterialLabel29.Depth = 0;
-            this.zeroitMaterialLabel29.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel29.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel29.Location = new System.Drawing.Point(31, 332);
-            this.zeroitMaterialLabel29.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel29.Name = "zeroitMaterialLabel29";
-            this.zeroitMaterialLabel29.Size = new System.Drawing.Size(151, 19);
-            this.zeroitMaterialLabel29.TabIndex = 36;
-            this.zeroitMaterialLabel29.Text = "Medizinische Historie";
-            // 
-            // zeroitMaterialLabel30
-            // 
-            this.zeroitMaterialLabel30.AllowTransparency = true;
-            this.zeroitMaterialLabel30.Depth = 0;
-            this.zeroitMaterialLabel30.Font = new System.Drawing.Font("Roboto", 11F);
-            this.zeroitMaterialLabel30.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.zeroitMaterialLabel30.Location = new System.Drawing.Point(31, 251);
-            this.zeroitMaterialLabel30.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialLabel30.Name = "zeroitMaterialLabel30";
-            this.zeroitMaterialLabel30.Size = new System.Drawing.Size(137, 19);
-            this.zeroitMaterialLabel30.TabIndex = 38;
-            this.zeroitMaterialLabel30.Text = "Ärzte des Patienten";
-            // 
-            // ambianceRichTextBox8
-            // 
-            this.ambianceRichTextBox8.AutoWordSelection = false;
-            this.ambianceRichTextBox8.BackColor = System.Drawing.Color.Transparent;
-            this.ambianceRichTextBox8.Font = new System.Drawing.Font("Tahoma", 10F);
-            this.ambianceRichTextBox8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
-            this.ambianceRichTextBox8.Location = new System.Drawing.Point(27, 276);
-            this.ambianceRichTextBox8.Name = "ambianceRichTextBox8";
-            this.ambianceRichTextBox8.ReadOnly = false;
-            this.ambianceRichTextBox8.Size = new System.Drawing.Size(611, 49);
-            this.ambianceRichTextBox8.TabIndex = 39;
-            this.ambianceRichTextBox8.Text = "Dr. med. Müller, Musterstraße 9,  20259 Hamburg";
-            this.ambianceRichTextBox8.WordWrap = true;
-            // 
-            // rd_btn_padfafü
-            // 
-            this.rd_btn_padfafü.AllowTransparency = true;
-            this.rd_btn_padfafü.Checked = false;
-            this.rd_btn_padfafü.Depth = 0;
-            this.rd_btn_padfafü.Font = new System.Drawing.Font("Roboto", 10F);
-            this.rd_btn_padfafü.Location = new System.Drawing.Point(38, 39);
-            this.rd_btn_padfafü.Margin = new System.Windows.Forms.Padding(0);
-            this.rd_btn_padfafü.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.rd_btn_padfafü.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.rd_btn_padfafü.Name = "rd_btn_padfafü";
-            this.rd_btn_padfafü.Ripple = true;
-            this.rd_btn_padfafü.Size = new System.Drawing.Size(285, 23);
-            this.rd_btn_padfafü.TabIndex = 4;
-            this.rd_btn_padfafü.Text = "Patientenverfügung";
-            // 
-            // zeroitMaterialRadioButton2
-            // 
-            this.zeroitMaterialRadioButton2.AllowTransparency = true;
-            this.zeroitMaterialRadioButton2.Checked = false;
-            this.zeroitMaterialRadioButton2.Depth = 0;
-            this.zeroitMaterialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
-            this.zeroitMaterialRadioButton2.Location = new System.Drawing.Point(38, 69);
-            this.zeroitMaterialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
-            this.zeroitMaterialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.zeroitMaterialRadioButton2.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialRadioButton2.Name = "zeroitMaterialRadioButton2";
-            this.zeroitMaterialRadioButton2.Ripple = true;
-            this.zeroitMaterialRadioButton2.Size = new System.Drawing.Size(252, 23);
-            this.zeroitMaterialRadioButton2.TabIndex = 5;
-            this.zeroitMaterialRadioButton2.Text = "Vorsorgevollmacht";
-            // 
-            // zeroitMaterialRadioButton3
-            // 
-            this.zeroitMaterialRadioButton3.AllowTransparency = true;
-            this.zeroitMaterialRadioButton3.Checked = false;
-            this.zeroitMaterialRadioButton3.Depth = 0;
-            this.zeroitMaterialRadioButton3.Font = new System.Drawing.Font("Roboto", 10F);
-            this.zeroitMaterialRadioButton3.Location = new System.Drawing.Point(38, 99);
-            this.zeroitMaterialRadioButton3.Margin = new System.Windows.Forms.Padding(0);
-            this.zeroitMaterialRadioButton3.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.zeroitMaterialRadioButton3.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialRadioButton3.Name = "zeroitMaterialRadioButton3";
-            this.zeroitMaterialRadioButton3.Ripple = true;
-            this.zeroitMaterialRadioButton3.Size = new System.Drawing.Size(191, 23);
-            this.zeroitMaterialRadioButton3.TabIndex = 6;
-            this.zeroitMaterialRadioButton3.Text = "Beteuungsverfügung";
-            // 
-            // zeroitMaterialRadioButton4
-            // 
-            this.zeroitMaterialRadioButton4.AllowTransparency = true;
-            this.zeroitMaterialRadioButton4.Checked = false;
-            this.zeroitMaterialRadioButton4.Depth = 0;
-            this.zeroitMaterialRadioButton4.Font = new System.Drawing.Font("Roboto", 10F);
-            this.zeroitMaterialRadioButton4.Location = new System.Drawing.Point(38, 129);
-            this.zeroitMaterialRadioButton4.Margin = new System.Windows.Forms.Padding(0);
-            this.zeroitMaterialRadioButton4.MouseLocation = new System.Drawing.Point(-1, -1);
-            this.zeroitMaterialRadioButton4.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
-            this.zeroitMaterialRadioButton4.Name = "zeroitMaterialRadioButton4";
-            this.zeroitMaterialRadioButton4.Ripple = true;
-            this.zeroitMaterialRadioButton4.Size = new System.Drawing.Size(285, 23);
-            this.zeroitMaterialRadioButton4.TabIndex = 7;
-            this.zeroitMaterialRadioButton4.Text = "Organspendeausweis";
+            this.btn_pat.Dark = false;
+            this.btn_pat.Image = null;
+            this.btn_pat.Location = new System.Drawing.Point(225, 39);
+            this.btn_pat.Name = "btn_pat";
+            this.btn_pat.NoRounding = false;
+            this.btn_pat.Size = new System.Drawing.Size(128, 23);
+            this.btn_pat.TabIndex = 14;
+            this.btn_pat.Text = "Hochladen";
+            this.btn_pat.Click += new System.EventHandler(this.btn_pat_Click);
             // 
             // DViewer
             // 
@@ -1315,17 +1138,194 @@
             this.DViewer.Zoom.ZoomMode = Gnostice.Documents.Controls.WinForms.ZoomMode.ActualSize;
             this.DViewer.Zoom.ZoomPercent = 100D;
             // 
-            // btn_pat
+            // zeroitMaterialRadioButton4
             // 
-            this.btn_pat.Dark = false;
-            this.btn_pat.Image = null;
-            this.btn_pat.Location = new System.Drawing.Point(225, 39);
-            this.btn_pat.Name = "btn_pat";
-            this.btn_pat.NoRounding = false;
-            this.btn_pat.Size = new System.Drawing.Size(128, 23);
-            this.btn_pat.TabIndex = 14;
-            this.btn_pat.Text = "Hochladen";
-            this.btn_pat.Click += new System.EventHandler(this.btn_pat_Click);
+            this.zeroitMaterialRadioButton4.AllowTransparency = true;
+            this.zeroitMaterialRadioButton4.Checked = false;
+            this.zeroitMaterialRadioButton4.Depth = 0;
+            this.zeroitMaterialRadioButton4.Font = new System.Drawing.Font("Roboto", 10F);
+            this.zeroitMaterialRadioButton4.Location = new System.Drawing.Point(38, 129);
+            this.zeroitMaterialRadioButton4.Margin = new System.Windows.Forms.Padding(0);
+            this.zeroitMaterialRadioButton4.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.zeroitMaterialRadioButton4.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialRadioButton4.Name = "zeroitMaterialRadioButton4";
+            this.zeroitMaterialRadioButton4.Ripple = true;
+            this.zeroitMaterialRadioButton4.Size = new System.Drawing.Size(285, 23);
+            this.zeroitMaterialRadioButton4.TabIndex = 7;
+            this.zeroitMaterialRadioButton4.Text = "Organspendeausweis";
+            // 
+            // zeroitMaterialRadioButton3
+            // 
+            this.zeroitMaterialRadioButton3.AllowTransparency = true;
+            this.zeroitMaterialRadioButton3.Checked = false;
+            this.zeroitMaterialRadioButton3.Depth = 0;
+            this.zeroitMaterialRadioButton3.Font = new System.Drawing.Font("Roboto", 10F);
+            this.zeroitMaterialRadioButton3.Location = new System.Drawing.Point(38, 99);
+            this.zeroitMaterialRadioButton3.Margin = new System.Windows.Forms.Padding(0);
+            this.zeroitMaterialRadioButton3.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.zeroitMaterialRadioButton3.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialRadioButton3.Name = "zeroitMaterialRadioButton3";
+            this.zeroitMaterialRadioButton3.Ripple = true;
+            this.zeroitMaterialRadioButton3.Size = new System.Drawing.Size(191, 23);
+            this.zeroitMaterialRadioButton3.TabIndex = 6;
+            this.zeroitMaterialRadioButton3.Text = "Beteuungsverfügung";
+            // 
+            // zeroitMaterialRadioButton2
+            // 
+            this.zeroitMaterialRadioButton2.AllowTransparency = true;
+            this.zeroitMaterialRadioButton2.Checked = false;
+            this.zeroitMaterialRadioButton2.Depth = 0;
+            this.zeroitMaterialRadioButton2.Font = new System.Drawing.Font("Roboto", 10F);
+            this.zeroitMaterialRadioButton2.Location = new System.Drawing.Point(38, 69);
+            this.zeroitMaterialRadioButton2.Margin = new System.Windows.Forms.Padding(0);
+            this.zeroitMaterialRadioButton2.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.zeroitMaterialRadioButton2.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialRadioButton2.Name = "zeroitMaterialRadioButton2";
+            this.zeroitMaterialRadioButton2.Ripple = true;
+            this.zeroitMaterialRadioButton2.Size = new System.Drawing.Size(252, 23);
+            this.zeroitMaterialRadioButton2.TabIndex = 5;
+            this.zeroitMaterialRadioButton2.Text = "Vorsorgevollmacht";
+            // 
+            // rd_btn_padfafü
+            // 
+            this.rd_btn_padfafü.AllowTransparency = true;
+            this.rd_btn_padfafü.Checked = false;
+            this.rd_btn_padfafü.Depth = 0;
+            this.rd_btn_padfafü.Font = new System.Drawing.Font("Roboto", 10F);
+            this.rd_btn_padfafü.Location = new System.Drawing.Point(38, 39);
+            this.rd_btn_padfafü.Margin = new System.Windows.Forms.Padding(0);
+            this.rd_btn_padfafü.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.rd_btn_padfafü.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.rd_btn_padfafü.Name = "rd_btn_padfafü";
+            this.rd_btn_padfafü.Ripple = true;
+            this.rd_btn_padfafü.Size = new System.Drawing.Size(285, 23);
+            this.rd_btn_padfafü.TabIndex = 4;
+            this.rd_btn_padfafü.Text = "Patientenverfügung";
+            // 
+            // tabNotfallkation
+            // 
+            this.tabNotfallkation.BackColor = System.Drawing.Color.White;
+            this.tabNotfallkation.Controls.Add(this.ambianceRichTextBox4);
+            this.tabNotfallkation.Controls.Add(this.ambianceRichTextBox5);
+            this.tabNotfallkation.Controls.Add(this.ambianceRichTextBox6);
+            this.tabNotfallkation.Controls.Add(this.zeroitMaterialLabel26);
+            this.tabNotfallkation.Controls.Add(this.zeroitMaterialLabel27);
+            this.tabNotfallkation.Controls.Add(this.zeroitMaterialLabel28);
+            this.tabNotfallkation.Location = new System.Drawing.Point(4, 20);
+            this.tabNotfallkation.Name = "tabNotfallkation";
+            this.tabNotfallkation.Size = new System.Drawing.Size(856, 497);
+            this.tabNotfallkation.TabIndex = 3;
+            this.tabNotfallkation.Text = "Notfallaktionen";
+            // 
+            // ambianceRichTextBox4
+            // 
+            this.ambianceRichTextBox4.AutoWordSelection = false;
+            this.ambianceRichTextBox4.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox4.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox4.Location = new System.Drawing.Point(27, 355);
+            this.ambianceRichTextBox4.Name = "ambianceRichTextBox4";
+            this.ambianceRichTextBox4.ReadOnly = false;
+            this.ambianceRichTextBox4.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox4.TabIndex = 15;
+            this.ambianceRichTextBox4.Text = "keine";
+            this.ambianceRichTextBox4.WordWrap = true;
+            // 
+            // ambianceRichTextBox5
+            // 
+            this.ambianceRichTextBox5.AutoWordSelection = false;
+            this.ambianceRichTextBox5.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox5.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox5.Location = new System.Drawing.Point(27, 201);
+            this.ambianceRichTextBox5.Name = "ambianceRichTextBox5";
+            this.ambianceRichTextBox5.ReadOnly = false;
+            this.ambianceRichTextBox5.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox5.TabIndex = 14;
+            this.ambianceRichTextBox5.Text = "Maria Müller (Mutter) Te.: 040-567 88 97";
+            this.ambianceRichTextBox5.WordWrap = true;
+            // 
+            // ambianceRichTextBox6
+            // 
+            this.ambianceRichTextBox6.AutoWordSelection = false;
+            this.ambianceRichTextBox6.BackColor = System.Drawing.Color.Transparent;
+            this.ambianceRichTextBox6.Font = new System.Drawing.Font("Tahoma", 10F);
+            this.ambianceRichTextBox6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(76)))), ((int)(((byte)(76)))));
+            this.ambianceRichTextBox6.Location = new System.Drawing.Point(27, 58);
+            this.ambianceRichTextBox6.Name = "ambianceRichTextBox6";
+            this.ambianceRichTextBox6.ReadOnly = false;
+            this.ambianceRichTextBox6.Size = new System.Drawing.Size(611, 108);
+            this.ambianceRichTextBox6.TabIndex = 13;
+            this.ambianceRichTextBox6.Text = "Kind im Kindergarten";
+            this.ambianceRichTextBox6.WordWrap = true;
+            // 
+            // zeroitMaterialLabel26
+            // 
+            this.zeroitMaterialLabel26.AllowTransparency = true;
+            this.zeroitMaterialLabel26.Depth = 0;
+            this.zeroitMaterialLabel26.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel26.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel26.Location = new System.Drawing.Point(27, 330);
+            this.zeroitMaterialLabel26.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel26.Name = "zeroitMaterialLabel26";
+            this.zeroitMaterialLabel26.Size = new System.Drawing.Size(111, 19);
+            this.zeroitMaterialLabel26.TabIndex = 12;
+            this.zeroitMaterialLabel26.Text = "Besonderheiten";
+            // 
+            // zeroitMaterialLabel27
+            // 
+            this.zeroitMaterialLabel27.AllowTransparency = true;
+            this.zeroitMaterialLabel27.Depth = 0;
+            this.zeroitMaterialLabel27.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel27.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel27.Location = new System.Drawing.Point(27, 176);
+            this.zeroitMaterialLabel27.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel27.Name = "zeroitMaterialLabel27";
+            this.zeroitMaterialLabel27.Size = new System.Drawing.Size(101, 19);
+            this.zeroitMaterialLabel27.TabIndex = 11;
+            this.zeroitMaterialLabel27.Text = "Notfallkontakt";
+            // 
+            // zeroitMaterialLabel28
+            // 
+            this.zeroitMaterialLabel28.AllowTransparency = true;
+            this.zeroitMaterialLabel28.Depth = 0;
+            this.zeroitMaterialLabel28.Font = new System.Drawing.Font("Roboto", 11F);
+            this.zeroitMaterialLabel28.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.zeroitMaterialLabel28.Location = new System.Drawing.Point(27, 33);
+            this.zeroitMaterialLabel28.MouseState = Zeroit.Framework.MaterialDesign.MouseState.HOVER;
+            this.zeroitMaterialLabel28.Name = "zeroitMaterialLabel28";
+            this.zeroitMaterialLabel28.Size = new System.Drawing.Size(48, 19);
+            this.zeroitMaterialLabel28.TabIndex = 10;
+            this.zeroitMaterialLabel28.Text = "Aktion";
+            // 
+            // picbox_pd_meinBild
+            // 
+            this.picbox_pd_meinBild.Location = new System.Drawing.Point(260, 85);
+            this.picbox_pd_meinBild.Name = "picbox_pd_meinBild";
+            this.picbox_pd_meinBild.Size = new System.Drawing.Size(134, 146);
+            this.picbox_pd_meinBild.TabIndex = 32;
+            this.picbox_pd_meinBild.TabStop = false;
+            // 
+            // btn_speichern
+            // 
+            this.btn_speichern.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btn_speichern.ButtonImage = ((System.Drawing.Image)(resources.GetObject("btn_speichern.ButtonImage")));
+            this.btn_speichern.ButtonStyle = XanderUI.XUIButton.Style.MaterialRounded;
+            this.btn_speichern.ButtonText = "Speichern";
+            this.btn_speichern.ClickBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(195)))), ((int)(((byte)(195)))), ((int)(((byte)(195)))));
+            this.btn_speichern.ClickTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_speichern.CornerRadius = 5;
+            this.btn_speichern.Horizontal_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_speichern.HoverBackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(225)))), ((int)(((byte)(225)))));
+            this.btn_speichern.HoverTextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_speichern.ImagePosition = XanderUI.XUIButton.imgPosition.Left;
+            this.btn_speichern.Location = new System.Drawing.Point(1122, 612);
+            this.btn_speichern.Name = "btn_speichern";
+            this.btn_speichern.Size = new System.Drawing.Size(200, 50);
+            this.btn_speichern.TabIndex = 0;
+            this.btn_speichern.TextColor = System.Drawing.Color.DodgerBlue;
+            this.btn_speichern.Vertical_Alignment = System.Drawing.StringAlignment.Center;
+            this.btn_speichern.Click += new System.EventHandler(this.Btn_speichern_Click);
             // 
             // zeroitMaterialLabel1
             // 
@@ -1386,9 +1386,9 @@
             this.xuiFlatTabControl.ResumeLayout(false);
             this.tbaNotfalldaten.ResumeLayout(false);
             this.tabMDDaten.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).EndInit();
             this.tabDokumente.ResumeLayout(false);
             this.tabNotfallkation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picbox_pd_meinBild)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
